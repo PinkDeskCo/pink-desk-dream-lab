@@ -42,90 +42,129 @@ function range(progress, start, end) {
 
 function updateDreamSession() {
 
-    if (!dreamSession) {
+    if (
+        !dreamSession ||
+        !shareScene ||
+        !thinkScene ||
+        !labScene
+    ) {
         return;
     }
 
-    const rect =
-        dreamSession.getBoundingClientRect();
 
-    const scrollableDistance =
-        dreamSession.offsetHeight -
+    /* =====================================
+       CALCULATE SCROLL PROGRESS
+    ===================================== */
+
+    const sectionTop =
+        dreamSession.offsetTop;
+
+    const sectionHeight =
+        dreamSession.offsetHeight;
+
+    const scrollDistance =
+        sectionHeight -
         window.innerHeight;
+
+    const distanceIntoSection =
+        window.scrollY -
+        sectionTop;
 
     const progress =
         clamp(
-            -rect.top /
-            scrollableDistance
+            distanceIntoSection /
+            scrollDistance
         );
 
 
-    /* -----------------------------
-       SCENE 1 → SCENE 2
-    ----------------------------- */
+    /* =====================================
+       SCENE 1
+       Share → exits left
+    ===================================== */
 
     const shareExit =
-        range(progress, 0.08, 0.27);
+        range(
+            progress,
+            0.05,
+            0.25
+        );
 
     shareScene.style.opacity =
         1 - shareExit;
 
     shareScene.style.transform =
         `translateX(${
-            -18 * shareExit
+            -20 * shareExit
         }%)`;
 
 
+    /* =====================================
+       SCENE 2
+       Think → enters from right
+    ===================================== */
+
     const thinkEnter =
-        range(progress, 0.17, 0.32);
+        range(
+            progress,
+            0.15,
+            0.30
+        );
 
     const thinkExit =
-        range(progress, 0.60, 0.75);
+        range(
+            progress,
+            0.62,
+            0.76
+        );
 
-    thinkScene.style.opacity =
+    const thinkVisibility =
         Math.min(
             thinkEnter,
             1 - thinkExit
         );
 
+    thinkScene.style.opacity =
+        thinkVisibility;
+
     thinkScene.style.transform =
         `translateX(${
-            14 * (1 - thinkEnter) -
-            18 * thinkExit
+            18 * (1 - thinkEnter) -
+            20 * thinkExit
         }%)`;
 
 
-    /* -----------------------------
-       THOUGHTS APPEAR
-    ----------------------------- */
+    /* =====================================
+       THOUGHT BUBBLES
+    ===================================== */
 
     thoughts.forEach(
         (thought, index) => {
 
             const start =
-                0.31 + index * 0.07;
+                0.31 +
+                index * 0.07;
 
             const end =
-                start + 0.08;
+                start + 0.07;
 
-            const appearance =
+            const appear =
                 range(
                     progress,
                     start,
                     end
                 );
 
-            const disappearance =
+            const disappear =
                 range(
                     progress,
                     0.58,
-                    0.67
+                    0.66
                 );
 
             const visibility =
                 Math.min(
-                    appearance,
-                    1 - disappearance
+                    appear,
+                    1 - disappear
                 );
 
             thought.style.opacity =
@@ -133,33 +172,39 @@ function updateDreamSession() {
 
             thought.style.transform =
                 `
-                translateY(${
-                    25 *
-                    (1 - appearance)
-                }px)
+                    translateY(${
+                        25 *
+                        (1 - appear)
+                    }px)
 
-                scale(${
-                    0.8 +
-                    appearance * 0.2
-                })
+                    scale(${
+                        0.8 +
+                        appear * 0.2
+                    })
                 `;
         }
     );
 
 
-    /* -----------------------------
-       SCENE 3 ENTERS
-    ----------------------------- */
+    /* =====================================
+       SCENE 3
+       Lab → enters from right
+    ===================================== */
 
     const labEnter =
-        range(progress, 0.65, 0.82);
+        range(
+            progress,
+            0.66,
+            0.82
+        );
 
     labScene.style.opacity =
         labEnter;
 
     labScene.style.transform =
         `translateX(${
-            14 * (1 - labEnter)
+            18 *
+            (1 - labEnter)
         }%)`;
 }
 
