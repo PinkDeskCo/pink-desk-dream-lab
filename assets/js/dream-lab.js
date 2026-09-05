@@ -24,200 +24,192 @@ const thoughts =
     );
 
 
-function clamp(value, min = 0, max = 1) {
-    return Math.min(
-        Math.max(value, min),
-        max
-    );
+let dreamSessionHasPlayed = false;
+
+
+/* =========================================
+   INITIAL STATE
+========================================= */
+
+function resetDreamSession() {
+
+    shareScene.style.transition = "none";
+    thinkScene.style.transition = "none";
+    labScene.style.transition = "none";
+
+    shareScene.style.opacity = "1";
+    shareScene.style.transform =
+        "translateX(0)";
+
+    thinkScene.style.opacity = "0";
+    thinkScene.style.transform =
+        "translateX(12%)";
+
+    labScene.style.opacity = "0";
+    labScene.style.transform =
+        "translateX(12%)";
+
+    thoughts.forEach((thought) => {
+        thought.style.opacity = "0";
+
+        thought.style.transform =
+            "translateY(20px) scale(.85)";
+    });
 }
 
 
-function range(progress, start, end) {
-    return clamp(
-        (progress - start) /
-        (end - start)
-    );
-}
+resetDreamSession();
 
 
-function updateDreamSession() {
+/* =========================================
+   PLAY DREAM SESSION
+========================================= */
 
-    if (
-        !dreamSession ||
-        !shareScene ||
-        !thinkScene ||
-        !labScene
-    ) {
+function playDreamSession() {
+
+    if (dreamSessionHasPlayed) {
         return;
     }
 
-
-    /* =====================================
-       CALCULATE SCROLL PROGRESS
-    ===================================== */
-
-    const sectionTop =
-        dreamSession.offsetTop;
-
-    const sectionHeight =
-        dreamSession.offsetHeight;
-
-    const scrollDistance =
-        sectionHeight -
-        window.innerHeight;
-
-    const distanceIntoSection =
-        window.scrollY -
-        sectionTop;
-
-    const progress =
-        clamp(
-            distanceIntoSection /
-            scrollDistance
-        );
+    dreamSessionHasPlayed = true;
 
 
-    /* =====================================
+    /* -------------------------------------
        SCENE 1
-       Share → exits left
-    ===================================== */
+       Conversation drifts away
+    ------------------------------------- */
 
-    const shareExit =
-        range(
-            progress,
-            0.05,
-            0.25
-        );
+    setTimeout(() => {
 
-    shareScene.style.opacity =
-        1 - shareExit;
+        shareScene.style.transition =
+            "opacity 1.4s ease, transform 1.4s ease";
 
-    shareScene.style.transform =
-        `translateX(${
-            -20 * shareExit
-        }%)`;
+        shareScene.style.opacity = "0";
+
+        shareScene.style.transform =
+            "translateX(-10%)";
 
 
-    /* =====================================
-       SCENE 2
-       Think → enters from right
-    ===================================== */
+        thinkScene.style.transition =
+            "opacity 1.4s ease, transform 1.4s ease";
 
-    const thinkEnter =
-        range(
-            progress,
-            0.15,
-            0.30
-        );
+        thinkScene.style.opacity = "1";
 
-    const thinkExit =
-        range(
-            progress,
-            0.62,
-            0.76
-        );
+        thinkScene.style.transform =
+            "translateX(0)";
 
-    const thinkVisibility =
-        Math.min(
-            thinkEnter,
-            1 - thinkExit
-        );
-
-    thinkScene.style.opacity =
-        thinkVisibility;
-
-    thinkScene.style.transform =
-        `translateX(${
-            18 * (1 - thinkEnter) -
-            20 * thinkExit
-        }%)`;
+    }, 1800);
 
 
-    /* =====================================
-       THOUGHT BUBBLES
-    ===================================== */
+    /* -------------------------------------
+       THOUGHT 1
+    ------------------------------------- */
 
-    thoughts.forEach(
-        (thought, index) => {
+    setTimeout(() => {
+        showThought(thoughts[0]);
+    }, 3400);
 
-            const start =
-                0.31 +
-                index * 0.07;
 
-            const end =
-                start + 0.07;
+    /* -------------------------------------
+       THOUGHT 2
+    ------------------------------------- */
 
-            const appear =
-                range(
-                    progress,
-                    start,
-                    end
-                );
+    setTimeout(() => {
+        showThought(thoughts[1]);
+    }, 4300);
 
-            const disappear =
-                range(
-                    progress,
-                    0.58,
-                    0.66
-                );
 
-            const visibility =
-                Math.min(
-                    appear,
-                    1 - disappear
-                );
+    /* -------------------------------------
+       THOUGHT 3
+    ------------------------------------- */
 
-            thought.style.opacity =
-                visibility;
+    setTimeout(() => {
+        showThought(thoughts[2]);
+    }, 5200);
+
+
+    /* -------------------------------------
+       SCENE 2 EXITS
+    ------------------------------------- */
+
+    setTimeout(() => {
+
+        thoughts.forEach((thought) => {
+
+            thought.style.transition =
+                "opacity .6s ease, transform .6s ease";
+
+            thought.style.opacity = "0";
 
             thought.style.transform =
-                `
-                    translateY(${
-                        25 *
-                        (1 - appear)
-                    }px)
+                "translateY(-15px) scale(.9)";
+        });
 
-                    scale(${
-                        0.8 +
-                        appear * 0.2
-                    })
-                `;
+
+        thinkScene.style.transition =
+            "opacity 1.3s ease, transform 1.3s ease";
+
+        thinkScene.style.opacity = "0";
+
+        thinkScene.style.transform =
+            "translateX(-10%)";
+
+
+        labScene.style.transition =
+            "opacity 1.3s ease, transform 1.3s ease";
+
+        labScene.style.opacity = "1";
+
+        labScene.style.transform =
+            "translateX(0)";
+
+    }, 7000);
+}
+
+
+/* =========================================
+   THOUGHT BUBBLE
+========================================= */
+
+function showThought(thought) {
+
+    if (!thought) {
+        return;
+    }
+
+    thought.style.transition =
+        "opacity .7s ease, transform .7s ease";
+
+    thought.style.opacity = "1";
+
+    thought.style.transform =
+        "translateY(0) scale(1)";
+}
+
+
+/* =========================================
+   START WHEN SECTION ENTERS VIEW
+========================================= */
+
+const observer =
+    new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+                    playDreamSession();
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.35
         }
     );
 
 
-    /* =====================================
-       SCENE 3
-       Lab → enters from right
-    ===================================== */
-
-    const labEnter =
-        range(
-            progress,
-            0.66,
-            0.82
-        );
-
-    labScene.style.opacity =
-        labEnter;
-
-    labScene.style.transform =
-        `translateX(${
-            18 *
-            (1 - labEnter)
-        }%)`;
+if (dreamSession) {
+    observer.observe(dreamSession);
 }
-
-
-window.addEventListener(
-    "scroll",
-    updateDreamSession,
-    { passive: true }
-);
-
-window.addEventListener(
-    "resize",
-    updateDreamSession
-);
-
-updateDreamSession();
