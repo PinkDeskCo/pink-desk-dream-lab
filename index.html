@@ -27,85 +27,71 @@
 
         <section class="dream-testimonial"></section>
 
-        <section
-            class="dream-session"
+        <section class="dream-session"
             id="dream-session"
         >
-
             <div class="dream-session__stage">
 
-                <div
-                    class="
-                        dream-session__scene
-                        dream-session__scene--share
-                    "
+                <video
+                    class="dream-session__video"
+                    muted
+                    playsinline
+                    preload="auto"
                 >
-                    <img
-                        src="assets/images/dream-session/scene-01-share.png"
-                        alt=""
+                    <source
+                        src="assets/images/dream-session/videos/dream-session.mp4"
+                        type="video/mp4"
                     >
-                </div>
+                </video>
 
-                <div
-                    class="
-                        dream-session__scene
-                        dream-session__scene--think
-                    "
-                >
-                    <img
-                        src="assets/images/dream-session/scene-02-think.png"
-                        alt=""
-                    >
+                <!-- Thinking overlays -->
+              <div class="dream-session__overlays">
 
-                    <div
-                        class="
-                            dream-thought
-                            dream-thought--one
+                    <div class="
+                            dream-thought-text
+                            dream-thought-text--one
                         "
                     >
-                        What if...?
+                        what if...
                     </div>
 
-                    <div
-                        class="
-                            dream-thought
-                            dream-thought--two
+                    <div class="
+                            dream-thought-text
+                            dream-thought-text--two
                         "
                     >
-                        A custom tool?
+                        a better way?
                     </div>
 
-                    <div
-                        class="
-                            dream-thought
-                            dream-thought--three
+                    <div class="
+                            dream-thought-spark
                         "
+                        aria-hidden="true"
                     >
-                        A better experience?
+                        ✦
                     </div>
-                </div>
 
-                <div
-                    class="
-                        dream-session__scene
-                        dream-session__scene--lab
-                    "
-                >
-                    <img
-                        src="assets/images/dream-session/scene-03-lab.png"
-                        alt=""
+                    <div class="dream-magic"
+                        aria-hidden="true"
                     >
+                        <span class="dream-magic__spark dream-magic__spark--1">✦</span>
+                        <span class="dream-magic__spark dream-magic__spark--2">✧</span>
+                        <span class="dream-magic__spark dream-magic__spark--3">✦</span>
+                        <span class="dream-magic__spark dream-magic__spark--4">✧</span>
+                    </div>
+
                 </div>
 
             </div>
-
         </section>
 
         <section class="dream-concept-card"></section>
 
     </main>
 
+
     <script src="assets/js/dream-lab.js"></script>
+
 
 </body>
 
