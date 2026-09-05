@@ -26,7 +26,7 @@ body {
 .dream-session {
     position: relative;
 
-    min-height: 100vh;
+    /* min-height: 100vh; */
 
     overflow: hidden;
 
@@ -42,16 +42,18 @@ body {
 .dream-session__stage {
     position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: min(1100px, 90vw);
 
-    width: 100%;
-    min-height: 100vh;
+    margin: 0 auto;
 
     overflow: hidden;
-}
 
+    border-radius: 26px;
+
+    box-shadow:
+        0 20px 55px
+        rgba(31, 58, 95, 0.10);
+}
 
 /* =========================================
    VIDEO
@@ -60,8 +62,8 @@ body {
 .dream-session__video {
     display: block;
 
-    width: min(1500px, 96vw);
-    max-height: 94vh;
+   width: 100%;
+    height: auto;
 
     object-fit: contain;
 
@@ -80,17 +82,6 @@ body {
     pointer-events: none;
 }
 
-
-/* =========================================
-   THINKING OVERLAYS
-========================================= */
-
-.dream-session__overlays {
-    position: absolute;
-    inset: 0;
-
-    pointer-events: none;
-}
 
 .dream-thought-text,
 .dream-thought-spark {
@@ -280,4 +271,802 @@ body {
             scale(1.15)
             rotate(18deg);
     }
+}
+
+/* =========================================
+   FROM THE LAB
+========================================= */
+
+.from-the-lab {
+    position: relative;
+
+    padding:
+        clamp(90px, 10vw, 150px)
+        24px;
+
+    background: #fbfaf7;
+
+    color: #1f3a5f;
+}
+
+.from-the-lab__inner {
+    width: min(1180px, 100%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.from-the-lab__header {
+    max-width: 760px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.from-the-lab__eyebrow {
+    margin: 0 0 14px;
+
+    color: #d95f91;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+}
+
+.from-the-lab__title {
+    margin: 0;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2.3rem,
+            5vw,
+            4.6rem
+        );
+
+    font-weight: 400;
+
+    line-height: 1.02;
+}
+
+.from-the-lab__title span {
+    display: block;
+
+    color: #d95f91;
+
+    font-style: italic;
+}
+
+.from-the-lab__intro {
+    max-width: 650px;
+
+    margin:
+        26px auto 0;
+
+    color: #5f6670;
+
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.lab-project {
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        clamp(34px, 5vw, 64px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f5f3 0%,
+            #ffffff 52%,
+            #f7edf2 100%
+        );
+
+    border:
+        1px solid
+        rgba(31, 58, 95, 0.12);
+
+    border-radius: 32px;
+
+    box-shadow:
+        0 24px 70px
+        rgba(31, 58, 95, 0.09);
+}
+
+.lab-project::before,
+.lab-project::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(239, 159, 189, 0.16),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.lab-project::before {
+    top: -70px;
+    left: -60px;
+}
+
+.lab-project::after {
+    right: -60px;
+    bottom: -80px;
+}
+
+
+/* =========================================
+   PROJECT NUMBER
+========================================= */
+
+.lab-project__number {
+    margin-bottom: 38px;
+
+    color: #9aa0a8;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================================
+   STORY
+========================================= */
+/* 
+.lab-project__story {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 34px;
+
+    margin-bottom: 28px;
+}
+
+.lab-project__story > div {
+    position: relative;
+
+    padding-top: 22px;
+}
+
+.lab-project__story > div::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 38px;
+    height: 2px;
+
+    background: #ef9fbd;
+} */
+
+/* 
+.lab-project__label {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #8c939c;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+.lab-project blockquote {
+    margin: 0;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.35rem;
+    font-style: italic;
+
+    line-height: 1.45;
+}
+
+.lab-project__idea p,
+.lab-project__result p {
+    margin: 0;
+
+    color: #5e6670;
+
+    line-height: 1.7;
+}
+
+.lab-project__result h3 {
+    margin:
+        0 0 12px;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.45rem;
+    font-weight: 400;
+} */
+
+/* =========================================
+   DREAM LAB EXPERIMENT
+========================================= */
+
+.lab-project__experiment {
+    position: relative;
+
+    margin-bottom: 34px;
+}
+
+
+/* Experiment header */
+
+.lab-project__experiment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 44px;
+}
+
+.lab-project__experiment-number {
+    color: #9098a3;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.17em;
+}
+
+.lab-project__status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 13px;
+
+    color: #b64f79;
+
+    background:
+        rgba(239, 159, 189, 0.1);
+
+    border:
+        1px solid
+        rgba(217, 95, 145, 0.42);
+
+    border-radius:
+        48% 52% 46% 54% /
+        53% 47% 55% 45%;
+
+    font-size: 0.66rem;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    transform: rotate(2deg);
+}
+
+
+/* =========================================
+   FORMULA
+========================================= */
+
+.lab-project__formula {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        150px
+        minmax(0, 1.15fr);
+
+    align-items: center;
+
+    gap: clamp(22px, 3vw, 48px);
+}
+
+
+/* Shared label */
+
+.lab-project__label {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #8c939c;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================================
+   THE SPARK
+========================================= */
+
+.lab-project__spark-card {
+    position: relative;
+
+    min-height: 220px;
+
+    display: flex;
+    align-items: center;
+
+    padding:
+        38px
+        clamp(28px, 3vw, 42px);
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border:
+        1px solid
+        rgba(31, 58, 95, 0.12);
+
+    border-radius:
+        52% 48% 50% 50% /
+        8% 9% 7% 10%;
+
+    box-shadow:
+        0 14px 36px
+        rgba(31, 58, 95, 0.06);
+}
+
+.lab-project__spark-card blockquote {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            1.3rem,
+            2vw,
+            1.75rem
+        );
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+.lab-project__quote-mark {
+    position: absolute;
+
+    top: -12px;
+    left: 18px;
+
+    color:
+        rgba(239, 159, 189, 0.32);
+
+    font-family: Georgia, serif;
+
+    font-size: 7rem;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   WHAT IF?
+========================================= */
+
+.lab-project__what-if {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 220px;
+}
+
+.lab-project__flask {
+    position: absolute;
+
+    color:
+        rgba(239, 159, 189, 0.12);
+
+    font-size: 8rem;
+
+    line-height: 1;
+
+    transform: rotate(-7deg);
+}
+
+.lab-project__what-if-text {
+    position: relative;
+    z-index: 1;
+
+    color: #d95f91;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.65rem;
+    font-style: italic;
+
+    transform: rotate(-5deg);
+}
+
+.lab-project__arrow {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 10px;
+
+    color: #d95f91;
+
+    font-size: 2.1rem;
+
+    transform: rotate(4deg);
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.lab-project__result-card {
+    position: relative;
+
+    min-height: 220px;
+
+    padding:
+        34px
+        clamp(28px, 3vw, 42px);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.94),
+            rgba(250, 235, 242, 0.7)
+        );
+
+    border:
+        1px solid
+        rgba(217, 95, 145, 0.22);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 16px 42px
+        rgba(31, 58, 95, 0.07);
+}
+
+.lab-project__result-card h3 {
+    max-width: 390px;
+
+    margin:
+        0 0 16px;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            1.55rem,
+            2.3vw,
+            2rem
+        );
+
+    font-weight: 400;
+
+    line-height: 1.08;
+}
+
+.lab-project__result-card p {
+    margin: 0;
+
+    color: #5e6670;
+
+    line-height: 1.7;
+}
+
+.lab-project__result-spark {
+    position: absolute;
+
+    top: 18px;
+    right: 22px;
+
+    color: #d95f91;
+
+    font-size: 1.25rem;
+}
+
+
+/* =========================================
+   LAB NOTE
+========================================= */
+
+.lab-project__note {
+    position: relative;
+
+    width: min(460px, 90%);
+
+    margin:
+        28px auto 8px;
+
+    padding:
+        18px 26px 20px;
+
+    background:
+        rgba(255, 246, 249, 0.92);
+
+    border:
+        1px solid
+        rgba(217, 95, 145, 0.24);
+
+    transform: rotate(-1.5deg);
+
+    box-shadow:
+        0 8px 22px
+        rgba(31, 58, 95, 0.05);
+}
+
+.lab-project__note::before {
+    content: "";
+
+    position: absolute;
+
+    top: -8px;
+    left: 50%;
+
+    width: 72px;
+    height: 17px;
+
+    background:
+        rgba(239, 159, 189, 0.22);
+
+    transform:
+        translateX(-50%)
+        rotate(2deg);
+}
+
+.lab-project__note-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #d95f91;
+
+    font-size: 0.64rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+.lab-project__note p {
+    margin: 0;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.05rem;
+    font-style: italic;
+
+    line-height: 1.55;
+}
+/* =========================================
+   VISUAL
+========================================= */
+
+.lab-project__visual {
+    position: relative;
+
+    padding: 8px 0 10px;
+}
+
+/* =========================================
+   FOOTER FLOW
+========================================= */
+
+.lab-project__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 34px;
+
+    color: #1f3a5f;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.lab-project__footer span:nth-child(2),
+.lab-project__footer span:nth-child(4) {
+    color: #d95f91;
+    font-size: 1rem;
+}
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.from-the-lab__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 32px;
+}
+
+.from-the-lab__nav {
+    display: grid;
+    place-items: center;
+
+    width: 46px;
+    height: 46px;
+
+    padding: 0;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        rgba(31, 58, 95, 0.18);
+
+    border-radius: 50%;
+
+    color: #1f3a5f;
+
+    font-size: 1.15rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.from-the-lab__nav:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    border-color: #ef9fbd;
+
+    background: #fff8fb;
+}
+
+.from-the-lab__nav:disabled {
+    opacity: 0.3;
+
+    cursor: default;
+}
+
+.from-the-lab__count {
+    color: #8c939c;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.lab-project__showcase {
+    display: block;
+
+    width: min(500px, 100%);
+    height: auto;
+
+    margin: 0 auto;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .lab-project__story {
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+    }
+
+
+
+    .lab-project__footer {
+        font-size: 0.66rem;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .lab-project__formula {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .lab-project__what-if {
+        min-height: 110px;
+    }
+
+    .lab-project__flask {
+        font-size: 6rem;
+    }
+
+    .lab-project__arrow {
+        transform: rotate(90deg);
+    }
+
+    .lab-project__experiment-header {
+        align-items: flex-start;
+    }
+
 }
