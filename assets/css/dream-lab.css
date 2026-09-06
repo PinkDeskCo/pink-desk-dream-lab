@@ -15,7 +15,7 @@ body {
 }
 
 body {
-    background: #fbfaf7;
+    background: #fdf6ed;
 }
 
 /* =========================================
@@ -25,102 +25,34 @@ body {
 .dream-hero {
     position: relative;
 
-    background: #fbfaf7;
+    background: #fdf6ed;
 
-    overflow: hidden;
+     overflow: visible;
+    padding-top: 60px;
 }
 .dream-hero__sky {
     position: relative;
 
-    min-height: 760px;
+    height: 600px;
+    min-height: 0;
 
     padding:
-        clamp(90px, 10vw, 145px)
+        42px
         24px
-        clamp(110px, 12vw, 165px);
+        55px;
 
-    overflow: hidden;
+    overflow: visible;
 
-    background:
-        radial-gradient(
-            ellipse at 66% 46%,
-            rgba(255, 255, 255, 0.30) 0%,
-            rgba(215, 226, 235, 0.18) 24%,
-            transparent 48%
-        ),
-        radial-gradient(
-            ellipse at 76% 32%,
-            rgba(255, 255, 255, 0.12),
-            transparent 30%
-        ),
-        radial-gradient(
-            ellipse at 18% 20%,
-            rgba(239, 159, 189, 0.08),
-            transparent 28%
-        ),
-        linear-gradient(
-            135deg,
-            #18324f 0%,
-            #102b46 48%,
-            #244b69 100%
-        );
-}
-.dream-hero__sky::after {
-    content: "";
+   background-image:
+    url("../images/hero/background.png");
 
-    position: absolute;
+background-repeat: no-repeat;
 
-    z-index: 1;
+background-position:
+    center top;
 
-    left: -3%;
-    right: -3%;
-    bottom: -1px;
-
-    height: 90px;
-
-    background:
-        radial-gradient(
-            ellipse at 4% 100%,
-            #fbfaf7 0 68%,
-            transparent 70%
-        ),
-        radial-gradient(
-            ellipse at 16% 100%,
-            #fbfaf7 0 64%,
-            transparent 66%
-        ),
-        radial-gradient(
-            ellipse at 29% 100%,
-            #fbfaf7 0 70%,
-            transparent 72%
-        ),
-        radial-gradient(
-            ellipse at 42% 100%,
-            #fbfaf7 0 63%,
-            transparent 65%
-        ),
-        radial-gradient(
-            ellipse at 55% 100%,
-            #fbfaf7 0 72%,
-            transparent 74%
-        ),
-        radial-gradient(
-            ellipse at 69% 100%,
-            #fbfaf7 0 65%,
-            transparent 67%
-        ),
-        radial-gradient(
-            ellipse at 83% 100%,
-            #fbfaf7 0 69%,
-            transparent 71%
-        ),
-        radial-gradient(
-            ellipse at 97% 100%,
-            #fbfaf7 0 64%,
-            transparent 66%
-        );
-
-    pointer-events: none;
+background-size:
+    100% 100%;
 }
 .dream-hero__inner {
     position: relative;
@@ -129,41 +61,70 @@ body {
     display: grid;
 
     grid-template-columns:
-        minmax(300px, 0.8fr)
-        minmax(520px, 1.2fr);
+        minmax(470px, 0.9fr)
+        minmax(600px, 1.1fr);
 
     align-items: center;
 
-    gap: clamp(30px, 5vw, 80px);
+    gap: 30px;
 
-    width: min(1320px, 100%);
+    width: min(1450px, 92%);
+    height: 100%;
 
     margin: 0 auto;
+    overflow: visible;
 }
 
 /* =========================================
-   HERO COPY
+   HERO CONTENT
 ========================================= */
-
 .dream-hero__content {
     position: relative;
-
     z-index: 4;
+
+    max-width: 560px;
+    margin-left: 74px;
 }
-.dream-hero__eyebrow {
-    margin: 0 0 18px;
 
-    color: #ef9fbd;
-
-    font-size: 0.72rem;
-    font-weight: 700;
-
-    letter-spacing: 0.19em;
-}
+/* =========================================
+   HERO TITLE
+========================================= */
 .dream-hero__title {
     margin: 0;
 
+    line-height: 1;
+}
+.dream-hero__title-script {
+    display: block;
+
     color: #ffffff;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+
+    font-size:
+        clamp(
+            2.9rem,
+            6.2vw,
+            6.5rem
+        );
+
+    font-weight: 400;
+
+    line-height: 0.88;
+    margin-bottom: 10px;
+}
+.dream-hero__title-build {
+    position: relative;
+
+    display: inline-block;
+
+    margin-top: -1px;
+    margin-left: 30px;
+
+    color: #ef8fb3;
 
     font-family:
         Georgia,
@@ -172,47 +133,134 @@ body {
 
     font-size:
         clamp(
-            3.4rem,
-            6.5vw,
-            6.4rem
+            2.6rem,
+            3.8vw,
+            4rem
         );
 
+    font-style: normal;
     font-weight: 400;
 
     line-height: 0.95;
 }
-.dream-hero__title span {
-    display: block;
+/* Brush stroke */
+.dream-hero__title-build::after {
+    content: "";
+
+    position: absolute;
+
+    left: 18%;
+    right: 8%;
+    bottom: -10px;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            #ef8fb3 12%,
+            #ef8fb3 82%,
+            transparent 100%
+        );
+
+    border-radius: 50%;
+
+    transform:
+        rotate(-1deg)
+        skewX(-10deg);
+
+    opacity: 0.78;
+}
+/* =========================================
+   SUPPORTING COPY
+========================================= */
+.dream-hero__copy {
+    position: relative;
+    z-index: 2;
+
+    width: fit-content;
+    max-width: 390px;
+
+     margin-top: 26px;
+
+    padding:
+        8px
+        18px
+        8px
+        0;
+}
+
+/* Creates a quieter patch behind the words */
+.dream-hero__copy::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    top: -16px;
+    right: -40px;
+    bottom: -16px;
+    left: -30px;
+
+    background:
+        radial-gradient(
+            ellipse at 32% 50%,
+            rgba(5, 30, 54, 0.94) 0%,
+            rgba(5, 30, 54, 0.76) 45%,
+            rgba(5, 30, 54, 0.30) 65%,
+            transparent 82%
+        );
+
+    pointer-events: none;
+}
+.dream-hero__copy-main {
+       margin: 0;
+
+    color: #ffffff;
+
+    font-size: 1.1rem;
+    font-weight: 400;
+
+    line-height: 1.45;
+    text-shadow:
+        0 1px 2px
+        rgba(0, 0, 0, 0.85);
+}
+.dream-hero__copy-emphasis {
+     margin: 4px 0 0;
 
     color: #ef9fbd;
 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1rem;
     font-style: italic;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    text-shadow:
+        0 1px 2px
+        rgba(0, 0, 0, 0.85);
 }
-.dream-hero__intro {
-    max-width: 500px;
-
-    margin:
-        28px 0
-        30px;
-
-    color:
-        rgba(255, 255, 255, 0.82);
-
-    font-size: 1.05rem;
-    line-height: 1.7;
-}
-.dream-hero__intro strong {
-    color: #ffffff;
-
-    font-weight: 600;
-}
+/* =========================================
+   HERO CTA
+========================================= */
 .dream-hero__cta {
     display: inline-flex;
     align-items: center;
 
-    gap: 12px;
+     gap: 10px;
 
-    padding: 14px 22px;
+     margin-top: 14px;
+
+    padding:
+        11px
+        18px;
 
     color: #17324f;
 
@@ -224,16 +272,16 @@ body {
 
     border-radius: 999px;
 
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     font-weight: 700;
 
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
 
     text-decoration: none;
 
     box-shadow:
-        0 10px 28px
-        rgba(0, 0, 0, 0.16);
+        0 8px 22px
+        rgba(0, 0, 0, 0.14);
 
     transition:
         transform 0.2s ease,
@@ -243,14 +291,38 @@ body {
     transform: translateY(-2px);
 
     box-shadow:
-        0 14px 34px
-        rgba(0, 0, 0, 0.2);
+        0 12px 28px
+        rgba(0, 0, 0, 0.18);
 }
-.dream-hero__aside {
-    margin: 26px 0 0;
+/* =========================================
+   WHAT'S YOUR WHAT IF?
+========================================= */
+.dream-hero__what-if {
+    position: relative;
 
-    color:
-        rgba(255, 255, 255, 0.66);
+    width: 250px;
+
+    margin-top: 10px;
+    align-content: center;
+}
+.dream-hero__what-if-brush {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+.dream-hero__what-if-text {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 0 22px;
+
+    color: #1f3a5f;
 
     font-family:
         Georgia,
@@ -259,25 +331,38 @@ body {
 
     font-size: 0.92rem;
     font-style: italic;
+    font-weight: 600;
 }
+.dream-hero__what-if-arrow {
+    display: inline-block;
 
+    transition: transform 0.2s ease;
+}
+.dream-hero__what-if:hover
+.dream-hero__what-if-arrow {
+    transform: translateX(4px);
+}
 /* =========================================
    ILLUSTRATED SCENE
 ========================================= */
 .dream-hero__scene {
     position: relative;
 
-    min-height: 530px;
+    min-height: 350px;
+    height: 100%;
+
+    overflow: visible;
 }
 .dream-hero__portrait {
     position: absolute;
 
     z-index: 4;
+    
 
-    left: 53%;
-    bottom: -58px;
+    left: 39%;
+    bottom: -85px;
 
-    width: min(540px, 72%);
+    width: min(520px, 52%);
 
     transform: translateX(-50%);
 }
@@ -293,104 +378,369 @@ body {
 ========================================= */
 .dream-hero__idea {
     position: absolute;
-
     z-index: 5;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    width: 150px;
-    min-height: 92px;
+    gap: 10px;
 
-    padding: 18px 20px;
+    padding: 16px 18px;
 
     color: #1f3a5f;
 
     background:
-        rgba(255, 252, 244, 0.94);
+        rgba(255, 252, 244, 0.96);
 
     border:
         1px solid
-        rgba(31, 58, 95, 0.16);
-
-    border-radius:
-        44% 56% 48% 52% /
-        55% 43% 57% 45%;
+        rgba(31, 58, 95, 0.13);
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     font-style: italic;
     font-weight: 600;
 
-    line-height: 1.25;
+    line-height: 1.16;
     text-align: center;
 
     box-shadow:
-        0 6px 18px
-        rgba(0, 0, 0, 0.08);
+        0 10px 18px rgba(15, 42, 70, 0.16),
+        0 3px 6px rgba(15, 42, 70, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65);
 }
+.dream-hero__idea-icon {
+    flex: 0 0 auto;
+
+    width: 32px;
+    height: 32px;
+
+    color: #1f3a5f;
+}
+.dream-hero__idea-icon svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.dream-hero__idea-label {
+    display: block;
+}
+/* =========================================
+   THOUGHT TRAILS
+========================================= */
+
 .dream-hero__idea::before,
 .dream-hero__idea::after {
     content: "";
 
     position: absolute;
 
-    background:
-        rgba(255, 252, 244, 0.94);
+    background: #fffdf8;
 
     border:
-        1px solid
-        rgba(31, 58, 95, 0.10);
+        1.5px solid
+        rgba(31, 58, 95, 0.55);
+
+    box-shadow:
+        0 3px 7px
+        rgba(15, 42, 70, 0.14);
+
+    pointer-events: none;
+}
+/* larger trail piece */
+.dream-hero__idea::before {
+    width: 18px;
+    height: 11px;
+
+    border-radius:
+        65% 35% 62% 38% /
+        48% 58% 42% 52%;
+}
+/* smaller trail piece */
+.dream-hero__idea::after {
+    width: 11px;
+    height: 7px;
+
+    border-radius:
+        40% 60% 35% 65% /
+        58% 42% 62% 38%;
+}
+
+/* =========================================
+   INDIVIDUAL THOUGHTS
+========================================= */
+/* ONLINE COURSE */
+.dream-hero__idea--one {
+    top: 10%;
+    left: 10%;
+
+    width: 158px;
+    min-height: 92px;
+
+    transform: rotate(-4deg);
+
+    border-radius:
+        42% 58% 48% 52% /
+        55% 43% 57% 45%;
+}
+/* CUSTOM TOOL */
+.dream-hero__idea--two {
+    top: 7%;
+    right: 3%;
+
+    width: 142px;
+    min-height: 104px;
+
+    transform: rotate(3deg);
+
+    border-radius:
+        55% 45% 62% 38% /
+        42% 57% 43% 58%;
+}
+/* PRODUCT */
+.dream-hero__idea--three {
+     top: 35%;
+    right: -2%;
+
+    width: 165px;
+    min-height: 100px;
+
+    transform: rotate(-2deg);
+
+    border-radius:
+        61% 39% 48% 52% /
+        49% 58% 42% 51%;
+}
+/* BOOKINGS */
+.dream-hero__idea--four {
+     top: 61%;
+    right: 7%;
+
+    width: 192px;
+    min-height: 88px;
+
+    transform: rotate(2deg);
+
+    border-radius:
+        48% 52% 59% 41% /
+        58% 43% 57% 42%;
+}
+/* COMMUNITY */
+.dream-hero__idea--five {
+     top: 43%;
+    left: 0;
+
+    width: 165px;
+    min-height: 108px;
+
+    transform: rotate(-3deg);
+
+    border-radius:
+        39% 61% 47% 53% /
+        56% 44% 61% 39%;
+}
+/* COMMUNITY . point thought trail toward her head */
+.dream-hero__idea--five::before {
+    content: "";
+
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    top: -14px;
+    right: 28px;
+    bottom: auto;
+    left: auto;
+
+    background: #fffdf8;
 
     border-radius: 50%;
 
-    z-index: -1;
+    box-shadow:
+        14px -15px 0 -4px #fffdf8;
 }
-.dream-hero__idea::before {
-    width: 58px;
-    height: 52px;
-
-    left: -18px;
-    top: 23px;
-}
-.dream-hero__idea::after {
-    width: 54px;
-    height: 48px;
-
-    right: -14px;
-    top: 18px;
-}
-.dream-hero__idea--one {
-    top: 3%;
-    left: 4%;
-}
-.dream-hero__idea--two {
-    top: 2%;
-    right: 18%;
-}
-.dream-hero__idea--three {
-    top: 26%;
-    right: 0;
-}
-.dream-hero__idea--four {
-    top: 52%;
-    right: 3%;
-}
-.dream-hero__idea--five {
-    top: 44%;
-    left: 0;
-}
+/* WHAT IF */
 .dream-hero__idea--six {
-    top: 25%;
-    left: 31%;
+     top: 2%;
+    left: 52%;
+    width: 155px;
+    min-height: 92px;
 
-    color: #d95f91;
+    padding: 22px 24px;
+
+    color: #173a63;
+    background:
+        linear-gradient(
+            145deg,
+            #f8b6ce 0%,
+            #ef9fbd 55%,
+            #e88caf 100%
+        );
+
+    border:
+        1px solid
+        rgba(190, 91, 130, 0.45);
+
+    border-radius:
+        48% 52% 46% 54% /
+        55% 46% 54% 45%;
+
+    box-shadow:
+         0 14px 24px rgba(15, 42, 70, 0.20),
+        0 4px 8px rgba(15, 42, 70, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.45);
+
+    transform: rotate(-2deg);
+
+    text-align: center;
+}
+.dream-hero__idea--six::before {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    left: 46%;
+    bottom: -17px;
+
+    background: #ef9fbd;
+
+    border-radius: 50%;
+
+    box-shadow:
+        12px 17px 0 -4px #ef9fbd;
+}
+.dream-hero__idea--six .dream-hero__idea-label {
+    color: #173a63;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-style: italic;
+
+    line-height: 1.15;
+}
+.dream-hero__idea--six .dream-hero__idea-heart {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #b94773;
 
     font-size: 1rem;
+}
+/* =========================================
+   THOUGHT-BUBBLE TRAILS
+   Every trail points toward her head
+========================================= */
+/* 1 . ONLINE COURSE
+   trail goes down-right */
+.dream-hero__idea--one::before {
+    right: 30px;
+    bottom: -10px;
+
+    transform: rotate(35deg);
+}
+.dream-hero__idea--one::after {
+    right: 17px;
+    bottom: -24px;
+
+    transform: rotate(42deg);
+}
+/* 2 . CUSTOM TOOL
+   trail goes down-left */
+.dream-hero__idea--two::before {
+    left: 28px;
+    bottom: -9px;
+
+    transform: rotate(-32deg);
+}
+.dream-hero__idea--two::after {
+    left: 15px;
+    bottom: -22px;
+
+    transform: rotate(-40deg);
+}
+/* 3 . PRODUCT
+   trail goes left/up toward her */
+.dream-hero__idea--three::before {
+     left: -8px;
+    top: 34px;
+
+    transform: rotate(-12deg);
+}
+.dream-hero__idea--three::after {
+    left: -19px;
+    top: 24px;
+
+    transform: rotate(-22deg);
+}
+/* 4 . BOOKINGS
+   trail goes up-left */
+.dream-hero__idea--four::before {
+    left: 32px;
+    top: -9px;
+
+    transform: rotate(30deg);
+}
+.dream-hero__idea--four::after {
+    left: 18px;
+    top: -22px;
+
+    transform: rotate(39deg);
+}
+/* 5 . COMMUNITY
+   trail goes up-right */
+.dream-hero__idea--five::before {
+   right: 25px;
+    top: -6px;
+
+    transform: rotate(-30deg);
+}
+.dream-hero__idea--five::after {
+     right: 10px;
+    top: -18px;
+
+    transform: rotate(-40deg);
+}
+/* 6 . WHAT IF
+   trail points straight down */
+.dream-hero__idea--six::before {
+    left: 48%;
+    bottom: -11px;
+
+    transform:
+        translateX(-50%)
+        rotate(12deg);
+}
+.dream-hero__idea--six::after {
+    left: 43%;
+    bottom: -25px;
+
+    transform:
+        translateX(-50%)
+        rotate(-8deg);
+}
+.dream-hero__idea--six::before,
+.dream-hero__idea--six::after {
+    background: #ef9fbd;
+
+    border-color:
+        rgba(185, 71, 115, 0.65);
 }
 
 /* =========================================
