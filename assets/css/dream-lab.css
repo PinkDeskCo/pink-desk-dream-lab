@@ -19,40 +19,228 @@ body {
 }
 
 /* =========================================
+   DREAM LAB HEADER
+========================================= */
+.dream-header {
+    position: absolute;
+    z-index: 50;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: transparent;
+}
+/* =========================================
+   HEADER INNER
+========================================= */
+.dream-header__inner {
+    position: relative;
+
+    width: 100%;
+    height: 105px;
+
+    margin: 0;
+}
+/* =========================================
+   LOGO
+========================================= */
+.dream-header__logo {
+    position: absolute;
+
+     top: 24px;
+    left: 4%;
+
+    display: block;
+
+    width: 220px;
+
+    z-index: 2;
+}
+.dream-header__logo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   NAVIGATION AREA
+========================================= */
+.dream-header__nav-wrap {
+    position: absolute;
+
+    top: 28px;
+    right: 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 30px;
+
+    width: auto;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+.dream-header__nav {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    margin: 0;
+    padding: 0;
+
+     top: 28px;
+    right: 4%;
+}
+
+.dream-header__nav a {
+    position: relative;
+
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+
+    color: #1f3a5f;
+
+    font-size: 0.76rem;
+    font-weight: 600;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+}
+
+.dream-header__nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ef9fbd;
+
+    transform: translateX(-50%);
+
+    transition:
+        width 0.2s ease;
+}
+.dream-header__nav a:hover {
+    color: #d95f91;
+}
+.dream-header__nav a:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   HEADER CTA
+========================================= */
+.dream-header__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding:
+        10px
+        20px;
+
+    margin: 0;
+
+    color: #1f3a5f;
+
+    background: #ef9fbd;
+
+    border-radius: 999px;
+
+    font-size: 0.70rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 6px 16px
+        rgba(31, 58, 95, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+.dream-header__cta:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px
+        rgba(31, 58, 95, 0.16);
+}
+
+
+
+/* =========================================
    DREAM LAB HERO
 ========================================= */
-
 .dream-hero {
     position: relative;
 
-    background: #fdf6ed;
+    min-height: 650px;
 
-     overflow: visible;
-    padding-top: 60px;
+    overflow: visible;
+
+    background-image:
+        url("../images/hero/background.png");
+
+    background-repeat: no-repeat;
+    background-position:
+            center 42px;
+
+        background-size:
+             100% calc(100% - 42px);
 }
 .dream-hero__sky {
     position: relative;
 
-    height: 600px;
+    height: 520px;
     min-height: 0;
 
-    padding:
-        42px
+     padding:
+        95px
         24px
-        55px;
+        45px;
 
     overflow: visible;
 
-   background-image:
+   /* background-image:
     url("../images/hero/background.png");
 
-background-repeat: no-repeat;
+    background-repeat: no-repeat;
 
-background-position:
-    center top;
+    background-position:
+        center top;
 
-background-size:
-    100% 100%;
+    background-size:
+        100% 100%; */
 }
 .dream-hero__inner {
     position: relative;
@@ -71,7 +259,9 @@ background-size:
     width: min(1450px, 92%);
     height: 100%;
 
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-top: 30px;
+
     overflow: visible;
 }
 
@@ -360,7 +550,7 @@ background-size:
     
 
     left: 39%;
-    bottom: -85px;
+    bottom: -135px;
 
     width: min(520px, 52%);
 
@@ -440,7 +630,6 @@ background-size:
 /* =========================================
    THOUGHT TRAILS
 ========================================= */
-
 .dream-hero__idea::before,
 .dream-hero__idea::after {
     content: "";
@@ -776,6 +965,247 @@ background-size:
 }
 
 /* =========================================
+   DREAM LAB NOTES
+========================================= */
+.dream-notes {
+    position: relative;
+
+    padding:
+        45px
+        5%
+        45px;
+
+    background-image:
+       linear-gradient(
+            rgba(251, 250, 247, 0.65),
+            rgba(251, 250, 247, 0.65)
+        ),
+        url("../images/testimonial/vintage.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: visible;
+
+      clip-path: polygon(
+        0 5%,
+        5% 3%,
+        11% 4%,
+        17% 2%,
+        24% 3.5%,
+        31% 2%,
+        39% 3.2%,
+        47% 1.8%,
+        55% 3.4%,
+        63% 2.2%,
+        71% 3.8%,
+        79% 2.1%,
+        87% 3.3%,
+        94% 2.4%,
+        100% 4%,
+
+        100% 96%,
+        95% 98%,
+        89% 96%,
+        82% 99%,
+        74% 97%,
+        66% 99%,
+        58% 97%,
+        49% 99%,
+        40% 97%,
+        32% 99%,
+        24% 97%,
+        16% 99%,
+        8% 97%,
+        0 99%
+    );
+}
+.dream-notes__inner {
+    display: grid;
+
+    grid-template-columns:
+        440px
+        max-content
+        250px;
+
+    align-items: center;
+    justify-content: center;
+
+    column-gap: clamp(35px, 3.5vw, 65px);
+
+    width: min(1500px, 94%);
+
+    margin: 0 auto;
+}
+
+/* =========================================
+   TESTIMONIAL NOTE
+========================================= */
+.dream-notes__testimonial {
+    position: relative;
+
+      justify-self: end;
+
+    width: min(100%, 640px);
+
+    transform: rotate(-2.5deg);
+
+    filter:
+        drop-shadow(
+            0 14px 13px
+            rgba(31, 58, 95, 0.14)
+        );
+
+    transition:
+        transform 0.25s ease;
+}
+.dream-notes__testimonial img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   CENTER MESSAGE
+========================================= */
+.dream-notes__message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    text-align: center;
+}
+.dream-notes__message p {
+    margin: 0;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            1.5rem,
+            2.1vw,
+            2.15rem
+        );
+
+    font-style: italic;
+
+    line-height: 1.2;
+}
+.dream-notes__doodle {
+    display: inline-block;
+
+    flex: 0 0 auto;
+
+    line-height: 1;
+}
+.dream-notes__doodle--flower {
+    color: #1f3a5f;
+
+    font-size: 2rem;
+
+    transform: rotate(-10deg);
+}
+.dream-notes__doodle--heart {
+    color: #ef9fbd;
+
+    font-size: 2.5rem;
+
+    transform: rotate(9deg);
+}
+
+/* =========================================
+   IDEA NOTE
+========================================= */
+.dream-notes__idea {
+    position: relative;
+
+     justify-self: start;
+
+    width: min(100%, 150px);
+
+    transform: rotate(3deg);
+
+    filter:
+        drop-shadow(
+            0 14px 13px
+            rgba(31, 58, 95, 0.15)
+        );
+
+    transition:
+        transform 0.25s ease;
+}
+.dream-notes__idea img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   PUSH PIN
+========================================= */
+.dream-notes__pushpin {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 2px;
+    left: 50%;
+
+    width: 17px;
+    height: 17px;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffffff 0%,
+            #8092a6 16%,
+            #1f3a5f 55%,
+            #112b49 100%
+        );
+
+    border-radius: 50%;
+
+    transform:
+        translateX(-50%);
+
+    box-shadow:
+        0 3px 5px
+        rgba(31, 58, 95, 0.32);
+}
+.dream-notes__pushpin::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -5px;
+
+    width: 7px;
+    height: 7px;
+
+    background:
+        rgba(31, 58, 95, 0.24);
+
+    border-radius: 50%;
+
+    transform:
+        translateX(-50%)
+        scaleY(0.45);
+
+    filter: blur(1px);
+}
+
+/* =========================================
    SECTION + STAGE
 ========================================= */
 .dream-session {
@@ -793,21 +1223,6 @@ background-size:
             #f8f8f6 100%
         );
 }
-.dream-session__stage {
-    position: relative;
-
-    width: min(1100px, 90vw);
-
-    margin: 0 auto;
-
-    overflow: hidden;
-
-    border-radius: 26px;
-
-    box-shadow:
-        0 20px 55px
-        rgba(31, 58, 95, 0.10);
-}
 /* =========================================
    VIDEO
 ========================================= */
@@ -821,7 +1236,6 @@ background-size:
 
     pointer-events: none;
 }
-
 /* =========================================
    OVERLAYS
 ========================================= */
@@ -831,6 +1245,122 @@ background-size:
 
     pointer-events: none;
 }
+/* =========================================
+   DREAM SESSION PLAY BUTTON
+========================================= */
+.dream-session__stage {
+    position: relative;
+}
+/* PLAY BUTTON */
+.dream-film__play {
+    position: absolute;
+    z-index: 20;
+
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    width: 84px;
+    height: 84px;
+
+    padding: 0;
+
+    color: #1f3a5f;
+
+    background:
+        rgba(255, 252, 247, 0.94);
+
+    border:
+        2px solid
+        rgba(239, 159, 189, 0.9);
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    box-shadow:
+        0 10px 28px
+        rgba(20, 43, 68, 0.24);
+
+    cursor: pointer;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+}
+/* PLAY BUTTON HOVER */
+.dream-film__play:hover {
+    background: #ffffff;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.06);
+
+    box-shadow:
+        0 14px 32px
+        rgba(20, 43, 68, 0.28);
+}
+/* PLAY ICON */
+.dream-film__play-icon {
+    display: block;
+
+    margin-left: 3px;
+
+    color: #ef7fac;
+
+    font-size: 1.4rem;
+
+    line-height: 1;
+}
+/* PLAY LABEL */
+.dream-film__play-label {
+    display: block;
+
+    color: #1f3a5f;
+
+    font-size: 0.58rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+/* HIDE WHILE VIDEO IS PLAYING */
+.dream-film__play.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+/* =========================================
+   KEEP OVERLAYS BELOW PLAY BUTTON
+========================================= */
+.dream-session__overlays {
+    position: absolute;
+    z-index: 10;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+
 .dream-thought-text,
 .dream-thought-spark {
     position: absolute;
@@ -1627,7 +2157,7 @@ background-size:
 
     .dream-hero__sky {
         padding-top: 90px;
-
+    }
    
 
     .dream-hero__inner {
@@ -1645,6 +2175,29 @@ background-size:
 
     .dream-hero__scene {
         min-height: 470px;
+    }
+     .dream-header__inner {
+        grid-template-columns:
+            1fr
+            auto;
+
+        min-height: 76px;
+    }
+
+    .dream-header__logo {
+        width: 175px;
+    }
+
+    .dream-header__nav {
+        display: none;
+    }
+
+    .dream-header__cta {
+        font-size: 0.68rem;
+
+        padding:
+            9px
+            14px;
     }
 
 }
@@ -1686,4 +2239,110 @@ background-size:
         align-items: flex-start;
     }
 
+}
+/* =========================================
+   HEADER MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .dream-header__inner {
+        height: 88px;
+    }
+
+    .dream-header__logo {
+        top: 14px;
+        left: 5%;
+
+        width: 170px;
+    }
+
+    .dream-header__nav {
+        display: none;
+    }
+
+    .dream-header__nav-wrap {
+        top: 18px;
+        right: 5%;
+    }
+
+    .dream-header__cta {
+        min-height: 36px;
+
+        padding:
+            9px
+            14px;
+
+        font-size: 0.64rem;
+    }
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .dream-header__logo {
+        width: 185px;
+    }
+
+    .dream-header__nav-wrap {
+        gap: 20px;
+    }
+
+    .dream-header__nav {
+        gap: 18px;
+    }
+
+    .dream-header__nav a {
+        font-size: 0.70rem;
+    }
+
+    .dream-header__cta {
+        padding:
+            9px
+            15px;
+
+        font-size: 0.65rem;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 820px) {
+
+    .dream-header__inner {
+        height: 80px;
+    }
+
+    .dream-header__logo {
+        top: 12px;
+        left: 5%;
+
+        width: 160px;
+    }
+
+    .dream-header__nav {
+        display: none;
+    }
+
+    .dream-header__nav-wrap {
+        top: 15px;
+        right: 5%;
+    }
+
+    .dream-header__cta {
+        min-height: 36px;
+
+        padding:
+            9px
+            13px;
+
+        font-size: 0.62rem;
+    }
 }

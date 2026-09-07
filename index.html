@@ -19,13 +19,63 @@
 
 <body>
 
-    <header class="dream-header"></header>
-
+    
     <main>
-
+        
         <section class="dream-hero"
-            id="dream-hero"
+        id="dream-hero"
         >
+            <header class="dream-header">
+
+                <div class="dream-header__inner">
+
+                    <a
+                        class="dream-header__logo"
+                        href="#dream-hero"
+                        aria-label="Pink Desk Dream Lab home"
+                    >
+                        <img
+                            src="assets/images/header/dream-lab-logo.svg"
+                            alt="Pink Desk Dream Lab"
+                        >
+                    </a>
+
+                    <div class="dream-header__nav-wrap">
+
+                        <nav
+                            class="dream-header__nav"
+                            aria-label="Primary navigation"
+                        >
+                            <a href="#dream-hero">
+                                Home
+                            </a>
+
+                            <a href="#dream-session">
+                                How It Works
+                            </a>
+
+                            <a href="#from-the-lab">
+                                Projects
+                            </a>
+
+                            <a href="#dream-services">
+                                Services
+                            </a>
+                        </nav>
+
+                        <a
+                            class="dream-header__cta"
+                            href="#dream-session"
+                        >
+                            Bring Me Your “What If”
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </header>
+
             <div class="dream-hero__sky">
 
                 <div class="dream-hero__stars" aria-hidden="true">
@@ -321,24 +371,92 @@
             </div>
         </section>
 
-        <section class="dream-testimonial"></section>
+        <section
+            class="dream-notes"
+            aria-label="Dream Lab notes"
+        >
+            <div class="dream-notes__inner">
+
+                <!-- CLIENT NOTE -->
+                <div class="dream-notes__testimonial">
+                    <img
+                        src="assets/images/testimonial/testimonial.svg"
+                        alt="Client testimonial from Bobbi W."
+                    >
+                </div>
+
+
+                <!-- CENTER MESSAGE -->
+                <div class="dream-notes__message">
+
+                    <span
+                        class="dream-notes__doodle dream-notes__doodle--flower"
+                        aria-hidden="true"
+                    >
+                        ❀
+                    </span>
+
+                    <p>
+                        Ideas come to life here.
+                    </p>
+
+                    <span
+                        class="dream-notes__doodle dream-notes__doodle--heart"
+                        aria-hidden="true"
+                    >
+                        ♡
+                    </span>
+
+                </div>
+
+
+                <!-- IDEA NOTE -->
+                <div class="dream-notes__idea">
+                    <img
+                        src="assets/images/testimonial/idea.svg"
+                        alt="Start with an idea. I'll make it happen."
+                    >
+
+                    <span
+                        class="dream-notes__pushpin"
+                        aria-hidden="true"
+                    ></span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- <section class="dream-testimonial"></section> -->
 
         <section class="dream-session"
             id="dream-session"
         >
             <div class="dream-session__stage">
 
-                <video
-                    class="dream-session__video"
+                <video class="dream-session__video"
+                    id="dream-session-video"
                     muted
                     playsinline
-                    preload="auto"
+                    preload="metadata"
                 >
                     <source
                         src="assets/images/dream-session/videos/dream-session.mp4"
                         type="video/mp4"
                     >
                 </video>
+
+                <button class="dream-film__play"
+                    type="button"
+                    aria-label="Play the Dream Session"
+                >
+                    <span class="dream-film__play-icon">
+                        ▶
+                    </span>
+
+                    <span class="dream-film__play-label">
+                        Play
+                    </span>
+                </button>
 
                 <!-- Thinking overlays -->
               <div class="dream-session__overlays">
