@@ -1,6 +1,9 @@
-/* =========================================
-   DREAM SESSION
-========================================= */
+@import url("./001-dream-header.css");
+@import url("./002-dream-hero.css");
+@import url("./003-dream-notes.css");
+@import url("./004-dream-session.css");
+@import url("./005-dream-unfold.css");
+@import url("./006-from-the-lab.css");
 
 * {
     box-sizing: border-box;
@@ -21,7 +24,7 @@ body {
 /* =========================================
    DREAM LAB HEADER
 ========================================= */
-.dream-header {
+/* .dream-header {
     position: absolute;
     z-index: 50;
 
@@ -31,22 +34,22 @@ body {
     width: 100%;
 
     background: transparent;
-}
+} */
 /* =========================================
    HEADER INNER
 ========================================= */
-.dream-header__inner {
+/* .dream-header__inner {
     position: relative;
 
     width: 100%;
     height: 105px;
 
     margin: 0;
-}
+} */
 /* =========================================
    LOGO
 ========================================= */
-.dream-header__logo {
+/* .dream-header__logo {
     position: absolute;
 
      top: 24px;
@@ -63,12 +66,12 @@ body {
 
     width: 100%;
     height: auto;
-}
+} */
 
 /* =========================================
    NAVIGATION AREA
 ========================================= */
-.dream-header__nav-wrap {
+/* .dream-header__nav-wrap {
     position: absolute;
 
     top: 28px;
@@ -86,12 +89,12 @@ body {
     padding: 0;
 
     background: transparent;
-}
+} */
 
 /* =========================================
    NAVIGATION
 ========================================= */
-.dream-header__nav {
+/* .dream-header__nav {
     display: flex;
     align-items: center;
 
@@ -147,12 +150,12 @@ body {
 }
 .dream-header__nav a:hover::after {
     width: 100%;
-}
+} */
 
 /* =========================================
    HEADER CTA
 ========================================= */
-.dream-header__cta {
+/* .dream-header__cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -194,7 +197,7 @@ body {
     box-shadow:
         0 10px 22px
         rgba(31, 58, 95, 0.16);
-}
+} */
 
 
 
@@ -206,7 +209,7 @@ body {
 
     min-height: 650px;
 
-    overflow: visible;
+    /* overflow: visible; */
 
     background-image:
         url("../images/hero/background.png");
@@ -230,6 +233,7 @@ body {
         45px;
 
     overflow: visible;
+    background:transparent;
 
    /* background-image:
     url("../images/hero/background.png");
@@ -968,10 +972,12 @@ body {
    DREAM LAB NOTES
 ========================================= */
 .dream-notes {
-    position: relative;
+    /* position: relative; */
+
+
 
     padding:
-        45px
+       45px
         5%
         45px;
 
@@ -2175,6 +2181,370 @@ body {
             rotate(18deg);
     }
 }
+
+
+/* =========================================
+   DREAM UNFOLD SECTION
+========================================= */
+
+.dream-unfold {
+    position: relative;
+
+    padding:
+        100px
+        24px
+        130px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fbfaf7 0%,
+            #f9f5f1 55%,
+            #fbfaf7 100%
+        );
+
+    overflow: hidden;
+}
+/* =========================================
+   SECTION INTRO
+========================================= */
+.dream-unfold__intro {
+    width: min(
+        680px,
+        90%
+    );
+
+    margin:
+        0
+        auto
+        65px;
+
+    text-align: center;
+}
+.dream-unfold__eyebrow {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #d986a8;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+.dream-unfold__title {
+    margin:
+        0
+        0
+        15px;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.25rem
+        );
+
+    font-weight: 400;
+    line-height: 1.05;
+}
+.dream-unfold__intro-copy {
+    margin: 0;
+
+    color: #66717d;
+
+    font-size:
+        clamp(
+            0.95rem,
+            1.3vw,
+            1.1rem
+        );
+
+    line-height: 1.7;
+}
+
+/* =========================================
+   INVITATION STAGE
+========================================= */
+.dream-invitation {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    perspective: 1400px;
+}
+
+/* =========================================
+   CLOSED INVITATION
+========================================= */
+.dream-invitation__closed {
+    position: relative;
+
+    width:
+        clamp(
+            310px,
+            34vw,
+            500px
+        );
+
+    aspect-ratio: 1.42 / 1;
+
+    padding: 0;
+
+    appearance: none;
+
+    background: transparent;
+
+    border: 0;
+
+    cursor: pointer;
+
+    transform:
+        rotate(-1.5deg);
+
+    transition:
+        transform 350ms ease;
+}
+.dream-invitation__closed:hover {
+    transform:
+        rotate(-1deg)
+        translateY(-5px);
+}
+
+/* =========================================
+   PAPER
+========================================= */
+.dream-invitation__paper {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        40px
+        65px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.75),
+            rgba(249,240,230,0.95)
+        );
+
+    border:
+        1px solid
+        rgba(150, 125, 110, 0.18);
+
+    box-shadow:
+        0 18px 35px
+        rgba(31, 58, 95, 0.14);
+
+    box-sizing: border-box;
+
+    clip-path: polygon(
+        1% 2%,
+        18% 0%,
+        34% 1%,
+        51% 0%,
+        68% 1.5%,
+        84% 0%,
+        99% 2%,
+        100% 24%,
+        99% 48%,
+        100% 74%,
+        98% 99%,
+        78% 98%,
+        58% 100%,
+        37% 98.5%,
+        17% 100%,
+        1% 98%,
+        0% 72%,
+        1% 48%,
+        0% 24%
+    );
+}
+
+/* =========================================
+   INVITATION TYPOGRAPHY
+========================================= */
+.dream-invitation__small {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 7px;
+
+    color: #d986a8;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+}
+.dream-invitation__name {
+    position: relative;
+
+    z-index: 2;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            1.65rem,
+            3vw,
+            2.6rem
+        );
+
+    line-height: 1;
+}
+.dream-invitation__prompt {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 50%;
+    bottom: 28px;
+
+    color: #1f3a5f;
+
+    font-size: 0.78rem;
+    font-style: italic;
+
+    transform:
+        translateX(-50%);
+
+    white-space: nowrap;
+}
+
+/* =========================================
+   PINK RIBBON
+========================================= */
+.dream-invitation__ribbon {
+    position: absolute;
+
+    z-index: 3;
+
+    top: -6%;
+    bottom: -6%;
+    left: 50%;
+
+    width: 48px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #dc86aa 0%,
+            #efabc4 25%,
+            #e391b1 52%,
+            #cf789d 100%
+        );
+
+    box-shadow:
+        3px 0 7px
+        rgba(99, 54, 75, 0.14);
+
+    transform:
+        translateX(-50%);
+}
+
+/* =========================================
+   WAX SEAL
+========================================= */
+.dream-invitation__seal {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 50%;
+    left: 50%;
+
+    display: grid;
+    place-items: center;
+
+    width: 72px;
+    height: 72px;
+
+    color: rgba(255,255,255,0.72);
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #f3a7c3 0%,
+            #dc7fa5 45%,
+            #bd668d 100%
+        );
+
+    border-radius:
+        48%
+        52%
+        46%
+        54% /
+        53%
+        45%
+        55%
+        47%;
+
+    box-shadow:
+        0 6px 10px
+        rgba(92, 45, 68, 0.25),
+        inset 0 2px 4px
+        rgba(255,255,255,0.28);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 2rem;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease;
+}
+
+.dream-invitation__closed:hover
+.dream-invitation__seal {
+    transform:
+        translate(
+            -50%,
+            -50%
+        )
+        scale(1.05);
+
+    box-shadow:
+        0 8px 15px
+        rgba(92, 45, 68, 0.3),
+        inset 0 2px 4px
+        rgba(255,255,255,0.3);
+}
+
 
 /* =========================================
    FROM THE LAB
