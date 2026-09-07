@@ -12,7 +12,6 @@ function hideThoughts() {
     });
 }
 
-
 /* =========================================
    DREAM SESSION VIDEO
 ========================================= */
@@ -27,7 +26,6 @@ const dreamMagic = document.querySelector(".dream-magic");
 /* =========================================
    HELPERS
 ========================================= */
-
 function hideDreamThoughts() {
     dreamThoughts.forEach((thought) => {
         thought.classList.remove(
@@ -46,7 +44,6 @@ function resetDreamEffects() {
         "is-active"
     );
 }
-
 /* =========================================
    PLAY BUTTON
 ========================================= */
