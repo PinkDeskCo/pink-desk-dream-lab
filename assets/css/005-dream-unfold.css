@@ -1,0 +1,1184 @@
+
+
+/* =========================================
+   DREAM UNFOLD SECTION
+========================================= */
+.dream-unfold {
+    position: relative;
+
+    padding:
+        100px
+        24px
+        130px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fbfaf7 0%,
+            #f9f5f1 55%,
+            #fbfaf7 100%
+        );
+
+    overflow: hidden;
+}
+/* =========================================
+   SECTION INTRO
+========================================= */
+.dream-unfold__intro {
+    width: min(
+        680px,
+        90%
+    );
+
+    margin:
+        0
+        auto
+        65px;
+
+    text-align: center;
+}
+.dream-unfold__eyebrow {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #d986a8;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+.dream-unfold__title {
+    margin:
+        0
+        0
+        15px;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.25rem
+        );
+
+    font-weight: 400;
+    line-height: 1.05;
+}
+.dream-unfold__intro-copy {
+    margin: 0;
+
+    color: #66717d;
+
+    font-size:
+        clamp(
+            0.95rem,
+            1.3vw,
+            1.1rem
+        );
+
+    line-height: 1.7;
+}
+/* ==================================================================
+   INVITATION STAGE
+===================================================================== */
+.dream-invitation {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    padding-bottom: 45px;
+
+    perspective: 1400px;
+}
+.dream-invitation__open {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-top: 34px;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.67rem;
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+
+    transition:
+        letter-spacing 250ms ease,
+        transform 250ms ease;
+}
+/* =========================================
+   PAPER
+========================================= */
+.dream-invitation__paper {
+    position: absolute;
+     z-index: 2;
+
+     inset:0;
+    /* inset:
+        10px
+        8px
+        8px
+        10px; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding:
+        92px
+        105px
+        60px
+        32px;
+
+    color: #1f3a5f;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 252, 246, 0.68),
+            rgba(244, 230, 218, 0.60)
+        ),
+        url("../images/testimonial/vintage.png");
+
+    background-size: cover;
+    background-position: center;
+
+    border:
+        1px solid
+        rgba(133, 103, 83, 0.22);
+
+   .dream-invitation__paper {
+        box-shadow:
+            0 12px 22px
+            rgba(38, 43, 53, 0.12),
+            0 3px 6px
+            rgba(38, 43, 53, 0.06),
+            inset 0 0 40px
+            rgba(128, 91, 66, 0.08);
+    }
+
+    box-sizing: border-box;
+
+    clip-path: polygon(
+        1% 2%,
+        17% 1%,
+        34% 1.6%,
+        51% 0.7%,
+        69% 1.5%,
+        85% 0.8%,
+        99% 2%,
+
+        99% 20%,
+        100% 39%,
+        99% 58%,
+        100% 78%,
+        98% 99%,
+
+        81% 98%,
+        63% 99.2%,
+        45% 98.4%,
+        27% 99.2%,
+        1% 98%,
+
+        0% 80%,
+        1% 61%,
+        0% 41%,
+        1% 21%
+    );
+}
+
+/* =========================================
+   INVITATION TYPOGRAPHY
+========================================= */
+.dream-invitation__small {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    margin:
+        0
+        0
+        5px;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+}
+.dream-invitation__name {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    width: 190px;
+
+    color: #1f3a5f;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+
+    font-size:
+        clamp(
+            2.75rem,
+            3.8vw,
+            3.65rem
+        );
+
+    font-weight: 400;
+
+    line-height: 0.78;
+
+    text-align: center;
+}
+.dream-invitation__name::after {
+    content: "♡";
+
+    display: block;
+
+    margin-top: 20px;
+
+    color: #e97fb2;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 1.45rem;
+    font-weight: 700;
+
+    line-height: 1;
+}
+.dream-invitation__teaser {
+    position: relative;
+    z-index: 2;
+
+    width: 175px;
+
+    margin: 28px 0 0;
+
+    color: #596577;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.72rem;
+    line-height: 1.5;
+
+    text-align: center;
+}
+/* =========================================
+   OPEN PROMPT
+========================================= */
+.dream-invitation__prompt {
+    position: absolute;
+
+    z-index: 7;
+
+    left: 43%;
+    bottom: -30px;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.78rem;
+    font-style: italic;
+
+    transform:
+        translateX(-50%);
+
+    white-space: nowrap;
+}
+/* =========================================
+   VERTICAL RIBBON
+========================================= */
+.dream-invitation__ribbon {
+    position: absolute;
+
+    z-index: 4;
+
+    top: 0;
+    bottom: 0;
+    left: 76%;
+
+    width: 27px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c87598 0%,
+            #e9a6bf 22%,
+            #f2bfd0 42%,
+            #dc91ad 68%,
+            #bd678b 100%
+        );
+
+    box-shadow:
+        -2px 0 4px
+        rgba(255, 255, 255, 0.3),
+        3px 0 7px
+        rgba(82, 47, 63, 0.16);
+
+    transform:
+        translateX(-50%);
+}
+.dream-invitation__ribbon-art {
+    position: absolute;
+
+    z-index: 6;
+
+    top: 52%;
+    left: 77%;
+
+    width: 69%;
+    height: auto;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(1deg);
+
+    transform-origin: center;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(
+            4px 7px 5px
+            rgba(62, 42, 44, 0.18)
+        );
+
+    transition:
+        transform 350ms ease;
+}
+
+/* =========================================
+   CLOSED INVITATION
+========================================= */
+.dream-invitation__closed {
+    position: relative;
+
+    width:
+        clamp(
+            300px,
+            26vw,
+            410px
+        );
+
+    aspect-ratio: 1 / 1;
+
+    padding: 0;
+
+    appearance: none;
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+
+    transform:
+        rotate(-0.75deg);
+
+    transform-origin: center;
+
+    transition:
+        transform 350ms ease;
+}
+.dream-invitation__closed::before,
+.dream-invitation__closed::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f7eee5 0%,
+            #efe1d5 100%
+        );
+
+    border:
+        1px solid
+        rgba(126, 96, 77, 0.18);
+
+    pointer-events: none;
+}
+/* back-most sheet */
+.dream-invitation__closed::before {
+    top: 8px;
+    right: -7px;
+    bottom: -9px;
+    left: 10px;
+
+    transform: rotate(0.7deg);
+
+    box-shadow:
+        0 14px 24px
+        rgba(48, 39, 34, 0.13);
+}
+.dream-invitation__closed::after {
+    top: 4px;
+    right: -3px;
+    bottom: -4px;
+    left: 5px;
+
+    transform: rotate(0.2deg);
+
+    box-shadow:
+        0 7px 12px
+        rgba(48, 39, 34, 0.08);
+}
+/* middle sheet */
+.dream-invitation__closed:hover {
+    transform:
+        rotate(-0.4deg)
+        translateY(-2px);
+}
+.dream-invitation__closed:hover
+.dream-invitation__open {
+    letter-spacing: 0.27em;
+
+    transform:
+        translateX(3px);
+}
+.dream-invitation__closed:hover
+.dream-invitation__ribbon-art {
+    transform:
+        translate(-50%, -50%)
+        rotate(1deg)
+        scale(1.025);
+
+    filter:
+        drop-shadow(
+            5px 9px 7px
+            rgba(62, 42, 44, 0.24)
+        );
+}
+.dream-invitation__closed:hover
+.dream-invitation__seal {
+    transform:
+        translate(
+            -50%,
+            -50%
+        )
+        scale(1.06);
+
+    box-shadow:
+        0 8px 13px
+        rgba(63, 35, 20, 0.36),
+
+        inset 0 2px 3px
+        rgba(255, 224, 180, 0.34),
+
+        inset 0 -3px 5px
+        rgba(67, 34, 16, 0.34);
+}
+
+/* ==================================================================
+   OPEN DREAM STORYBOARD . DESIGN STATE
+===================================================================== */
+.dream-storyboard {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        1.12fr
+        1.12fr
+        1.12fr
+        1.12fr
+        1.55fr;
+
+    width: min(1580px, 96vw);
+
+    min-height: 410px;
+
+    margin: 25px auto 0;
+
+    perspective: 1800px;
+
+    transform: rotate(-0.35deg);
+
+}
+.dream-storyboard__copy {
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+/*
+ * Temporary design state.
+ *
+ * Later this will be controlled by the
+ * opening interaction.
+ */
+.dream-storyboard--design {
+    display: grid;
+}
+
+/* =========================================
+   INDIVIDUAL PAPER PANELS
+========================================= */
+.dream-storyboard__panel {
+    position: relative;
+
+    min-width: 0;
+
+    padding:
+        34px
+        38px
+        28px;
+
+    color: #263d58;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 252, 246, 0.91),
+            rgba(247, 236, 225, 0.94)
+        ),
+        url("../images/testimonial/vintage.png");
+
+    background-size: cover;
+    background-position: center;
+
+    border: 0;
+
+    box-sizing: border-box;
+
+    /*
+     * IMPORTANT:
+     * Keep visible so the exterior paper
+     * shadow can extend below the panel.
+     */
+    overflow: visible;
+
+    transform-origin: top center;
+
+    /*
+     * Actual bowed paper silhouette.
+     */
+    border-radius:
+        50% 50% 50% 50%
+        /
+        8px 8px 12px 12px;
+
+    /*
+     * Physical contact shadow.
+     * This follows the panel's curved shape.
+     */
+    box-shadow:
+        0 14px 10px
+        rgba(74, 52, 40, 0.18),
+
+        0 5px 4px
+        rgba(74, 52, 40, 0.10),
+
+        inset 0 9px 13px
+        rgba(116, 84, 62, 0.045),
+
+        inset 0 -12px 16px
+        rgba(116, 84, 62, 0.075);
+}
+
+/* =========================================
+   AGED PAPER SURFACE
+========================================= */
+.dream-storyboard__panel::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 1;
+
+    inset: 0;
+
+    /*
+     * THIS is the important fix.
+     * The aging layer now follows the
+     * curved paper instead of remaining
+     * a square rectangle.
+     */
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(116, 78, 52, 0.13) 0%,
+            rgba(150, 108, 77, 0.065) 3%,
+            rgba(182, 145, 112, 0.025) 7%,
+            transparent 12%
+        ),
+
+        linear-gradient(
+            0deg,
+            rgba(101, 69, 48, 0.14) 0%,
+            rgba(142, 101, 72, 0.075) 3%,
+            rgba(180, 143, 108, 0.025) 7%,
+            transparent 13%
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(113, 82, 62, 0.03) 0%,
+            transparent 8%,
+            transparent 92%,
+            rgba(113, 82, 62, 0.04) 100%
+        );
+
+    pointer-events: none;
+}
+
+/* =========================================
+   KEEP CONTENT ABOVE PAPER EFFECTS
+========================================= */
+.dream-storyboard__panel > * {
+    position: relative;
+
+    z-index: 2;
+}
+
+/* =========================================
+   ACCORDION PAPER SHADING
+========================================= */
+.dream-storyboard__panel:nth-child(odd) {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.11) 0%,
+            transparent 15%,
+            transparent 84%,
+            rgba(79, 57, 45, 0.055) 100%
+        ),
+
+        linear-gradient(
+            rgba(255, 252, 246, 0.90),
+            rgba(247, 236, 225, 0.94)
+        ),
+
+        url("../images/testimonial/vintage.png");
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        2px 14px 10px
+        rgba(74, 52, 40, 0.18),
+
+        1px 5px 4px
+        rgba(74, 52, 40, 0.10),
+
+        inset 0 9px 13px
+        rgba(116, 84, 62, 0.045),
+
+        inset -8px 0 12px
+        rgba(73, 52, 41, 0.045),
+
+        inset 0 -12px 16px
+        rgba(116, 84, 62, 0.075);
+}
+
+.dream-storyboard__panel:nth-child(even) {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(79, 57, 45, 0.055) 0%,
+            transparent 16%,
+            transparent 86%,
+            rgba(255, 255, 255, 0.13) 100%
+        ),
+
+        linear-gradient(
+            rgba(249, 240, 231, 0.94),
+            rgba(255, 251, 245, 0.91)
+        ),
+
+        url("../images/testimonial/vintage.png");
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        -2px 14px 10px
+        rgba(74, 52, 40, 0.17),
+
+        -1px 5px 4px
+        rgba(74, 52, 40, 0.09),
+
+        inset 0 9px 13px
+        rgba(116, 84, 62, 0.045),
+
+        inset 8px 0 12px
+        rgba(73, 52, 41, 0.04),
+
+        inset 0 -12px 16px
+        rgba(116, 84, 62, 0.075);
+}
+
+/* =========================================
+   PHYSICAL FOLD CREASE
+========================================= */
+.dream-storyboard__panel:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 5;
+
+    /*
+     * Do NOT let the crease run all the way
+     * through the curved top/bottom edge.
+     */
+    top: 10px;
+    right: -7px;
+    bottom: 12px;
+
+    width: 14px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(87, 63, 49, 0.08) 0%,
+            rgba(87, 63, 49, 0.15) 34%,
+            rgba(255, 255, 255, 0.26) 55%,
+            rgba(255, 255, 255, 0.07) 72%,
+            transparent 100%
+        );
+
+    pointer-events: none;
+}
+
+/* =========================================
+   SLIGHTLY DIFFERENT PAPER BOWS
+========================================= */
+.dream-storyboard__panel:nth-child(1) {
+    border-radius:
+        50% 50% 50% 50%
+        /
+        7px 9px 13px 11px;
+}
+.dream-storyboard__panel:nth-child(2) {
+    border-radius:
+        50% 50% 50% 50%
+        /
+        9px 7px 11px 14px;
+}
+.dream-storyboard__panel:nth-child(3) {
+    border-radius:
+        50% 50% 50% 50%
+        /
+        7px 8px 14px 12px;
+}
+.dream-storyboard__panel:nth-child(4) {
+    border-radius:
+        50% 50% 50% 50%
+        /
+        9px 7px 12px 14px;
+}
+.dream-storyboard__panel:nth-child(5) {
+    border-radius:
+        50% 50% 50% 50%
+        /
+        8px 9px 14px 10px;
+}
+/* =========================================
+   PANEL NUMBER
+========================================= */
+.dream-storyboard__number {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    color:
+        rgba(31, 58, 95, 0.18);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 1.5rem;
+}
+
+/* =========================================
+   EYEBROWS
+========================================= */
+.dream-storyboard__eyebrow {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    padding:
+        3px
+        8px;
+
+    color: #1f3a5f;
+
+    background:
+        linear-gradient(
+            transparent 35%,
+            rgba(233, 127, 178, 0.30) 35%,
+            rgba(233, 127, 178, 0.30) 88%,
+            transparent 88%
+        );
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.19em;
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+.dream-storyboard__heading {
+    margin:
+        0
+        0
+        20px;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            1.25rem,
+            1.7vw,
+            1.7rem
+        );
+
+    font-weight: 400;
+
+    line-height: 1.15;
+}
+.dream-storyboard__copy {
+    margin: 0;
+
+    color: #5e6874;
+
+    font-size: 0.86rem;
+
+    line-height: 1.7;
+}
+
+/* =========================================
+   HANDWRITTEN NOTES
+========================================= */
+.dream-storyboard__note {
+    margin:
+        28px
+        0
+        0;
+
+    color: #d77fa4;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+
+    font-size: 1.35rem;
+
+    line-height: 1.1;
+
+    transform:
+        rotate(-3deg);
+}
+
+/* =========================================
+   PANEL 1 . IDEA
+========================================= */
+.dream-storyboard__doodle--spark {
+    display: block;
+
+    margin-top: 35px;
+
+    color: #dda550;
+
+    font-size: 2rem;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   PANEL 2 . CONVERSATION
+========================================= */
+.dream-storyboard__scribble {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin-top: 32px;
+
+    color: #d77fa4;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+
+    font-size: 1.25rem;
+
+    line-height: 1;
+}
+.dream-storyboard__scribble span:nth-child(1) {
+    transform: rotate(-3deg);
+}
+.dream-storyboard__scribble span:nth-child(2) {
+    margin-left: 24px;
+
+    transform: rotate(2deg);
+}
+.dream-storyboard__scribble span:nth-child(3) {
+    margin-left: 8px;
+
+    transform: rotate(-1deg);
+}
+
+
+/* =========================================
+   PANEL 3 . MAP
+========================================= */
+.dream-storyboard__map {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 38px;
+}
+.dream-storyboard__map-dot {
+    flex: 0 0 12px;
+
+    width: 12px;
+    height: 12px;
+
+    background: #e58aaf;
+
+    border:
+        3px solid
+        #f8e5ed;
+
+    border-radius: 50%;
+
+    box-sizing: content-box;
+}
+.dream-storyboard__map-line {
+    flex: 1;
+
+    height: 2px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #a7aeb5 0,
+            #a7aeb5 6px,
+            transparent 6px,
+            transparent 11px
+        );
+}
+
+/* =========================================
+   PANEL 4 . STORYBOARD
+========================================= */
+.dream-storyboard__panel--storyboard {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 249, 244, 0.96),
+            rgba(250, 229, 237, 0.92)
+        ),
+        url("../images/testimonial/vintage.png");
+
+    background-size: cover;
+}
+.dream-storyboard__frames {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        1fr
+        1.28fr;
+
+    gap: 7px;
+
+    margin-top: 30px;
+}
+.dream-storyboard__frames span {
+    aspect-ratio: 1.15 / 1;
+
+    background:
+        rgba(255, 255, 255, 0.48);
+
+    border:
+        1px solid
+        rgba(31, 58, 95, 0.28);
+
+    box-shadow:
+        inset 0 0 8px
+        rgba(31, 58, 95, 0.05);
+}
+.dream-storyboard__deliverable {
+    display: block;
+
+    margin-top: 25px;
+
+    color: #d77fa4;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   PANEL 5 . NEXT
+========================================= */
+.dream-storyboard__next-paths {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 28px;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 0.84rem;
+
+    text-align: center;
+}
+.dream-storyboard__or {
+    color: #d77fa4;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+
+    font-size: 1.3rem;
+}
+.dream-storyboard__cta {
+    display: block;
+
+    margin-top: 28px;
+
+    padding:
+        11px
+        14px;
+
+    color: #ffffff;
+
+    background: #1f3a5f;
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 5px 10px
+        rgba(31, 58, 95, 0.16);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-align: center;
+    text-decoration: none;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TEMPORARY OPEN-STATE DESIGN LAYOUT
+========================================= */
+
+.dream-invitation {
+    display: block;
+
+    width: 100%;
+}
+
+.dream-invitation__closed {
+    margin:
+        0
+        auto
+        55px;
+}
+
+.dream-storyboard {
+    width: 96vw;
+    max-width: 1720px;
+
+    height: 430px;
+    min-height: 0;
+
+    margin:
+        0
+        auto;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        1fr
+        1.4fr;
+
+    flex-shrink: 0;
+}

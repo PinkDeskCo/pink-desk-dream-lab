@@ -1,0 +1,768 @@
+
+
+/* =========================================
+   DREAM LAB HERO
+========================================= */
+.dream-hero {
+    position: relative;
+
+    min-height: 650px;
+
+    /* overflow: visible; */
+
+    background-image:
+        url("../images/hero/background.png");
+
+    background-repeat: no-repeat;
+    background-position:
+            center 42px;
+
+        background-size:
+             100% calc(100% - 42px);
+}
+.dream-hero__sky {
+    position: relative;
+
+    height: 520px;
+    min-height: 0;
+
+     padding:
+        95px
+        24px
+        45px;
+
+    overflow: visible;
+    background:transparent;
+
+   /* background-image:
+    url("../images/hero/background.png");
+
+    background-repeat: no-repeat;
+
+    background-position:
+        center top;
+
+    background-size:
+        100% 100%; */
+}
+.dream-hero__inner {
+    position: relative;
+    z-index: 3;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(470px, 0.9fr)
+        minmax(600px, 1.1fr);
+
+    align-items: center;
+
+    gap: 30px;
+
+    width: min(1450px, 92%);
+    height: 100%;
+
+    /* margin: 0 auto; */
+    margin-top: 30px;
+
+    overflow: visible;
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+.dream-hero__content {
+    position: relative;
+    z-index: 4;
+
+    max-width: 560px;
+    margin-left: 74px;
+}
+
+/* =========================================
+   HERO TITLE
+========================================= */
+.dream-hero__title {
+    margin: 0;
+
+    line-height: 1;
+}
+.dream-hero__title-script {
+    display: block;
+
+    color: #ffffff;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+
+    font-size:
+        clamp(
+            2.9rem,
+            6.2vw,
+            6.5rem
+        );
+
+    font-weight: 400;
+
+    line-height: 0.88;
+    margin-bottom: 10px;
+}
+.dream-hero__title-build {
+    position: relative;
+
+    display: inline-block;
+
+    margin-top: -1px;
+    margin-left: 30px;
+
+    color: #ef8fb3;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2.6rem,
+            3.8vw,
+            4rem
+        );
+
+    font-style: normal;
+    font-weight: 400;
+
+    line-height: 0.95;
+}
+/* Brush stroke */
+.dream-hero__title-build::after {
+    content: "";
+
+    position: absolute;
+
+    left: 18%;
+    right: 8%;
+    bottom: -10px;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            #ef8fb3 12%,
+            #ef8fb3 82%,
+            transparent 100%
+        );
+
+    border-radius: 50%;
+
+    transform:
+        rotate(-1deg)
+        skewX(-10deg);
+
+    opacity: 0.78;
+}
+/* =========================================
+   SUPPORTING COPY
+========================================= */
+.dream-hero__copy {
+    position: relative;
+    z-index: 2;
+
+    width: fit-content;
+    max-width: 390px;
+
+     margin-top: 26px;
+
+    padding:
+        8px
+        18px
+        8px
+        0;
+}
+
+/* Creates a quieter patch behind the words */
+.dream-hero__copy::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    top: -16px;
+    right: -40px;
+    bottom: -16px;
+    left: -30px;
+
+    background:
+        radial-gradient(
+            ellipse at 32% 50%,
+            rgba(5, 30, 54, 0.94) 0%,
+            rgba(5, 30, 54, 0.76) 45%,
+            rgba(5, 30, 54, 0.30) 65%,
+            transparent 82%
+        );
+
+    pointer-events: none;
+}
+.dream-hero__copy-main {
+       margin: 0;
+
+    color: #ffffff;
+
+    font-size: 1.1rem;
+    font-weight: 400;
+
+    line-height: 1.45;
+    text-shadow:
+        0 1px 2px
+        rgba(0, 0, 0, 0.85);
+}
+.dream-hero__copy-emphasis {
+     margin: 4px 0 0;
+
+    color: #ef9fbd;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    text-shadow:
+        0 1px 2px
+        rgba(0, 0, 0, 0.85);
+}
+/* =========================================
+   HERO CTA
+========================================= */
+.dream-hero__cta {
+    display: inline-flex;
+    align-items: center;
+
+     gap: 10px;
+
+     margin-top: 14px;
+
+    padding:
+        11px
+        18px;
+
+    color: #17324f;
+
+    background: #ef9fbd;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.3);
+
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 22px
+        rgba(0, 0, 0, 0.14);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+.dream-hero__cta:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px
+        rgba(0, 0, 0, 0.18);
+}
+/* =========================================
+   WHAT'S YOUR WHAT IF?
+========================================= */
+.dream-hero__what-if {
+    position: relative;
+
+    width: 250px;
+
+    margin-top: 10px;
+    align-content: center;
+}
+.dream-hero__what-if-brush {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+.dream-hero__what-if-text {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 0 22px;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.92rem;
+    font-style: italic;
+    font-weight: 600;
+}
+.dream-hero__what-if-arrow {
+    display: inline-block;
+
+    transition: transform 0.2s ease;
+}
+.dream-hero__what-if:hover
+.dream-hero__what-if-arrow {
+    transform: translateX(4px);
+}
+/* =========================================
+   ILLUSTRATED SCENE
+========================================= */
+.dream-hero__scene {
+    position: relative;
+
+    min-height: 350px;
+    height: 100%;
+
+    overflow: visible;
+}
+.dream-hero__portrait {
+    position: absolute;
+
+    z-index: 4;
+    
+
+    left: 39%;
+    bottom: -135px;
+
+    width: min(520px, 52%);
+
+    transform: translateX(-50%);
+}
+.dream-hero__portrait img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   IDEA BUBBLES
+========================================= */
+.dream-hero__idea {
+    position: absolute;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 16px 18px;
+
+    color: #1f3a5f;
+
+    background:
+        rgba(255, 252, 244, 0.96);
+
+    border:
+        1px solid
+        rgba(31, 58, 95, 0.13);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 600;
+
+    line-height: 1.16;
+    text-align: center;
+
+    box-shadow:
+        0 10px 18px rgba(15, 42, 70, 0.16),
+        0 3px 6px rgba(15, 42, 70, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+.dream-hero__idea-icon {
+    flex: 0 0 auto;
+
+    width: 32px;
+    height: 32px;
+
+    color: #1f3a5f;
+}
+.dream-hero__idea-icon svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.dream-hero__idea-label {
+    display: block;
+}
+/* =========================================
+   THOUGHT TRAILS
+========================================= */
+.dream-hero__idea::before,
+.dream-hero__idea::after {
+    content: "";
+
+    position: absolute;
+
+    background: #fffdf8;
+
+    border:
+        1.5px solid
+        rgba(31, 58, 95, 0.55);
+
+    box-shadow:
+        0 3px 7px
+        rgba(15, 42, 70, 0.14);
+
+    pointer-events: none;
+}
+/* larger trail piece */
+.dream-hero__idea::before {
+    width: 18px;
+    height: 11px;
+
+    border-radius:
+        65% 35% 62% 38% /
+        48% 58% 42% 52%;
+}
+/* smaller trail piece */
+.dream-hero__idea::after {
+    width: 11px;
+    height: 7px;
+
+    border-radius:
+        40% 60% 35% 65% /
+        58% 42% 62% 38%;
+}
+
+/* =========================================
+   INDIVIDUAL THOUGHTS
+========================================= */
+/* ONLINE COURSE */
+.dream-hero__idea--one {
+    top: 10%;
+    left: 10%;
+
+    width: 158px;
+    min-height: 92px;
+
+    transform: rotate(-4deg);
+
+    border-radius:
+        42% 58% 48% 52% /
+        55% 43% 57% 45%;
+}
+/* CUSTOM TOOL */
+.dream-hero__idea--two {
+    top: 7%;
+    right: 3%;
+
+    width: 142px;
+    min-height: 104px;
+
+    transform: rotate(3deg);
+
+    border-radius:
+        55% 45% 62% 38% /
+        42% 57% 43% 58%;
+}
+/* PRODUCT */
+.dream-hero__idea--three {
+     top: 35%;
+    right: -2%;
+
+    width: 165px;
+    min-height: 100px;
+
+    transform: rotate(-2deg);
+
+    border-radius:
+        61% 39% 48% 52% /
+        49% 58% 42% 51%;
+}
+/* BOOKINGS */
+.dream-hero__idea--four {
+     top: 61%;
+    right: 7%;
+
+    width: 192px;
+    min-height: 88px;
+
+    transform: rotate(2deg);
+
+    border-radius:
+        48% 52% 59% 41% /
+        58% 43% 57% 42%;
+}
+/* COMMUNITY */
+.dream-hero__idea--five {
+     top: 43%;
+    left: 0;
+
+    width: 165px;
+    min-height: 108px;
+
+    transform: rotate(-3deg);
+
+    border-radius:
+        39% 61% 47% 53% /
+        56% 44% 61% 39%;
+}
+/* COMMUNITY . point thought trail toward her head */
+.dream-hero__idea--five::before {
+    content: "";
+
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    top: -14px;
+    right: 28px;
+    bottom: auto;
+    left: auto;
+
+    background: #fffdf8;
+
+    border-radius: 50%;
+
+    box-shadow:
+        14px -15px 0 -4px #fffdf8;
+}
+/* WHAT IF */
+.dream-hero__idea--six {
+     top: 2%;
+    left: 52%;
+    width: 155px;
+    min-height: 92px;
+
+    padding: 22px 24px;
+
+    color: #173a63;
+    background:
+        linear-gradient(
+            145deg,
+            #f8b6ce 0%,
+            #ef9fbd 55%,
+            #e88caf 100%
+        );
+
+    border:
+        1px solid
+        rgba(190, 91, 130, 0.45);
+
+    border-radius:
+        48% 52% 46% 54% /
+        55% 46% 54% 45%;
+
+    box-shadow:
+         0 14px 24px rgba(15, 42, 70, 0.20),
+        0 4px 8px rgba(15, 42, 70, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.45);
+
+    transform: rotate(-2deg);
+
+    text-align: center;
+}
+.dream-hero__idea--six::before {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    left: 46%;
+    bottom: -17px;
+
+    background: #ef9fbd;
+
+    border-radius: 50%;
+
+    box-shadow:
+        12px 17px 0 -4px #ef9fbd;
+}
+.dream-hero__idea--six .dream-hero__idea-label {
+    color: #173a63;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-style: italic;
+
+    line-height: 1.15;
+}
+.dream-hero__idea--six .dream-hero__idea-heart {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #b94773;
+
+    font-size: 1rem;
+}
+/* =========================================
+   THOUGHT-BUBBLE TRAILS
+   Every trail points toward her head
+========================================= */
+/* 1 . ONLINE COURSE
+   trail goes down-right */
+.dream-hero__idea--one::before {
+    right: 30px;
+    bottom: -10px;
+
+    transform: rotate(35deg);
+}
+.dream-hero__idea--one::after {
+    right: 17px;
+    bottom: -24px;
+
+    transform: rotate(42deg);
+}
+/* 2 . CUSTOM TOOL
+   trail goes down-left */
+.dream-hero__idea--two::before {
+    left: 28px;
+    bottom: -9px;
+
+    transform: rotate(-32deg);
+}
+.dream-hero__idea--two::after {
+    left: 15px;
+    bottom: -22px;
+
+    transform: rotate(-40deg);
+}
+/* 3 . PRODUCT
+   trail goes left/up toward her */
+.dream-hero__idea--three::before {
+     left: -8px;
+    top: 34px;
+
+    transform: rotate(-12deg);
+}
+.dream-hero__idea--three::after {
+    left: -19px;
+    top: 24px;
+
+    transform: rotate(-22deg);
+}
+/* 4 . BOOKINGS
+   trail goes up-left */
+.dream-hero__idea--four::before {
+    left: 32px;
+    top: -9px;
+
+    transform: rotate(30deg);
+}
+.dream-hero__idea--four::after {
+    left: 18px;
+    top: -22px;
+
+    transform: rotate(39deg);
+}
+/* 5 . COMMUNITY
+   trail goes up-right */
+.dream-hero__idea--five::before {
+   right: 25px;
+    top: -6px;
+
+    transform: rotate(-30deg);
+}
+.dream-hero__idea--five::after {
+     right: 10px;
+    top: -18px;
+
+    transform: rotate(-40deg);
+}
+/* 6 . WHAT IF
+   trail points straight down */
+.dream-hero__idea--six::before {
+    left: 48%;
+    bottom: -11px;
+
+    transform:
+        translateX(-50%)
+        rotate(12deg);
+}
+.dream-hero__idea--six::after {
+    left: 43%;
+    bottom: -25px;
+
+    transform:
+        translateX(-50%)
+        rotate(-8deg);
+}
+.dream-hero__idea--six::before,
+.dream-hero__idea--six::after {
+    background: #ef9fbd;
+
+    border-color:
+        rgba(185, 71, 115, 0.65);
+}
+
+/* =========================================
+   STARS
+========================================= */
+.dream-hero__star {
+    position: absolute;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 1rem;
+}
+.dream-hero__star--1 {
+    top: 15%;
+    left: 7%;
+}
+.dream-hero__star--2 {
+    top: 30%;
+    left: 48%;
+}
+.dream-hero__star--3 {
+    top: 12%;
+    right: 9%;
+}
+.dream-hero__star--4 {
+    top: 55%;
+    left: 41%;
+}
+.dream-hero__star--5 {
+    top: 42%;
+    right: 4%;
+}
