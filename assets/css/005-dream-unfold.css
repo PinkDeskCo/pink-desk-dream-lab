@@ -992,7 +992,7 @@
 
     width: 100%;
 
-    margin-top: 38px;
+    margin-top: 14px;
 }
 .dream-storyboard__map-dot {
     flex: 0 0 12px;
@@ -1144,11 +1144,91 @@
     text-transform: uppercase;
 }
 
+/* =========================================
+   STORYBOARD ILLUSTRATIONS
+========================================= */
+.dream-storyboard__icon {
+    position: absolute;
+    z-index: 3;
+
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    pointer-events: none;
+}
+
+/* 01 . IDEA */
+.dream-storyboard__icon--idea {
+    width: 54px;
+
+    right: 68px;
+    top: 320px;
+
+    transform: rotate(5deg);
+}
+
+/* 02 . TALK */
+.dream-storyboard__icon--talk {
+    width: 72px;
+
+    right: 24px;
+    top: 315px;
+
+    transform: rotate(-4deg);
+}
+
+/* 03 . THINK / MAP */
+.dream-storyboard__icon--map {
+    width: 88px;
+
+    right: 45px;
+    top: 352px;
+
+    transform: rotate(3deg);
+}
+
+/* 04 . STORYBOARD */
+.dream-storyboard__icon--storyboard {
+    width: 92px;
+
+    right: 88px;
+    top: 322px;
+
+    transform: rotate(-3deg);
+}
+
+/* =========================================
+   PANEL 05 PAPERCLIP
+========================================= */
+.dream-storyboard__paperclip {
+    position: absolute;
+
+    z-index: 8;
+
+    width: 82px;
+    height: auto;
+
+    top: -20px;
+    right: 28px;
+
+    transform: rotate(17deg);
+
+    filter:
+        drop-shadow(
+            2px 5px 3px
+            rgba(61, 43, 34, 0.18)
+        );
+
+    pointer-events: none;
+}
 
 /* =========================================
    TEMPORARY OPEN-STATE DESIGN LAYOUT
 ========================================= */
-
 .dream-invitation {
     display: block;
 
