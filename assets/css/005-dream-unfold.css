@@ -6,24 +6,106 @@
 .dream-unfold {
     position: relative;
 
-    padding:
-        100px
-        24px
-        130px;
+    z-index: 1;
 
-    background:
-        linear-gradient(
-            180deg,
-            #fbfaf7 0%,
-            #f9f5f1 55%,
-            #fbfaf7 100%
-        );
+    padding:
+        80px
+        24px
+        50px;
+
+    background-image:
+        url("../images/dream-unfold/pink-bkground.png");
+
+    background-position:
+        center top;
+
+   background-size: 100% 100%;
+
+    background-repeat:
+        no-repeat;
 
     overflow: hidden;
+}
+.dream-unfold::before,
+.dream-unfold::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 0;
+
+    border-radius: 50%;
+
+    filter: blur(28px);
+
+    opacity: 0.45;
+
+    pointer-events: none;
+}
+.dream-unfold::before {
+
+      content: "";
+
+    position: absolute;
+
+    z-index: 0;
+
+    /*
+     * Extend the WATERCOLOUR upward,
+     * without moving the section content.
+     */
+    top: -45px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background:
+        url("../images/dream-unfold/pink-bkground.png");
+    
+    background-position:
+        center top;
+
+    background-size:
+        cover;
+
+    background-repeat:
+        no-repeat;
+
+    pointer-events: none;
+    /* width: 380px;
+    height: 220px;
+
+    top: 70px;
+    left: -80px;
+
+    background:
+        rgba(235, 167, 193, 0.24);
+
+    transform:
+        rotate(-8deg); */
+}
+.dream-unfold::after {
+    width: 420px;
+    height: 250px;
+
+    right: -110px;
+    bottom: 80px;
+
+    background:
+        rgba(178, 199, 225, 0.20);
+
+    transform:
+        rotate(7deg);
 }
 /* =========================================
    SECTION INTRO
 ========================================= */
+.dream-unfold__intro,
+.dream-invitation,
+.dream-unfold__note {
+    position: relative;
+    z-index: 2;
+}
 .dream-unfold__intro {
     width: min(
         680px,
@@ -33,7 +115,7 @@
     margin:
         0
         auto
-        65px;
+        28px;
 
     text-align: center;
 }
@@ -88,20 +170,94 @@
 
     line-height: 1.7;
 }
+.dream-unfold__note {
+    position: absolute;
+
+    z-index: 3;
+
+    margin: 0;
+
+    color: #1f3a5f;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+
+    font-size:
+        clamp(
+            1.35rem,
+            1.7vw,
+            1.8rem
+        );
+
+    line-height: 1.05;
+
+    pointer-events: none;
+}
+.dream-unfold__note--left {
+    top: 105px;
+    left: 6%;
+
+    transform: rotate(-7deg);
+}
+.dream-unfold__note--right {
+    top: 110px;
+    right: 6%;
+
+    text-align: center;
+
+    transform: rotate(5deg);
+}
+.dream-unfold__arrow {
+    display: block;
+
+    margin-top: 4px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 2rem;
+
+    color: #e68fb1;
+
+    transform: rotate(8deg);
+}
+
+.dream-unfold__coffee {
+    position: absolute;
+
+    z-index: 1;
+
+    left: 3%;
+    bottom: -20px;
+
+    width: 150px;
+    height: auto;
+
+    transform: rotate(-8deg);
+
+    opacity: 0.9;
+
+    pointer-events: none;
+}
 /* ==================================================================
    INVITATION STAGE
 ===================================================================== */
 .dream-invitation {
     position: relative;
+    margin-top: -75px;
 
     display: flex;
     justify-content: center;
 
     width: 100%;
+    height: 480px;
 
     padding-bottom: 45px;
 
-    perspective: 1400px;
+    perspective: 1800px;
 }
 .dream-invitation__open {
     position: relative;
@@ -109,7 +265,7 @@
 
     display: block;
 
-    margin-top: 34px;
+    margin-top: 24px;
 
     color: #1f3a5f;
 
@@ -553,9 +709,6 @@
  * Later this will be controlled by the
  * opening interaction.
  */
-.dream-storyboard--design {
-    display: grid;
-}
 
 /* =========================================
    INDIVIDUAL PAPER PANELS
@@ -1225,23 +1378,243 @@
 
     pointer-events: none;
 }
-
-/* =========================================
-   TEMPORARY OPEN-STATE DESIGN LAYOUT
-========================================= */
+/* ==================================================================
+   DREAM INVITATION . SHARED PHYSICAL STAGE
+===================================================================== */
 .dream-invitation {
+    position: relative;
+
     display: block;
 
     width: 100%;
+    height: 560px;
+
+    perspective: 1800px;
+
+    overflow: visible;
 }
 
+/* =========================================
+   CLOSED COVER
+========================================= */
 .dream-invitation__closed {
-    margin:
-        0
-        auto
-        55px;
+    position: absolute;
+
+    z-index: 10;
+
+    top: 50%;
+    left: 50%;
+
+    margin: 0;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-0.75deg);
+
+    transform-origin:
+        left center;
+
+    transform-style: preserve-3d;
+
+    backface-visibility: hidden;
+
+    transition:
+        transform 1100ms
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+        opacity 140ms ease 380ms,
+        visibility 0s linear 540ms;
+     
+}
+/* Keep the subtle hover */
+
+.dream-invitation__closed:hover {
+    transform:
+        translate(-50%, calc(-50% - 2px))
+        rotate(-0.4deg);
 }
 
+/* =========================================
+   STORYBOARD POSITION
+========================================= */
+
+.dream-storyboard {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 50%;
+    left: 50%;
+
+    width: 96vw;
+    max-width: 1720px;
+
+    height: 430px;
+
+    margin: 0;
+
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: none;
+
+    transform-style: preserve-3d;
+
+
+        transform:
+        translate(
+            calc(-50% + 41%),
+            -50%
+        )
+        rotate(-0.35deg);
+
+    transition:
+        transform 1300ms
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        650ms;
+}
+
+/* =========================================
+   PANELS BEGIN FOLDED
+========================================= */
+.dream-storyboard__panel {
+    opacity: 0;
+
+    transform-origin:
+        left center;
+
+    transform:
+        rotateY(-88deg)
+        scaleX(0.94);
+
+    transition:
+        transform 900ms
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+        opacity 180ms ease;
+}
+
+/* =========================================
+   RIBBON RELEASE
+========================================= */
+.dream-invitation__ribbon-art {
+    transition:
+        transform 600ms
+        cubic-bezier(
+            0.4,
+            0,
+            0.2,
+            1
+        ),
+        opacity 450ms ease,
+        filter 450ms ease;
+}
+.dream-invitation.is-opening
+.dream-invitation__ribbon-art {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -42%)
+        rotate(6deg)
+        scale(0.96);
+
+    filter:
+        drop-shadow(
+            8px 14px 8px
+            rgba(62, 42, 44, 0.08)
+        );
+}
+
+/* =========================================
+   COVER PAGE TURN
+========================================= */
+.dream-invitation.is-open
+.dream-invitation__closed {
+    transform:
+        translate(-50%, -50%)
+        rotateY(-82deg)
+        scale(0.96);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+/* =========================================
+   STORYBOARD OPEN STATE
+========================================= */
+.dream-invitation.is-open
+.dream-storyboard {
+    pointer-events: auto;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        )
+        rotate(-0.35deg);
+}
+/* =========================================
+   UNFOLD PANELS
+========================================= */
+.dream-invitation.is-open
+.dream-storyboard__panel {
+    opacity: 1;
+
+    transform:
+        rotateY(0deg)
+        scaleX(1);
+}
+
+.dream-invitation.is-open
+.dream-storyboard__panel:nth-child(1) {
+    transition-delay: 260ms;
+}
+.dream-invitation.is-open
+.dream-storyboard__panel:nth-child(2) {
+    transition-delay: 500ms;
+}
+.dream-invitation.is-open
+.dream-storyboard__panel:nth-child(3) {
+    transition-delay: 760ms;
+}
+.dream-invitation.is-open
+.dream-storyboard__panel:nth-child(4) {
+    transition-delay: 1020ms;
+}
+.dream-invitation.is-open
+.dream-storyboard__panel:nth-child(5) {
+    transition-delay: 1280ms;
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+@media (prefers-reduced-motion: reduce) {
+
+    .dream-invitation__closed,
+    .dream-invitation__ribbon-art,
+    .dream-storyboard,
+    .dream-storyboard__panel {
+        transition: none;
+    }
+}
+
+/* 
 .dream-storyboard {
     width: 96vw;
     max-width: 1720px;
@@ -1261,4 +1634,4 @@
         1.4fr;
 
     flex-shrink: 0;
-}
+} */

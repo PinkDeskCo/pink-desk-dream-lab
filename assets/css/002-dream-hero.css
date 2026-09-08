@@ -5,6 +5,7 @@
 ========================================= */
 .dream-hero {
     position: relative;
+    z-index: 3;
 
     min-height: 650px;
 
@@ -22,6 +23,7 @@
 }
 .dream-hero__sky {
     position: relative;
+  
 
     height: 520px;
     min-height: 0;

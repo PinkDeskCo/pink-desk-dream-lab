@@ -5,12 +5,15 @@
 .dream-notes {
     /* position: relative; */
 
+    z-index:1;
+       padding-top: calc(110px + 70px);
+       padding-bottom: 130px;
+        margin-top: -110px;
 
-
-    padding:
+    /* padding:
        45px
         5%
-        45px;
+        45px; */
 
     background-image:
        linear-gradient(
@@ -41,6 +44,7 @@
         87% 3.3%,
         94% 2.4%,
         100% 4%,
+
 
         100% 96%,
         95% 98%,

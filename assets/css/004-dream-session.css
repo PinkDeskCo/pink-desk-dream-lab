@@ -4,6 +4,7 @@
 ========================================= */
 .dream-session {
     position: relative;
+     z-index: 3;
 
     width: 100%;
     height: clamp(
@@ -14,9 +15,10 @@
 
     padding: 0;
 
+
     background: #fbfaf7;
 
-    overflow: hidden;
+    overflow: visible;
 }
 /* =========================================
    FULL-WIDTH WATERCOLOR WORLD
@@ -29,10 +31,20 @@
 
     margin: 0;
 
-    overflow: hidden;
+    overflow: visible;
+
+    /* filter:
+        drop-shadow(
+        0 7px 4px
+        rgba(31, 58, 95, 0.16)
+    ); */
 
     filter:
-        drop-shadow(
+    drop-shadow(
+        0 -7px 6px
+        rgba(31, 58, 95, 0.20)
+    )
+    drop-shadow(
         0 7px 4px
         rgba(31, 58, 95, 0.16)
     );
@@ -40,14 +52,15 @@
 .dream-session__world-image {
     position: absolute;
 
-    z-index: 0;
+    z-index: 1;
 
     inset: 0;
 
     display: block;
 
+    top: -65px;
     width: 100%;
-    height: 100%;
+    height: calc(100% + 95px);
 
     max-width: none;
     max-height: none;
@@ -61,8 +74,27 @@
      */
     object-fit: fill;
     clip-path: polygon(
-        0 0,
-        100% 0,
+        /* 0 0,
+        100% 0, */
+
+          0 38px,
+        5% 30px,
+        11% 36px,
+        17% 27px,
+        23% 34px,
+        29% 29px,
+        35% 38px,
+        41% 31px,
+        47% 35px,
+        53% 28px,
+        59% 37px,
+        65% 30px,
+        71% 35px,
+        77% 27px,
+        83% 38px,
+        89% 30px,
+        95% 36px,
+        100% 29px,
 
         100% 97.2%,
 

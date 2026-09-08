@@ -201,3 +201,45 @@ dreamVideo?.addEventListener(
 
     }
 );
+
+/* =========================================
+   DREAM SESSION INVITATION
+========================================= */
+
+const dreamInvitation = document.querySelector( ".dream-invitation");
+const dreamInvitationClosed = document.querySelector(".dream-invitation__closed");
+const dreamStoryboard = document.querySelector( ".dream-storyboard");
+
+
+if (
+    dreamInvitation &&
+    dreamInvitationClosed &&
+    dreamStoryboard
+) {
+    dreamInvitationClosed.addEventListener(
+        "click",
+        () => {
+
+            dreamInvitation.classList.add(
+                "is-opening"
+            );
+
+            window.setTimeout(
+                () => {
+
+                    dreamInvitation.classList.add(
+                        "is-open"
+                    );
+
+                    dreamStoryboard.setAttribute(
+                        "aria-hidden",
+                        "false"
+                    );
+
+                },
+                350
+            );
+
+        }
+    );
+}
