@@ -740,31 +740,94 @@
 /* =========================================
    STARS
 ========================================= */
+
 .dream-hero__star {
     position: absolute;
+     font-size: 1rem;
 
-    color:
-        rgba(255, 255, 255, 0.7);
+    color: #fff8df;
 
-    font-size: 1rem;
+    line-height: 1;
+
+    opacity: 0.25;
+
+    text-shadow:
+        0 0 4px rgba(255, 255, 255, 1),
+        0 0 9px rgba(255, 244, 202, 1),
+        0 0 18px rgba(255, 211, 125, 0.9);
+
 }
 .dream-hero__star--1 {
-    top: 15%;
-    left: 7%;
+    top: 35%;
+    left: 2%;
+     animation:
+        dream-star-twinkle
+       2.5s
+        ease-in-out
+        infinite;
 }
 .dream-hero__star--2 {
     top: 30%;
-    left: 48%;
+    left: 38%;
+     animation:
+        dream-star-twinkle
+        3s
+        ease-in-out
+        infinite;
 }
 .dream-hero__star--3 {
-    top: 12%;
+    top: 18%;
     right: 9%;
+     animation:
+        dream-star-twinkle
+        2.5s
+        ease-in-out
+        infinite;
 }
 .dream-hero__star--4 {
-    top: 55%;
-    left: 41%;
+    top: 65%;
+    left: 31%;
+     animation:
+        dream-star-twinkle
+        3.5s
+        ease-in-out
+        infinite;
 }
 .dream-hero__star--5 {
     top: 42%;
     right: 4%;
+     animation:
+        dream-star-twinkle
+        3.5s
+        ease-in-out
+        infinite;
+}
+
+.dream-hero__star--6 {
+    top: 78%;
+    left: 3%;
+     animation:
+        dream-star-twinkle
+       1.5s
+        ease-in-out
+        infinite;
+}
+
+.dream-hero__star--7 {
+    top: 82%;
+    right: 10%;
+     animation:
+        dream-star-twinkle
+        2.5s
+        ease-in-out
+        infinite;
+}
+.dream-hero__star--8 {
+    top: 52%;
+    right: 24%;
+     animation:
+        dream-star-twinkle
+       1.5s
+        ease-in-out
+        infinite;
 }
