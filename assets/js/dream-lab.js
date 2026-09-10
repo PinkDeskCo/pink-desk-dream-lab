@@ -475,279 +475,231 @@ let activeLabIndex = 0;
 
 function initFromTheLab() {
 
+    /* ==================================================
+       ELEMENTS
+    ================================================== */
+
     const projectButtons = [
         ...document.querySelectorAll(
-            ".from-the-lab__project"
+            ".lab-projects__card"
         )
     ];
 
-    const featureCards = [
+    const story =
+        document.querySelector(
+            ".lab-project__story"
+        );
+
+    const projectNumber =
+        document.querySelector(
+            ".lab-project__number"
+        );
+
+    const projectTitle =
+        document.querySelector(
+            ".lab-project__title"
+        );
+
+    const projectDescription =
+        document.querySelector(
+            ".lab-project__description"
+        );
+
+    const projectScribble =
+        document.querySelector(
+            ".lab-project__scribble"
+        );
+
+    const notesButton =
+        document.querySelector(
+            ".lab-project__notes-button"
+        );
+
+    const projectBoard =
+        document.querySelector(
+            "#lab-feature-board"
+        );
+
+    const labNotesOverlay =
+        document.querySelector(
+            "#lab-notes-overlay"
+        );
+
+    const labNotesImage =
+        document.querySelector(
+            "#lab-notes-overlay-image"
+        );
+
+    const labNotesCloseButtons = [
         ...document.querySelectorAll(
-            ".lab-feature__copy-card"
+            "[data-lab-notes-close]"
         )
     ];
 
-    const featureImage =
-        document.querySelector(
-            "#lab-feature-image"
-        );
 
-    const prevButton =
-        document.querySelector(
-            ".from-the-lab__arrow--prev"
-        );
-
-    const nextButton =
-        document.querySelector(
-            ".from-the-lab__arrow--next"
-        );
-
-
-    /*
-     * Stop if the From the Lab section
-     * is not present on the page.
-     */
     if (
         !projectButtons.length ||
-        !featureCards.length
+        !story ||
+        !projectBoard
     ) {
         return;
     }
 
 
     /* ==================================================
-       FEATURED PROJECT IMAGES
+       PROJECT DATA
     ================================================== */
 
-    const projectImages = {
+    const projects = {
 
         bwamplerfit: {
-            src:
-                "assets/images/dream-session/bwamplerfit-ecosystem.png",
 
-            alt:
-                "BWamplerFit challenge experience and management dashboard shown across multiple devices"
+            number:
+                "EXPERIMENT 001 / 005",
+
+            title:
+                "BWamplerFit<br>Challenge<br>Experience",
+
+            description:
+                "One interactive heat map became paid 30-day challenges, a built-in community, saved progress across devices, and an owner dashboard for managing multiple challenges.",
+
+            scribble:
+                "from one idea<br>to a working ecosystem",
+
+            board:
+                "assets/images/the-lab/boards/bwampler-board.png",
+
+            boardAlt:
+                "BWamplerFit Challenge Experience project board",
+
+            labNotes:
+                "assets/images/the-lab/bwamplerfit-lab-notes.png",
+
+            labNotesAlt:
+                "BWamplerFit Challenge Experience Lab Notes"
         },
+
 
         nails: {
-            src:
-                "assets/images/from-the-lab/thumb-nails.png",
 
-            alt:
-                "Custom Nail Builder concept"
+            number:
+                "EXPERIMENT 002 / 005",
+
+            title:
+                "Custom Nail<br>Builder",
+
+            description:
+                "A custom shopping experience that lets customers build their press-on nail set by choosing shape, size, length, color, finish, accents, and nail art.",
+
+            scribble:
+                "from custom orders<br>to a guided builder",
+
+            board:
+                "assets/images/the-lab/boards/nail-board.png",
+
+            boardAlt:
+                "Custom Nail Builder project board",
+
+            labNotes:
+                "assets/images/the-lab/nail-lab-notes.png",
+
+            labNotesAlt:
+                "Custom Nail Builder Lab Notes"
         },
+
 
         plumbing: {
-            src:
-                "assets/images/from-the-lab/thumb-plumbing.png",
 
-            alt:
-                "Plumbing Quote Builder concept"
+            number:
+                "EXPERIMENT 003 / 005",
+
+            title:
+                "Plumbing<br>Quote Builder",
+
+            description:
+                "A quoting system designed to turn project details and blueprints into faster, clearer estimates with package options and a streamlined path from quote to approval.",
+
+            scribble:
+                "from slow quoting<br>to faster decisions",
+
+            board:
+                "assets/images/the-lab/boards/quote-board.png",
+
+            boardAlt:
+                "Plumbing Quote Builder project board",
+
+            labNotes:
+                "assets/images/the-lab/plumbing-lab-notes.png",
+
+            labNotesAlt:
+                "Plumbing Quote Builder Lab Notes"
         },
+
 
         "mr-row": {
-            src:
-                "assets/images/from-the-lab/thumb-mr-row.png",
 
-            alt:
-                "Mr Row homeschool program"
+            number:
+                "EXPERIMENT 004 / 005",
+
+            title:
+                "Mr Row<br>Homeschool<br>Program",
+
+            description:
+                "A creative homeschool idea became an international learning experience connecting lessons, travel, culture, storytelling, and hands-on discovery.",
+
+            scribble:
+                "from one spark<br>to a worldwide adventure",
+
+            board:
+                "assets/images/the-lab/boards/mr-row-board.png",
+
+            boardAlt:
+                "Mr Row Homeschool Program project board",
+
+            labNotes:
+                "assets/images/the-lab/mr-row-lab-notes.png",
+
+            labNotesAlt:
+                "Mr Row Homeschool Program Lab Notes"
         },
 
-        pddl: {
-            src:
-                "assets/images/from-the-lab/thumb-pddl.png",
 
-            alt:
-                "Pink Desk Diagnostic Lab communication center"
+        pddl: {
+
+            number:
+                "EXPERIMENT 005 / 005",
+
+            title:
+                "PDDL<br>Communication<br>Center",
+
+            description:
+                "A scattered client workflow became one organized place for intakes, case files, diagnostic progress, project requests, notes, and active work.",
+
+            scribble:
+                "from scattered pieces<br>to one clear system",
+
+            board:
+                "assets/images/the-lab/boards/pddl-board.png",
+
+            boardAlt:
+                "Pink Desk Diagnostic Lab Communication Center project board",
+
+            labNotes:
+                "assets/images/the-lab/pddl-lab-notes.png",
+
+            labNotesAlt:
+                "PDDL Communication Center Lab Notes"
         }
 
     };
 
 
     /* ==================================================
-       CURRENT STATE
+       CURRENT PROJECT
     ================================================== */
 
-    let activeIndex = 0;
-
-    /*
-     * Oldest → newest.
-     *
-     * BWamplerFit begins on top when
-     * the page first loads.
-     */
-    let cardHistory = [
-        "bwamplerfit"
-    ];
-
-
-    /* ==================================================
-       UPDATE CARD STACK
-    ================================================== */
-
-    function updateCardStack(
-        projectKey
-    ) {
-
-        /*
-         * Remove the selected project
-         * from wherever it currently
-         * exists in the stack.
-         */
-        cardHistory =
-            cardHistory.filter(
-                (key) =>
-                    key !== projectKey
-            );
-
-
-        /*
-         * Add it back as the newest,
-         * top-most card.
-         */
-        cardHistory.push(
-            projectKey
-        );
-
-
-        /*
-         * Clear all stack states.
-         */
-        featureCards.forEach(
-            (card) => {
-
-                card.classList.remove(
-                    "is-active",
-                    "is-under-1",
-                    "is-under-2"
-                );
-
-            }
-        );
-
-
-        /*
-         * Only keep the newest three
-         * cards visibly stacked.
-         */
-        const visibleCards =
-            [
-                ...cardHistory
-            ]
-            .reverse()
-            .slice(
-                0,
-                3
-            );
-
-
-        visibleCards.forEach(
-            (
-                key,
-                stackPosition
-            ) => {
-
-                const card =
-                    featureCards.find(
-                        (item) =>
-                            item.dataset.featureCard ===
-                            key
-                    );
-
-
-                if (!card) {
-                    return;
-                }
-
-
-                if (
-                    stackPosition === 0
-                ) {
-                    card.classList.add(
-                        "is-active"
-                    );
-                }
-
-
-                if (
-                    stackPosition === 1
-                ) {
-                    card.classList.add(
-                        "is-under-1"
-                    );
-                }
-
-
-                if (
-                    stackPosition === 2
-                ) {
-                    card.classList.add(
-                        "is-under-2"
-                    );
-                }
-
-            }
-        );
-
-    }
-
-
-    /* ==================================================
-       UPDATE POLAROIDS
-    ================================================== */
-
-    function updateActivePolaroid(
-        index
-    ) {
-
-        projectButtons.forEach(
-            (
-                button,
-                buttonIndex
-            ) => {
-
-                button.classList.toggle(
-                    "is-active",
-                    buttonIndex === index
-                );
-
-            }
-        );
-
-    }
-
-
-    /* ==================================================
-       UPDATE FEATURE IMAGE
-    ================================================== */
-
-    function updateFeatureImage(
-        projectKey
-    ) {
-
-        if (!featureImage) {
-            return;
-        }
-
-
-        const image =
-            projectImages[
-                projectKey
-            ];
-
-
-        if (!image) {
-            return;
-        }
-
-
-        featureImage.src =
-            image.src;
-
-        featureImage.alt =
-            image.alt;
-
-    }
+    let activeProject =
+        "bwamplerfit";
 
 
     /* ==================================================
@@ -755,77 +707,110 @@ function initFromTheLab() {
     ================================================== */
 
     function showProject(
-        index
+        projectKey
     ) {
 
-        const button =
-            projectButtons[index];
+        const project =
+            projects[
+                projectKey
+            ];
 
 
-        if (!button) {
+        if (!project) {
             return;
         }
 
 
-        const projectKey =
-            button.dataset.project;
+        activeProject =
+            projectKey;
 
 
-        if (!projectKey) {
-            return;
+        story.dataset.featureCard =
+            projectKey;
+
+
+        if (projectNumber) {
+            projectNumber.textContent =
+                project.number;
         }
 
 
-        const matchingCard =
-            featureCards.find(
-                (card) =>
-                    card.dataset.featureCard ===
-                    projectKey
+        if (projectTitle) {
+            projectTitle.innerHTML =
+                project.title;
+        }
+
+
+        if (projectDescription) {
+            projectDescription.textContent =
+                project.description;
+        }
+
+
+        if (projectScribble) {
+            projectScribble.innerHTML =
+                project.scribble;
+        }
+
+
+        projectBoard.src =
+            project.board;
+
+        projectBoard.alt =
+            project.boardAlt;
+
+
+        if (notesButton) {
+
+            notesButton.setAttribute(
+                "aria-label",
+                `Open the ${project.labNotesAlt}`
             );
 
-
-        if (!matchingCard) {
-            return;
         }
 
 
-        activeIndex =
-            index;
+        projectButtons.forEach(
+            (button) => {
+
+                const isActive =
+                    button.dataset.projectTarget ===
+                    projectKey;
 
 
-        updateCardStack(
-            projectKey
-        );
+                button.classList.toggle(
+                    "is-active",
+                    isActive
+                );
 
-
-        updateActivePolaroid(
-            index
-        );
-
-
-        updateFeatureImage(
-            projectKey
+            }
         );
 
     }
 
 
     /* ==================================================
-       POLAROID CLICKS
+       PROJECT POLAROID CLICKS
     ================================================== */
 
     projectButtons.forEach(
-        (
-            button,
-            index
-        ) => {
+        (button) => {
 
             button.addEventListener(
                 "click",
                 () => {
 
+                    const projectKey =
+                        button.dataset.projectTarget;
+
+
+                    if (!projectKey) {
+                        return;
+                    }
+
+
                     showProject(
-                        index
+                        projectKey
                     );
 
                 }
@@ -836,23 +821,104 @@ function initFromTheLab() {
 
 
     /* ==================================================
-       NEXT PROJECT
+       OPEN LAB NOTES
     ================================================== */
 
-    nextButton?.addEventListener(
+    function openLabNotes() {
+
+        if (
+            !labNotesOverlay ||
+            !labNotesImage
+        ) {
+            return;
+        }
+
+
+        const project =
+            projects[
+                activeProject
+            ];
+
+
+        if (!project) {
+            return;
+        }
+
+
+        labNotesImage.src =
+            project.labNotes;
+
+        labNotesImage.alt =
+            project.labNotesAlt;
+
+
+        labNotesOverlay.classList.add(
+            "is-open"
+        );
+
+
+        labNotesOverlay.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        document.body.classList.add(
+            "lab-notes-is-open"
+        );
+
+    }
+
+
+    /* ==================================================
+       CLOSE LAB NOTES
+    ================================================== */
+
+    function closeLabNotes() {
+
+        if (!labNotesOverlay) {
+            return;
+        }
+
+
+        labNotesOverlay.classList.remove(
+            "is-open"
+        );
+
+
+        labNotesOverlay.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.classList.remove(
+            "lab-notes-is-open"
+        );
+
+    }
+
+
+    /* ==================================================
+       LAB NOTES BUTTON
+    ================================================== */
+
+    notesButton?.addEventListener(
         "click",
-        () => {
-
-            const nextIndex =
-                (
-                    activeIndex +
-                    1
-                ) %
-                projectButtons.length;
+        openLabNotes
+    );
 
 
-            showProject(
-                nextIndex
+    /* ==================================================
+       CLOSE BUTTON / BACKDROP
+    ================================================== */
+
+    labNotesCloseButtons.forEach(
+        (button) => {
+
+            button.addEventListener(
+                "click",
+                closeLabNotes
             );
 
         }
@@ -860,25 +926,19 @@ function initFromTheLab() {
 
 
     /* ==================================================
-       PREVIOUS PROJECT
+       ESCAPE KEY
     ================================================== */
 
-    prevButton?.addEventListener(
-        "click",
-        () => {
+    document.addEventListener(
+        "keydown",
+        (event) => {
 
-            const previousIndex =
-                (
-                    activeIndex -
-                    1 +
-                    projectButtons.length
-                ) %
-                projectButtons.length;
-
-
-            showProject(
-                previousIndex
-            );
+            if (
+                event.key ===
+                "Escape"
+            ) {
+                closeLabNotes();
+            }
 
         }
     );
@@ -889,11 +949,10 @@ function initFromTheLab() {
     ================================================== */
 
     showProject(
-        0
+        "bwamplerfit"
     );
 
 }
-
 
 /* ==================================================
    START FROM THE LAB
