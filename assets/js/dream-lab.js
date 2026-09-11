@@ -573,7 +573,7 @@ function initFromTheLab() {
                 "BWamplerFit Challenge Experience project board",
 
             labNotes:
-                "assets/images/the-lab/bwamplerfit-lab-notes.png",
+                "assets/images/the-lab/lab-notes/bwamplerfit-lab-notes.png",
 
             labNotesAlt:
                 "BWamplerFit Challenge Experience Lab Notes"
@@ -601,7 +601,7 @@ function initFromTheLab() {
                 "Custom Nail Builder project board",
 
             labNotes:
-                "assets/images/the-lab/nail-lab-notes.png",
+                "assets/images/the-lab/lab-notes/nail-lab-notes.png",
 
             labNotesAlt:
                 "Custom Nail Builder Lab Notes"
@@ -629,7 +629,7 @@ function initFromTheLab() {
                 "Plumbing Quote Builder project board",
 
             labNotes:
-                "assets/images/the-lab/plumbing-lab-notes.png",
+                "assets/images/the-lab/lab-notes/plumbing-lab-notes.png",
 
             labNotesAlt:
                 "Plumbing Quote Builder Lab Notes"
@@ -657,7 +657,7 @@ function initFromTheLab() {
                 "Mr Row Homeschool Program project board",
 
             labNotes:
-                "assets/images/the-lab/mr-row-lab-notes.png",
+                "assets/images/the-lab/lab-notes/mr-row-lab-notes.png",
 
             labNotesAlt:
                 "Mr Row Homeschool Program Lab Notes"
@@ -685,7 +685,7 @@ function initFromTheLab() {
                 "Pink Desk Diagnostic Lab Communication Center project board",
 
             labNotes:
-                "assets/images/the-lab/pddl-lab-notes.png",
+                "assets/images/the-lab/lab-notes/pddl-lab-notes.png",
 
             labNotesAlt:
                 "PDDL Communication Center Lab Notes"

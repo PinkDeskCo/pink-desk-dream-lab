@@ -1,12 +1,10 @@
 /* ==========================================================
    FROM THE LAB
 ========================================================== */
-
 .from-the-lab,
 .from-the-lab * {
     box-sizing: border-box;
 }
-
 .from-the-lab {
     position: relative;
 
@@ -26,17 +24,14 @@
 
     overflow: hidden;
 }
-
 .from-the-lab__inner {
     width: min(1600px, 98vw);
     margin: 0 auto;
 }
 
-
 /* ==========================================================
    MAIN COMPOSITION
-========================================================== */
-
+========================================================= */
 .from-the-lab__canvas {
     position: relative;
 
@@ -49,11 +44,9 @@
     container-type: inline-size;
 }
 
-
 /* ==========================================================
    HEADER
 ========================================================== */
-
 .from-the-lab__header {
     position: absolute;
 
@@ -66,7 +59,6 @@
 
     text-align: center;
 }
-
 .from-the-lab__title {
     margin: 0;
 
@@ -81,11 +73,9 @@
     font-weight: 400;
     line-height: 0.82;
 }
-
 .from-the-lab__title span {
     color: #df7fa5;
 }
-
 .from-the-lab__tagline {
     margin:
         1.2cqw
@@ -101,7 +91,6 @@
 
     text-transform: uppercase;
 }
-
 .from-the-lab__header::after {
     content: "";
 
@@ -117,18 +106,16 @@
         rgba(31, 58, 95, 0.13);
 }
 
-
 /* ==========================================================
    SAME MAGIC
 ========================================================== */
-
 .from-the-lab__magic {
     position: absolute;
 
     z-index: 31;
 
-    top: 3.5%;
-    right: 5%;
+    top: 8.5%;
+    right: 18%;
 
     margin: 0;
 
@@ -139,7 +126,7 @@
         "Brush Script MT",
         cursive;
 
-    font-size: 1.8cqw;
+    font-size: 2.8cqw;
     line-height: 1;
 
     white-space: nowrap;
@@ -148,12 +135,10 @@
         rotate(3deg);
 }
 
-
 /* ==========================================================
    FEATURED PROJECT ROW
    CHARACTER | STORY | BOARD
 ========================================================== */
-
 .from-the-lab__feature {
     position: absolute;
 
@@ -177,11 +162,9 @@
     gap: 1.5cqw;
 }
 
-
 /* ==========================================================
    CHARACTER
 ========================================================== */
-
 .from-the-lab__character {
     position: relative;
 
@@ -199,7 +182,6 @@
 
     pointer-events: none;
 }
-
 .from-the-lab__character img {
     display: block;
 
@@ -215,11 +197,9 @@
         center bottom;
 }
 
-
 /* ==========================================================
    STORY CARD
 ========================================================== */
-
 .lab-project__story {
     position: relative;
 
@@ -248,7 +228,6 @@
     transform:
         rotate(-0.6deg);
 }
-
 .lab-project__story::before {
     content: "";
 
@@ -274,11 +253,9 @@
     pointer-events: none;
 }
 
-
 /* ==========================================================
    STORY CONTENT
 ========================================================== */
-
 .lab-project__number {
     display: block;
 
@@ -289,14 +266,14 @@
 
     color: #df7fa5;
 
-    font-size: 0.64cqw;
+    font-size: 0.84cqw;
     font-weight: 700;
 
     letter-spacing: 0.17em;
 
     text-transform: uppercase;
+    font-weight: bold;
 }
-
 .lab-project__title {
     margin:
         0
@@ -315,7 +292,6 @@
 
     line-height: 0.98;
 }
-
 .lab-project__description {
     margin:
         0
@@ -324,16 +300,14 @@
 
     color: #536274;
 
-    font-size: 0.82cqw;
+    font-size: 1.02cqw;
 
     line-height: 1.55;
 }
 
-
 /* ==========================================================
    OPEN LAB NOTES
 ========================================================== */
-
 .lab-project__notes-button {
     display: block;
 
@@ -349,7 +323,7 @@
     padding: 0;
 
     background:
-        url("../images/the-lab/accents/open-lab-notes.svg")
+        url("../images/the-lab/accents/lab-notes/open-lab-notes.svg")
         center / contain
         no-repeat;
 
@@ -364,14 +338,12 @@
     transition:
         transform 180ms ease;
 }
-
 .lab-project__notes-button:hover {
     transform:
         translateY(-2px)
         rotate(-1deg)
         scale(1.02);
 }
-
 .lab-project__scribble {
     margin:
         0.6cqw
@@ -386,7 +358,9 @@
         "Brush Script MT",
         cursive;
 
-    font-size: 1.35cqw;
+    font-size: 1.65cqw;
+    font-weight: bold;
+    text-align: center;
 
     line-height: 0.94;
 
@@ -394,11 +368,9 @@
         rotate(-3deg);
 }
 
-
 /* ==========================================================
    PROJECT SCRAPBOOK BOARD
 ========================================================== */
-
 .lab-feature__board-wrap {
     position: relative;
 
@@ -416,7 +388,6 @@
 
     overflow: visible;
 }
-
 .lab-feature__board {
     display: block;
 
@@ -437,22 +408,19 @@
         );
 }
 
-
 /* ==========================================================
    EXPLORE MORE
 ========================================================== */
-
 .from-the-lab__more-heading {
     position: absolute;
 
     z-index: 20;
 
-    left: 4%;
+    left: 7%;
     bottom: 2.5%;
 
     width: 22%;
 }
-
 .from-the-lab__more-heading p {
     margin: 0;
 
@@ -471,7 +439,6 @@
     transform:
         rotate(-3deg);
 }
-
 .from-the-lab__more-heading span {
     display: block;
 
@@ -482,14 +449,12 @@
     font-family: inherit;
 
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 500;
 }
-
 
 /* ==========================================================
    EXPLORE ARROW
 ========================================================== */
-
 .from-the-lab__more-arrow {
     position: absolute;
 
@@ -498,7 +463,7 @@
     left: 17%;
     bottom: 1.4%;
 
-    width: 13%;
+    width: 23%;
     height: auto;
 
     transform:
@@ -507,18 +472,16 @@
     pointer-events: none;
 }
 
-
 /* ==========================================================
    PROJECT POLAROIDS
 ========================================================== */
-
 .lab-projects {
     position: absolute;
 
     z-index: 20;
 
     right: 2.4%;
-    bottom: 1.7%;
+    bottom: -10%;
 
     display: flex;
 
@@ -528,8 +491,8 @@
     gap: 1.05%;
 
     width: 69%;
+    padding-bottom: 40px;
 }
-
 .lab-projects__card {
     position: relative;
 
@@ -572,7 +535,6 @@
 /* Temporary tape on project thumbnails.
    We can replace these with the decorative pins/clips later.
 */
-
 .lab-projects__card::before {
     content: "";
 
@@ -595,33 +557,26 @@
 
     pointer-events: none;
 }
-
-
 .lab-projects__card:nth-child(1) {
     transform:
         rotate(-1.4deg);
 }
-
 .lab-projects__card:nth-child(2) {
     transform:
         rotate(1deg);
 }
-
 .lab-projects__card:nth-child(3) {
     transform:
         rotate(-0.7deg);
 }
-
 .lab-projects__card:nth-child(4) {
     transform:
         rotate(1.2deg);
 }
-
 .lab-projects__card:nth-child(5) {
     transform:
         rotate(-1deg);
 }
-
 .lab-projects__card:hover {
     z-index: 30;
 
@@ -630,7 +585,6 @@
         rotate(0deg)
         scale(1.03);
 }
-
 .lab-projects__card img {
     display: block;
 
@@ -642,7 +596,6 @@
 
     object-fit: cover;
 }
-
 .lab-projects__card span {
     display: block;
 
@@ -653,7 +606,7 @@
         "Times New Roman",
         serif;
 
-    font-size: 0.68cqw;
+    font-size: 0.88cqw;
     font-weight: 600;
 
     line-height: 1.12;
@@ -661,11 +614,758 @@
     text-align: center;
 }
 
+/* ==================================================
+   DREAM NOTE CTA
+   COMPACT SCRAPBOOK COMPOSITION
+================================================== */
+.dream-note-cta {
+    position: relative;
+    overflow: hidden;
 
+    padding: 56px 4% 62px;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255, 255, 255, 0.72) 0%,
+            rgba(250, 247, 238, 0.72) 38%,
+            transparent 70%
+        ),
+        #f1ecdf;
+
+    color: #1f3a5f;
+}
+/* ==================================================
+   STAGE
+================================================== */
+.dream-note-cta__inner {
+    position: relative;
+
+    width: min(1480px, 100%);
+    margin: 0 auto;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==================================================
+   PAPER STACK
+================================================== */
+.dream-note-cta__paper {
+    position: relative;
+    z-index: 3;
+
+    width: min(1060px, 78%);
+    margin: 0 auto;
+
+    padding:
+        56px
+        clamp(58px, 6vw, 92px)
+        48px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.52),
+            rgba(245, 237, 218, 0.24)
+        ),
+        #fbf7ed;
+
+    box-shadow:
+        0 14px 30px rgba(68, 54, 37, 0.14),
+        0 3px 8px rgba(68, 54, 37, 0.08);
+
+    clip-path: polygon(
+        1% 2%,
+        9% 1%,
+        16% 1.7%,
+        24% 0.7%,
+        32% 1.5%,
+        40% 0.8%,
+        49% 1.5%,
+        58% 0.7%,
+        67% 1.4%,
+        76% 0.6%,
+        85% 1.5%,
+        93% 0.8%,
+        99% 2%,
+
+        98.7% 13%,
+        99.4% 27%,
+        98.8% 40%,
+        99.5% 55%,
+        98.8% 69%,
+        99.3% 83%,
+        98% 98%,
+
+        90% 97.7%,
+        82% 99%,
+        72% 98%,
+        63% 99.1%,
+        53% 98%,
+        44% 99%,
+        34% 98.1%,
+        24% 99.2%,
+        14% 98.2%,
+        2% 98.8%,
+
+        1% 88%,
+        0.5% 74%,
+        1.2% 59%,
+        0.5% 44%,
+        1.1% 29%,
+        0.5% 14%
+    );
+}
+/* torn aged layer behind the main paper */
+
+.dream-note-cta__paper::after {
+    content: "";
+
+    position: absolute;
+    z-index: -2;
+
+    inset:
+        -14px
+        -12px
+        -16px
+        -14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e9dfcb,
+            #f4ecdd
+        );
+
+    clip-path: polygon(
+        1% 5%,
+        8% 2%,
+        17% 4%,
+        27% 1%,
+        37% 4%,
+        48% 2%,
+        59% 4%,
+        70% 1%,
+        81% 4%,
+        91% 2%,
+        99% 5%,
+
+        98% 18%,
+        99% 36%,
+        98% 53%,
+        99% 72%,
+        97% 96%,
+
+        88% 98%,
+        77% 96%,
+        65% 99%,
+        53% 97%,
+        42% 99%,
+        30% 96%,
+        18% 99%,
+        2% 96%,
+
+        1% 77%,
+        2% 58%,
+        1% 38%,
+        2% 19%
+    );
+
+    box-shadow:
+        0 12px 22px rgba(85, 67, 45, 0.10);
+
+    opacity: 0.95;
+}
+/* subtle paper speckling and staining */
+
+.dream-note-cta__paper::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 8% 12%,
+            rgba(130, 97, 60, 0.13) 0 1px,
+            transparent 1.7px
+        ),
+        radial-gradient(
+            circle at 84% 22%,
+            rgba(157, 116, 74, 0.08) 0 1px,
+            transparent 1.8px
+        ),
+        radial-gradient(
+            ellipse at 18% 84%,
+            rgba(222, 175, 155, 0.08),
+            transparent 34%
+        ),
+        radial-gradient(
+            ellipse at 83% 17%,
+            rgba(206, 166, 133, 0.09),
+            transparent 26%
+        );
+
+    background-size:
+        22px 24px,
+        31px 29px,
+        auto,
+        auto;
+
+    opacity: 0.75;
+}
+
+/* ==================================================
+   CONTENT
+================================================== */
+.dream-note-cta__content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+/* ==================================================
+   EYEBROW
+================================================== */
+.dream-note-cta__eyebrow {
+    margin: 0;
+
+    color: #1f3a5f;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.30em;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+/* ==================================================
+   DIVIDER
+================================================== */
+.dream-note-cta__divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: min(540px, 82%);
+    margin: 12px auto 23px;
+
+    color: #1f3a5f;
+}
+
+.dream-note-cta__divider::before,
+.dream-note-cta__divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        rgba(31, 58, 95, 0.38);
+}
+.dream-note-cta__divider span {
+    font-size: 1.35rem;
+    line-height: 1;
+}
+
+/* ==================================================
+   TITLE
+================================================== */
+.dream-note-cta__title {
+    margin: 0;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2.4rem,
+            3.6vw,
+            3.75rem
+        );
+
+    font-weight: 400;
+    line-height: 1.02;
+}
+.dream-note-cta__title span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #e97fb2;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size: 1.17em;
+    font-weight: 400;
+    line-height: 0.95;
+}
+/* little hand-drawn underline */
+
+.dream-note-cta__title span::after {
+    content: "";
+
+    display: block;
+
+    width: 245px;
+    height: 3px;
+
+    margin:
+        8px auto 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(233, 127, 178, 0.48);
+
+    transform:
+        rotate(-1deg)
+        scaleX(0.92);
+}
+
+/* ==================================================
+   COPY
+================================================== */
+
+.dream-note-cta__copy {
+    max-width: 690px;
+    margin: 24px auto 0;
+
+    color: #29405e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            1rem,
+            1.15vw,
+            1.1rem
+        );
+
+    line-height: 1.5;
+}
+
+
+.dream-note-cta__copy p {
+    margin: 0;
+}
+
+
+.dream-note-cta__copy p + p {
+    margin-top: 14px;
+}
+
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.dream-note-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    width: min(500px, 88%);
+
+    margin-top: 25px;
+    padding: 15px 28px;
+
+    border:
+        2px solid
+        #ef9fbd;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #173a63,
+            #102e50
+        );
+
+    box-shadow:
+        0 6px 12px
+        rgba(31, 58, 95, 0.17);
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.15rem;
+
+    text-decoration: none;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+}
+
+
+.dream-note-cta__button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 9px 17px
+        rgba(31, 58, 95, 0.22);
+}
+
+
+.dream-note-cta__button-arrow {
+    font-size: 1.45rem;
+    line-height: 1;
+}
+
+
+/* ==================================================
+   SCRIBBLE
+================================================== */
+
+.dream-note-cta__scribble {
+    margin: 18px 0 0;
+
+    color: #e97fb2;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:
+        clamp(
+            1.65rem,
+            2.25vw,
+            2.1rem
+        );
+
+    line-height: 0.84;
+
+    transform:
+        rotate(-2deg);
+}
+
+
+.dream-note-cta__scribble span {
+    display: inline-block;
+
+    margin-left: 7px;
+
+    color: #1f3a5f;
+}
+
+
+/* ==================================================
+   HEART CLIP
+================================================== */
+
+.dream-note-cta__heart-clip {
+    position: absolute;
+    z-index: 6;
+
+    top: 6px;
+    right: 6%;
+
+    color: #e97fb2;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            3.7rem,
+            5vw,
+            5rem
+        );
+
+    line-height: 1;
+
+    transform:
+        rotate(10deg);
+
+    text-shadow:
+        1px 1px 0 #b85f86,
+        3px 4px 6px
+        rgba(66, 50, 34, 0.18);
+}
+
+
+/* ==================================================
+   COFFEE RING
+================================================== */
+
+.dream-note-cta__coffee-ring {
+    position: absolute;
+    z-index: 4;
+
+    right: -58px;
+    bottom: -38px;
+
+    width:
+        clamp(
+            120px,
+            12vw,
+            175px
+        );
+
+    aspect-ratio: 1;
+
+    border:
+        4px solid
+        rgba(151, 101, 57, 0.28);
+
+    border-radius: 50%;
+
+    transform:
+        rotate(-8deg);
+
+    opacity: 0.75;
+}
+
+
+.dream-note-cta__coffee-ring::after {
+    content: "";
+
+    position: absolute;
+    inset: 7px;
+
+    border:
+        1px solid
+        rgba(151, 101, 57, 0.13);
+
+    border-radius: 50%;
+}
+
+
+/* ==================================================
+   SIDE NOTES
+================================================== */
+
+.dream-note-cta__margin-note {
+    position: absolute;
+    z-index: 2;
+
+    margin: 0;
+
+    color:
+        rgba(
+            101,
+            77,
+            60,
+            0.68
+        );
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:
+        clamp(
+            1.5rem,
+            1.8vw,
+            1.9rem
+        );
+
+    line-height: 1.03;
+
+    pointer-events: none;
+}
+
+
+.dream-note-cta__margin-note span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #e97fb2;
+}
+
+
+.dream-note-cta__margin-note--left {
+    top: 19%;
+    left: 1.3%;
+
+    transform:
+        rotate(-5deg);
+}
+
+
+.dream-note-cta__margin-note--right {
+    right: 1.5%;
+    bottom: 23%;
+
+    text-align: center;
+
+    transform:
+        rotate(-5deg);
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1050px) {
+
+    .dream-note-cta__inner {
+        min-height: 610px;
+    }
+
+
+    .dream-note-cta__paper {
+        width: 88%;
+    }
+
+
+    .dream-note-cta__margin-note {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .dream-note-cta {
+        padding:
+            42px 16px
+            46px;
+    }
+
+
+    .dream-note-cta__inner {
+        min-height: 0;
+    }
+
+
+    .dream-note-cta__paper {
+        width: 100%;
+
+        padding:
+            48px 24px
+            42px;
+    }
+
+
+    .dream-note-cta__title {
+        font-size:
+            clamp(
+                2rem,
+                9vw,
+                2.8rem
+            );
+    }
+
+
+    .dream-note-cta__copy {
+        font-size: 1rem;
+    }
+
+
+    .dream-note-cta__button {
+        width: 100%;
+
+        gap: 14px;
+
+        font-size: 1.05rem;
+    }
+
+
+    .dream-note-cta__heart-clip {
+        top: 8px;
+        right: 3%;
+    }
+
+
+    .dream-note-cta__coffee-ring {
+        right: -62px;
+        bottom: -48px;
+    }
+
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 980px) {
+
+    .dream-note-cta__paper {
+        width: 92%;
+    }
+
+    .dream-note-cta__margin-note {
+        display: none;
+    }
+
+}
+@media (max-width: 640px) {
+
+    .dream-note-cta {
+        padding:
+            55px 18px;
+    }
+
+    .dream-note-cta__paper {
+        width: 100%;
+
+        padding:
+            55px 25px
+            48px;
+    }
+
+    .dream-note-cta__eyebrow {
+        letter-spacing: 0.2em;
+    }
+
+    .dream-note-cta__copy {
+        font-size: 1rem;
+    }
+
+    .dream-note-cta__button {
+        min-width: 0;
+        width: 100%;
+
+        gap: 14px;
+    }
+
+    .dream-note-cta__heart-clip {
+        right: 3%;
+    }
+
+    .dream-note-cta__coffee-ring {
+        right: -55px;
+        bottom: -45px;
+    }
+
+}
 /* ==========================================================
    TABLET
 ========================================================== */
-
 @media (max-width: 1000px) {
 
     .from-the-lab {
@@ -689,11 +1389,9 @@
 
 }
 
-
 /* ==========================================================
    MOBILE
 ========================================================== */
-
 @media (max-width: 650px) {
 
     .from-the-lab {
@@ -716,7 +1414,6 @@
 /* ==========================================================
    LAB NOTES OVERLAY
 ========================================================== */
-
 .lab-notes-overlay {
     position: fixed;
     z-index: 9999;
@@ -731,13 +1428,11 @@
         opacity 240ms ease,
         visibility 240ms ease;
 }
-
 .lab-notes-overlay.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
-
 .lab-notes-overlay__backdrop {
     position: absolute;
     inset: 0;
@@ -745,7 +1440,6 @@
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
 }
-
 .lab-notes-overlay__panel {
     position: relative;
     z-index: 1;
@@ -755,7 +1449,6 @@
     width: min(1180px, 92vw);
     max-height: 92vh;
 }
-
 .lab-notes-overlay__image {
     display: block;
     width: 100%;
@@ -770,7 +1463,6 @@
             rgba(0, 0, 0, 0.28)
         );
 }
-
 .lab-notes-overlay__close {
     position: absolute;
     z-index: 3;

@@ -1,0 +1,612 @@
+/* ==================================================
+   WHAT IF CTA
+================================================== */
+.what-if-cta {
+    position: relative;
+    overflow: hidden;
+
+    padding: 28px 0;
+
+    background: #fbfaf3;
+
+    color: #1f3a5f;
+
+}
+
+/* ==================================================
+   PAPER STRIP
+================================================== */
+.what-if-cta__paper {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 340px;
+
+    padding:
+        70px
+        clamp(220px, 17vw, 320px)
+        64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+     linear-gradient(
+            rgba(255, 252, 244, 0.38),
+            rgba(255, 252, 244, 0.38)
+        ),
+        url("../images/the-lab/cta/cta-background.png")
+        center / 100% 100%
+        no-repeat;
+}
+
+/* ==================================================
+   MAIN CONTENT
+================================================== */
+.what-if-cta__content {
+    position: relative;
+    z-index: 5;
+
+    width: min(100%, 820px);
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+/* ==================================================
+   EYEBROW
+================================================== */
+.what-if-cta__eyebrow {
+    margin-top: 20px;
+
+    color: #1f3a5f;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    line-height: 1.3;
+
+    text-transform: uppercase;
+}
+
+/* ==================================================
+   DIVIDER
+================================================== */
+.what-if-cta__divider {
+    width: min(520px, 72%);
+    margin: 25px auto 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #1f3a5f;
+}
+.what-if-cta__divider::before,
+.what-if-cta__divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        rgba(31, 58, 95, 0.45);
+}
+.what-if-cta__divider span {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* ==================================================
+   TITLE
+================================================== */
+.what-if-cta__title {
+    margin: 0;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            2rem,
+            3vw,
+            3rem
+        );
+
+    font-weight: 500;
+    line-height: 1.05;
+}
+.what-if-cta__title span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #df7fa5;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+
+    font-size: 1.15em;
+    font-weight: 400;
+    line-height: 0.95;
+}
+
+/* pink underline */
+.what-if-cta__title span::after {
+    content: "";
+
+    display: block;
+
+    width: 225px;
+    height: 2px;
+
+    margin: 7px auto 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(223, 127, 165, 0.55);
+
+    transform: rotate(-1deg);
+}
+
+/* ==================================================
+   COPY
+================================================== */
+.what-if-cta__copy {
+    width: min(100%, 650px);
+
+    margin: 18px auto 0;
+
+    color: #26384a;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            0.98rem,
+            1.15vw,
+            1.1rem
+        );
+
+    line-height: 1.45;
+}
+
+/* ==================================================
+   CTA BUTTON
+================================================== */
+.what-if-cta__button {
+    position: relative;
+    isolation: isolate;
+
+    width: fit-content;
+
+    margin: 20px auto 0;
+    padding: 14px 34px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    border: 3px solid transparent;
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #173a63 0%,
+            #102e50 100%
+        ) padding-box,
+
+        linear-gradient(
+            110deg,
+            #df7fa5 0%,
+            #f2a8c4 20%,
+            #ffffff 34%,
+            #c8cbd1 42%,
+            #ffffff 48%,
+            #ef9fbd 62%,
+            #df7fa5 78%,
+            #f4d7e3 100%
+        ) border-box;
+
+    background-size:
+        100% 100%,
+        250% 100%;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.05rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 7px 18px rgba(31, 58, 95, 0.20),
+        0 0 12px rgba(223, 127, 165, 0.15);
+
+    animation:
+        what-if-border-shimmer
+        4s linear
+        infinite;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+}
+/* inner ivory line */
+.what-if-cta__button::before {
+    content: "";
+
+    position: absolute;
+    inset: 3px;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.94);
+
+    border-radius: inherit;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+.what-if-cta__button > * {
+    position: relative;
+    z-index: 2;
+}
+.what-if-cta__button-arrow {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+.what-if-cta__button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(31, 58, 95, 0.24),
+        0 0 18px rgba(223, 127, 165, 0.28);
+}
+
+@keyframes what-if-border-shimmer {
+
+    0% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+
+    100% {
+        background-position:
+            0 0,
+            250% 50%;
+    }
+}
+
+
+/* ==================================================
+   LEFT FLOWERS
+================================================== */
+.what-if-cta__flowers {
+    position: absolute;
+    z-index: 3;
+
+    left: 7.5%;
+    bottom: 100px;
+
+    width:
+        clamp(
+            92px,
+            12vw,
+            135px
+        );
+
+    transform: rotate(-7deg);
+
+    pointer-events: none;
+}
+.what-if-cta__flowers img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    filter:
+        drop-shadow(
+            1px 3px 3px
+            rgba(66, 50, 34, 0.12)
+        );
+}
+
+/* ==================================================
+   LEFT HANDWRITTEN NOTE
+================================================== */
+.what-if-cta__left-note {
+    position: absolute;
+    z-index: 4;
+    text-align: center;
+
+    left:
+        clamp(
+            255px,
+            12vw,
+            200px
+        );
+
+    top: 60%;
+
+    margin: 0;
+
+    color:
+        rgba(
+            82,
+            67,
+            57,
+            0.72
+        );
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+
+    font-size:
+        clamp(
+            1.37rem,
+            2vw,
+            2rem
+        );
+    font-weight: 600;
+
+    line-height: 0.95;
+
+    transform:
+        translateY(-50%)
+        rotate(-30deg);
+
+    pointer-events: none;
+}
+.what-if-cta__left-note span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #df7fa5;
+}
+
+/* ==================================================
+   RIGHT COFFEE RING
+================================================== */
+.what-if-cta__coffee {
+    position: absolute;
+    z-index: 3;
+
+    right: -1px;
+    top: 30%;
+
+    width:
+        clamp(
+            360px,
+            15vw,
+            260px
+        );
+
+    aspect-ratio: 1;
+    padding-bottom: 10px;
+
+    transform:
+        translateY(-50%)
+        rotate(-7deg);
+
+    pointer-events: none;
+}
+.what-if-cta__coffee img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    opacity: 0.72;
+}
+
+/* ==================================================
+   RIGHT HANDWRITTEN NOTE
+================================================== */
+
+.what-if-cta__right-note {
+    position: absolute;
+    z-index: 6;
+
+    right: 35%;
+    top: 40%;
+
+    margin: 0;
+
+    color: rgba(76, 65, 57, 0.72);
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive !important;
+
+    font-size: clamp(
+        1.35rem,
+        1.7vw,
+        1.75rem
+    );
+
+    font-weight: 600;
+    line-height: 0.9;
+
+    text-align: center;
+
+    transform: rotate(-6deg);
+
+    pointer-events: none;
+}
+
+.what-if-cta__right-note span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #df7fa5;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+}
+/* ==================================================
+   TABLET
+================================================== */
+@media (max-width: 1000px) {
+
+    .what-if-cta__paper {
+        min-height: 320px;
+
+        padding:
+            38px
+            150px;
+    }
+
+
+    .what-if-cta__flowers {
+        left: 1.5%;
+
+        width: 95px;
+    }
+
+
+    .what-if-cta__left-note {
+        display: none;
+    }
+
+
+    .what-if-cta__coffee {
+        right: -45px;
+
+        width: 190px;
+
+        opacity: 0.65;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+@media (max-width: 680px) {
+
+    .what-if-cta {
+        padding:
+            18px 0;
+    }
+
+
+    .what-if-cta__paper {
+        min-height: 390px;
+
+        padding:
+            45px
+            28px;
+
+        background-size:
+            auto 100%;
+    }
+
+
+    .what-if-cta__content {
+        width: 100%;
+    }
+
+
+    .what-if-cta__eyebrow {
+        font-size: 0.68rem;
+
+        letter-spacing: 0.18em;
+    }
+
+
+    .what-if-cta__divider {
+        width: 80%;
+    }
+
+
+    .what-if-cta__title {
+        font-size: 1.85rem;
+    }
+
+
+    .what-if-cta__title span {
+        font-size: 1.12em;
+    }
+
+
+    .what-if-cta__title span::after {
+        width: 150px;
+    }
+
+
+    .what-if-cta__copy {
+        margin-top: 16px;
+
+        font-size: 0.96rem;
+    }
+
+
+    .what-if-cta__button {
+        margin-top: 20px;
+
+        padding:
+            13px
+            23px;
+
+        font-size: 0.95rem;
+    }
+
+
+    .what-if-cta__flowers {
+        left: -20px;
+        bottom: -8px;
+
+        width: 90px;
+
+        opacity: 0.72;
+    }
+
+
+    .what-if-cta__coffee {
+        right: -72px;
+        top: 54%;
+
+        width: 165px;
+
+        opacity: 0.40;
+    }
+
+
+    .what-if-cta__coffee-note {
+        display: none;
+    }
+
+}
