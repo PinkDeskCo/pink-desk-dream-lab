@@ -1236,16 +1236,17 @@
 }
 
 
-/* =========================================
-   PANEL 5 . NEXT
-========================================= */
+/* ==================================================
+   Page 05 - Next / Purchase
+================================================== */
 .dream-storyboard__next-paths {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     gap: 8px;
 
-    margin-top: 28px;
+    margin-top: 14px;
 
     color: #1f3a5f;
 
@@ -1253,11 +1254,47 @@
         Georgia,
         serif;
 
-    font-size: 0.84rem;
-
     text-align: center;
 }
+/* Individual choice */
+
+.dream-storyboard__path {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 3px;
+
+    width: 100%;
+}
+.dream-storyboard__path-title {
+    display: block;
+
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+.dream-storyboard__path-action {
+    display: block;
+
+    font-size: 0.86rem;
+    line-height: 1.3;
+}
+.dream-storyboard__path-note {
+    margin: 1px 0 0;
+
+    color: #6d7180;
+
+    font-size: 0.78rem;
+    line-height: 1.3;
+}
+/* Handwritten OR */
+
 .dream-storyboard__or {
+    display: block;
+
+    margin: 0;
+
     color: #d77fa4;
 
     font-family:
@@ -1265,12 +1302,72 @@
         "Brush Script MT",
         cursive;
 
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 600;
 }
+/* Purchase information */
+
+.dream-storyboard__purchase {
+    margin-top: 16px;
+    padding-top: 16px;
+
+    border-top:
+        1px solid
+        rgba(31, 58, 95, 0.16);
+
+    text-align: center;
+}
+
+.dream-storyboard__purchase-label {
+    display: inline-block;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 0.66rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.dream-storyboard__price {
+    display: inline-block;
+
+    margin-left: 6px;
+
+    color: #d77fa4;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.dream-storyboard__includes {
+    max-width: 88%;
+
+    margin: 7px auto 0;
+
+    color: #747987;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 0.81rem;
+    line-height: 1.35;
+}
+
 .dream-storyboard__cta {
     display: block;
 
-    margin-top: 28px;
+    margin-top: 10px;
 
     padding:
         11px
@@ -1293,10 +1390,8 @@
 
     text-align: center;
     text-decoration: none;
-
     text-transform: uppercase;
 }
-
 /* =========================================
    STORYBOARD ILLUSTRATIONS
 ========================================= */
@@ -1339,7 +1434,7 @@
     width: 88px;
 
     right: 45px;
-    top: 352px;
+    top: 362px;
 
     transform: rotate(3deg);
 }
@@ -1349,7 +1444,7 @@
     width: 92px;
 
     right: 88px;
-    top: 322px;
+    top: 352px;
 
     transform: rotate(-3deg);
 }
