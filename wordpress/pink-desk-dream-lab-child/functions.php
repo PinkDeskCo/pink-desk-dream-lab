@@ -17,11 +17,35 @@ function pddl_enqueue_styles() {
 
     if ( function_exists( 'is_order_received_page' ) && is_order_received_page() ) {
 
+        $order_css = get_stylesheet_directory() . '/assets/css/order-confirmation.css';
+
         wp_enqueue_style(
             'pddl-order-confirmation',
             get_stylesheet_directory_uri() . '/assets/css/order-confirmation.css',
             array( 'pddl-child-style' ),
-            wp_get_theme()->get( 'Version' )
+            file_exists( $order_css ) ? filemtime( $order_css ) : null
         );
     }
+}
+
+
+/**
+ * Load Order Confirmation styling inside the WordPress Site Editor
+ * so the template preview matches the real page.
+ */
+add_action(
+    'enqueue_block_editor_assets',
+    'pddl_enqueue_order_confirmation_editor_styles'
+);
+
+function pddl_enqueue_order_confirmation_editor_styles() {
+
+    $order_css = get_stylesheet_directory() . '/assets/css/order-confirmation.css';
+
+    wp_enqueue_style(
+        'pddl-order-confirmation-editor',
+        get_stylesheet_directory_uri() . '/assets/css/order-confirmation.css',
+        array(),
+        file_exists( $order_css ) ? filemtime( $order_css ) : null
+    );
 }
