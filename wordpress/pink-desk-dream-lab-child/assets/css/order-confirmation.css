@@ -89,15 +89,15 @@ body {
     left: 50%;
     bottom: -0.30em;
 
-    width: 120%;
-    height: 0.48em;
+    width: 135%;
+    height: 0.55em;
 
     transform: translateX(-50%);
 
     background-image: url("../images/explore-stroke.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 100% auto;
 
     pointer-events: none;
 }
@@ -122,7 +122,6 @@ body {
 /* Main headline */
 .dream-order-hero__title {
     max-width: 820px;
-
     margin: 0 auto 16px !important;
 
     color: #173a63 !important;
@@ -135,12 +134,11 @@ body {
     font-size: clamp(2.7rem, 3.4vw, 3.65rem) !important;
     font-weight: 600 !important;
 
-    line-height: 0.98 !important;
+    line-height: 1.18 !important;
     letter-spacing: -0.035em !important;
 
     text-align: center !important;
 }
-
 
 /* ==================================================
    Hand-drawn title accent
@@ -194,21 +192,4 @@ body {
     .dream-order-header__back {
         font-size: 0.85rem;
     }
-}
-
-.dream-order-hero__explore {
-    position: relative;
-    display: inline-block;
-}
-
-.dream-order-hero__explore::after {
-    content: "TEST";
-    position: absolute;
-    left: 0;
-    top: 100%;
-
-    color: red;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1;
 }
