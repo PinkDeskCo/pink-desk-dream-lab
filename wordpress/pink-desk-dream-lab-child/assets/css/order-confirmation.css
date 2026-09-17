@@ -741,6 +741,156 @@ tfoot td {
 }
 
 /* ==================================================
+   What Happens From Here
+================================================== */
+.dream-order-next {
+    box-sizing: border-box;
+    width: min(1180px, calc(100% - 48px));
+    margin: 30px auto 0 !important;
+    padding: 20px 40px 26px !important;
+
+    text-align: center;
+}
+.dream-order-next__title {
+    margin: 0 auto 24px !important;
+
+    color: #173a63 !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size: clamp(1.8rem, 2.5vw, 2.6rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.1 !important;
+
+    text-align: center !important;
+}
+.dream-order-next__steps {
+    width: 100%;
+    margin: 0 auto 18px !important;
+    gap: 0 !important;
+}
+.dream-order-next__step {
+    position: relative;
+    box-sizing: border-box;
+
+    padding: 105px 34px 12px !important;
+
+    text-align: center;
+}
+.dream-order-next__step + .dream-order-next__step {
+    border-left: 1px solid rgba(23, 58, 99, 0.16);
+}
+.dream-order-next__step::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 90px;
+    height: 90px;
+
+    transform: translateX(-50%);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.dream-order-next__step:nth-child(1)::before {
+    background-image: url("../images/dream-session-img.png");
+}
+.dream-order-next__step:nth-child(2)::before {
+    background-image: url("../images/dream-lab-img.png");
+}
+.dream-order-next__step:nth-child(3)::before {
+    background-image: url("../images/storybook-img.png");
+}
+.dream-order-next__number {
+    position: absolute;
+
+    top: 34px;
+    left: calc(50% - 90px);
+
+    margin: 0 !important;
+
+    color: #df7fa5 !important;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive !important;
+
+    font-size: 2.5rem !important;
+    line-height: 1 !important;
+}
+.dream-order-next__step-title {
+    margin: 0 0 6px !important;
+
+    color: #173a63 !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+
+    text-align: center !important;
+}
+.dream-order-next__description {
+    max-width: 280px;
+    margin: 0 auto !important;
+
+    color: #294564 !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size: 0.95rem !important;
+    line-height: 1.35 !important;
+
+    text-align: center !important;
+}
+.dream-order-next__after {
+    margin: 10px auto 8px !important;
+
+    color: #df7fa5 !important;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive !important;
+
+    font-size: clamp(2rem, 2.5vw, 2.7rem) !important;
+    line-height: 1 !important;
+
+    text-align: center !important;
+}
+.dream-order-next__closing {
+    max-width: 850px;
+
+    margin: 2px auto !important;
+
+    color: #294564 !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size: 0.85rem !important;
+    line-height: 1.35 !important;
+
+    text-align: center !important;
+}
+
+/* ==================================================
    Mobile
 ================================================== */
 @media (max-width: 600px) {
