@@ -752,7 +752,11 @@ tfoot td {
     text-align: center;
 }
 .dream-order-next__title {
-    margin: 0 auto 24px !important;
+    position: relative;
+
+    width: fit-content;
+    margin: 0 auto 28px !important;
+    padding-bottom: 10px;
 
     color: #173a63 !important;
 
@@ -761,11 +765,44 @@ tfoot td {
         "Times New Roman",
         serif !important;
 
-    font-size: clamp(1.8rem, 2.5vw, 2.6rem) !important;
+    font-size: clamp(1.6rem, 2vw, 2rem) !important;
     font-weight: 600 !important;
     line-height: 1.1 !important;
 
     text-align: center !important;
+}
+.dream-order-next__title::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+
+    width: 105px;
+    height: 7px;
+
+    transform: translateX(-50%);
+
+    background: #df7fa5;
+
+    clip-path: polygon(
+        0% 55%,
+        8% 35%,
+        24% 42%,
+        42% 25%,
+        61% 38%,
+        78% 22%,
+        93% 38%,
+        100% 50%,
+        92% 62%,
+        74% 58%,
+        55% 72%,
+        34% 60%,
+        15% 70%,
+        3% 62%
+    );
+
+    opacity: 0.9;
 }
 .dream-order-next__steps {
     width: 100%;
@@ -888,6 +925,147 @@ tfoot td {
     line-height: 1.35 !important;
 
     text-align: center !important;
+}
+
+/* ==================================================
+   Dream Order Footer
+================================================== */
+.dream-order-footer {
+    position: relative;
+    box-sizing: border-box;
+
+    width: 100%;
+    min-height: 320px;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-image: url("../images/footer-background.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+
+    color: #fbfaf3;
+}
+.dream-order-footer__inner {
+    position: relative;
+    box-sizing: border-box;
+
+    width: calc(100% - 120px);
+    max-width: none;
+    min-height: 320px;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+.dream-order-footer__inner::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 66%;
+
+    width: 250px;
+    height: 100px;
+
+    background-image: url("../images/pink-desk-dl-logo-white.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.dream-order-footer__links {
+    position: absolute !important;
+
+    left: auto !important;
+    right: 260px !important;
+    top: 66% !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+
+    width: max-content !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    list-style: none !important;
+    z-index: 5;
+}
+.dream-order-footer__links > .wp-block-navigation-item {
+    display: flex !important;
+    flex: 0 0 auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    white-space: nowrap !important;
+}
+.dream-order-footer__links > .wp-block-navigation-item + .wp-block-navigation-item::before {
+    content: "|";
+    margin: 0 14px;
+    color: rgba(251, 250, 243, 0.6);
+}
+.dream-order-footer__links .wp-block-navigation-item {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    white-space: nowrap !important;
+}
+.dream-order-footer__message {
+    position: absolute;
+
+    left: auto;
+    right: 0;
+    top: 66%;
+
+    width: 210px;
+
+    margin: 0 !important;
+
+    color: #fbfaf3 !important;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive !important;
+
+    font-size: 1.55rem !important;
+    font-weight: 400 !important;
+    line-height: 1.05 !important;
+
+    text-align: center !important;
+
+    transform: translateY(-50%) rotate(-5deg);
+}
+.dream-order-footer__links a {
+    color: #fbfaf3 !important;
+    text-decoration: none !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size: 0.8rem !important;
+}
+.dream-order-footer__links li + li::before {
+    content: "|";
+
+    margin: 0 14px;
+
+    color: rgba(251, 250, 243, 0.55);
 }
 
 /* ==================================================
