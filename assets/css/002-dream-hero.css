@@ -841,3 +841,224 @@
         ease-in-out
         infinite;
 }
+.dream-hero__mobile-cta {
+    display: none;
+}
+/* =========================================
+   MOBILE . HERO
+========================================= */
+@media (max-width: 600px) {
+
+    .dream-hero {
+        min-height: 0;
+
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .dream-hero__sky {
+        height: auto;
+        min-height: 540px;
+
+        padding: 88px 22px 45px;
+    }
+
+    .dream-hero__inner {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        margin: 0;
+    }
+
+    .dream-hero__content {
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+
+        text-align: center;
+    }
+
+    .dream-hero__title {
+        width: 100%;
+    }
+
+    .dream-hero__title-script {
+        margin-bottom: 8px;
+
+        font-size: clamp(3.1rem, 16vw, 4.2rem);
+        line-height: 0.9;
+    }
+
+    .dream-hero__title-build {
+        margin: 0 auto;
+
+        color: #ef9fbd;
+
+        font-size: clamp(2.5rem, 12vw, 3.3rem);
+        line-height: 1;
+
+        text-shadow:
+            0 1px 1px rgba(31, 58, 95, 0.85),
+            0 0 2px rgba(31, 58, 95, 0.55);
+    }
+
+     .dream-hero__copy {
+        width: min(330px, 94%);
+
+        margin: 24px auto 0;
+        padding: 10px 18px 11px;
+
+        background: rgba(31, 58, 95, 0.78);
+
+        border-radius: 28px;
+
+        box-shadow:
+            0 8px 22px rgba(31, 58, 95, 0.12);
+    }
+     .dream-hero__copy::before {
+        display: none;
+    }
+    .dream-hero__title-build,
+    .dream-hero__copy-emphasis {
+        color: #ffd6e5;
+    }
+
+    .dream-hero__copy-main {
+        font-size: 1rem;
+        line-height: 1.45;
+        color: #ffffff;
+        text-shadow: none;
+    }
+
+    .dream-hero__copy-emphasis {
+        margin-top: 5px;
+
+        font-size: 1rem;
+        color: #ffd6e5;
+        text-shadow: none;
+    }
+
+
+    .dream-hero__mobile-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 18px;
+        padding: 11px 20px;
+
+        color: #1f3a5f;
+        background: #ef9fbd;
+
+        border-radius: 999px;
+
+        font-size: 0.72rem;
+        font-weight: 700;
+        line-height: 1;
+
+        text-decoration: none;
+
+        box-shadow:
+            0 6px 16px
+            rgba(31, 58, 95, 0.14);
+    }
+
+    .dream-hero__what-if {
+        display: none;
+    }
+
+    .dream-hero__scene {
+        margin-top: 35px;
+    }
+
+    .dream-hero__idea--two,
+    .dream-hero__idea--four,
+    .dream-hero__idea--five {
+        display: none;
+    }
+
+    /* =========================================
+   MOBILE . HERO SCENE
+    ========================================= */
+    .dream-hero__scene {
+        position: relative;
+
+        width: 100%;
+        min-height: 500px;
+
+        margin-top: 20px;
+
+        overflow: visible;
+    }
+    .dream-hero__portrait {
+        position: absolute;
+
+        z-index: 4;
+
+        left: 50%;
+        bottom: 0;
+
+        width: 88%;
+        max-width: 330px;
+
+        transform: translateX(-50%);
+    }
+    .dream-hero__portrait img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+    }
+    .dream-hero__idea--two,
+    .dream-hero__idea--four,
+    .dream-hero__idea--five {
+        display: none;
+    }
+    .dream-hero__idea {
+        padding: 10px 12px;
+
+        gap: 7px;
+
+        font-size: 0.72rem;
+        line-height: 1.12;
+    }
+    .dream-hero__idea-icon {
+        width: 25px;
+        height: 25px;
+    }
+    .dream-hero__idea--one {
+        top: 5px;
+        left: 4%;
+
+        width: 145px;
+        min-height: 82px;
+
+        transform: rotate(-3deg);
+    }
+    .dream-hero__idea--six {
+        top: 0;
+        right: 3%;
+        left: auto;
+
+        width: 128px;
+        min-height: 78px;
+
+        padding: 14px 16px;
+
+        transform: rotate(2deg);
+    }
+    .dream-hero__idea--three {
+        top: 125px;
+        right: 1%;
+        left: auto;
+
+        width: 142px;
+        min-height: 82px;
+
+        transform: rotate(-2deg);
+    }
+
+}

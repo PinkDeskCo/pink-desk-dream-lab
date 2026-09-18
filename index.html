@@ -34,10 +34,22 @@
                             href="#dream-hero"
                             aria-label="Pink Desk Dream Lab home"
                         >
-                            <img
+                            <!-- <img
                                 src="assets/images/header/dream-lab-logo.svg"
                                 alt="Pink Desk Dream Lab"
-                            >
+                            > -->
+
+                            <picture>
+                                <source
+                                    media="(max-width: 600px)"
+                                    srcset="assets/images/header/pink-desk-dl-logo-white.png"
+                                >
+
+                                <img
+                                    src="assets/images/header/dream-lab-logo.svg"
+                                    alt="Pink Desk Dream Lab"
+                                >
+                            </picture>
                         </a>
 
                         <div class="dream-header__nav-wrap">
@@ -114,6 +126,12 @@
                                 </p>
 
                             </div>
+
+                            <a class="dream-hero__mobile-cta"
+                                href="#dream-unfold"
+                            >
+                                Bring Me Your “What If”
+                            </a>
 
                         <div class="dream-hero__what-if">
                             <img

@@ -430,59 +430,154 @@
     }
 
 }
-
 /* ==================================================
-   MOBILE
+   MOBILE . DREAM NOTES
 ================================================== */
+
 @media (max-width: 640px) {
 
+    .dream-notes {
+        width: 100%;
+
+        padding-top: 95px;
+        padding-right: 20px;
+        padding-bottom: 90px;
+        padding-left: 20px;
+
+        overflow: hidden;
+    }
+
+
+    /* Stack desktop layout */
+
+    .dream-notes__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 auto;
+    }
+
+
+    /* Hide decorative notes */
+
+    .dream-notes__testimonial,
+    .dream-notes__idea {
+        display: none;
+    }
+
+
+    /* Main message */
+
+    .dream-notes__message {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 auto;
+
+        overflow: visible;
+    }
+
+
+    /* Where the magic happens */
+
     .dream-notes__heading {
-        gap: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        max-width: 100%;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+    .dream-notes__message .dream-notes__heading p {
+        width: auto;
+        max-width: calc(100% - 42px);
+
+        margin: 0;
+
+        font-size: 1.55rem;
+        line-height: 1.15;
+
+        white-space: normal;
+    }
+
+    .dream-notes__doodle--flower {
+        flex: 0 0 auto;
+
+        font-size: 1.5rem;
     }
 
 
-    .dream-notes__heading p {
-        font-size: 1.65rem;
+    /* CTA area */
+
+    .dream-notes__message .dream-notes__cta {
+        width: 100%;
+        max-width: 340px;
+
+        margin: 28px auto 0;
+        padding: 0;
     }
 
 
-    .dream-notes__cta {
-        margin-top: 15px;
+    /* Divider */
 
-        padding-inline: 16px;
+    .dream-notes__message .dream-notes__divider {
+        width: 100%;
+        max-width: 300px;
+
+        margin: 0 auto;
     }
 
 
-    .dream-notes__divider {
-        width: 82%;
+    /* HAVE A WHAT IF OF YOUR OWN? */
+
+    .dream-notes__message .dream-notes__eyebrow {
+        width: 100%;
+
+        margin-top: 14px;
+
+        font-size: 0.66rem;
+        letter-spacing: 0.15em;
+        line-height: 1.4;
+
+        text-align: center;
     }
 
 
-    .dream-notes__eyebrow {
-        margin-top: 12px;
+    /* Big or small... */
 
-        font-size: 0.65rem;
-        letter-spacing: 0.16em;
+    .dream-notes__message .dream-notes__cta-line {
+        width: 100%;
+
+        margin-top: 11px;
+
+        font-size: 1.85rem;
+        line-height: 1.05;
+
+        text-align: center;
     }
 
 
-    .dream-notes__cta-line {
-        margin-top: 10px;
+    /* Dream Session button */
 
-        font-size: 1.9rem;
-    }
+    .dream-notes__message .dream-notes__button {
+        width: auto;
+        max-width: 100%;
 
+        margin-top: 20px;
 
-    .dream-notes__button {
-        margin-top: 16px;
-
-        padding:
-            12px
-            24px;
+        padding: 12px 22px;
     }
 
 }
-
 /* ==================================================
    DREAM NOTES CTA - FINAL OVERRIDES
 ================================================== */
