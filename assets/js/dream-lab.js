@@ -973,3 +973,115 @@ if (
     initFromTheLab();
 
 }
+
+/* =========================================
+   MOBILE STORYBOARD NAVIGATION
+========================================= */
+
+const dreamStoryboardPanels =
+    document.querySelectorAll(
+        ".dream-storyboard__panel"
+    );
+
+if (
+    dreamStoryboard &&
+    dreamStoryboardPanels.length
+) {
+    let currentStoryboardPanel = 0;
+
+    const storyboardPrev =
+        document.createElement("button");
+
+    const storyboardNext =
+        document.createElement("button");
+
+
+    storyboardPrev.type = "button";
+    storyboardNext.type = "button";
+
+    storyboardPrev.className =
+        "dream-storyboard__mobile-nav dream-storyboard__mobile-nav--prev";
+
+    storyboardNext.className =
+        "dream-storyboard__mobile-nav dream-storyboard__mobile-nav--next";
+
+
+    storyboardPrev.innerHTML = "←";
+    storyboardNext.innerHTML = "→";
+
+
+    storyboardPrev.setAttribute(
+        "aria-label",
+        "Previous Dream Session page"
+    );
+
+    storyboardNext.setAttribute(
+        "aria-label",
+        "Next Dream Session page"
+    );
+
+
+    dreamStoryboard.append(
+        storyboardPrev,
+        storyboardNext
+    );
+
+
+    function showStoryboardPanel(index) {
+
+        currentStoryboardPanel = index;
+
+        dreamStoryboardPanels.forEach(
+            (panel, panelIndex) => {
+
+                panel.classList.toggle(
+                    "is-mobile-active",
+                    panelIndex === index
+                );
+
+            }
+        );
+
+
+        storyboardPrev.disabled =
+            index === 0;
+
+        storyboardNext.disabled =
+            index ===
+            dreamStoryboardPanels.length - 1;
+    }
+
+
+    storyboardPrev.addEventListener(
+        "click",
+        () => {
+
+            if (currentStoryboardPanel > 0) {
+                showStoryboardPanel(
+                    currentStoryboardPanel - 1
+                );
+            }
+
+        }
+    );
+
+
+    storyboardNext.addEventListener(
+        "click",
+        () => {
+
+            if (
+                currentStoryboardPanel <
+                dreamStoryboardPanels.length - 1
+            ) {
+                showStoryboardPanel(
+                    currentStoryboardPanel + 1
+                );
+            }
+
+        }
+    );
+
+
+    showStoryboardPanel(0);
+}

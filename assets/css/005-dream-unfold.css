@@ -703,16 +703,6 @@
     font-size: 0.82rem;
     line-height: 1.55;
 }
-/*
- * Temporary design state.
- *
- * Later this will be controlled by the
- * opening interaction.
- */
-
-/* =========================================
-   INDIVIDUAL PAPER PANELS
-========================================= */
 .dream-storyboard__panel {
     position: relative;
 
@@ -1256,8 +1246,6 @@
 
     text-align: center;
 }
-/* Individual choice */
-
 .dream-storyboard__path {
     display: flex;
     flex-direction: column;
@@ -1288,8 +1276,6 @@
     font-size: 0.78rem;
     line-height: 1.3;
 }
-/* Handwritten OR */
-
 .dream-storyboard__or {
     display: block;
 
@@ -1306,8 +1292,6 @@
     line-height: 1;
     font-weight: 600;
 }
-/* Purchase information */
-
 .dream-storyboard__purchase {
     margin-top: 16px;
     padding-top: 16px;
@@ -1318,7 +1302,6 @@
 
     text-align: center;
 }
-
 .dream-storyboard__purchase-label {
     display: inline-block;
 
@@ -1333,7 +1316,6 @@
 
     letter-spacing: 0.12em;
 }
-
 .dream-storyboard__price {
     display: inline-block;
 
@@ -1348,7 +1330,6 @@
     font-size: 1.05rem;
     font-weight: 700;
 }
-
 .dream-storyboard__includes {
     max-width: 88%;
 
@@ -1363,7 +1344,6 @@
     font-size: 0.81rem;
     line-height: 1.35;
 }
-
 .dream-storyboard__cta {
     display: block;
 
@@ -1408,8 +1388,6 @@
 
     pointer-events: none;
 }
-
-/* 01 . IDEA */
 .dream-storyboard__icon--idea {
     width: 54px;
 
@@ -1418,8 +1396,6 @@
 
     transform: rotate(5deg);
 }
-
-/* 02 . TALK */
 .dream-storyboard__icon--talk {
     width: 72px;
 
@@ -1428,8 +1404,6 @@
 
     transform: rotate(-4deg);
 }
-
-/* 03 . THINK / MAP */
 .dream-storyboard__icon--map {
     width: 88px;
 
@@ -1438,8 +1412,6 @@
 
     transform: rotate(3deg);
 }
-
-/* 04 . STORYBOARD */
 .dream-storyboard__icon--storyboard {
     width: 92px;
 
@@ -1448,7 +1420,6 @@
 
     transform: rotate(-3deg);
 }
-
 /* =========================================
    PANEL 05 PAPERCLIP
 ========================================= */
@@ -1525,8 +1496,6 @@
         visibility 0s linear 540ms;
      
 }
-/* Keep the subtle hover */
-
 .dream-invitation__closed:hover {
     transform:
         translate(-50%, calc(-50% - 2px))
@@ -1577,7 +1546,6 @@
         )
         650ms;
 }
-
 /* =========================================
    PANELS BEGIN FOLDED
 ========================================= */
@@ -1601,7 +1569,6 @@
         ),
         opacity 180ms ease;
 }
-
 /* =========================================
    RIBBON RELEASE
 ========================================= */
@@ -1632,7 +1599,6 @@
             rgba(62, 42, 44, 0.08)
         );
 }
-
 /* =========================================
    COVER PAGE TURN
 ========================================= */
@@ -1674,7 +1640,6 @@
         rotateY(0deg)
         scaleX(1);
 }
-
 .dream-invitation.is-open
 .dream-storyboard__panel:nth-child(1) {
     transition-delay: 260ms;
@@ -1730,3 +1695,143 @@
 
     flex-shrink: 0;
 } */
+/* ==================================================
+   MOBILE . OPEN STORYBOARD
+================================================== */
+@media (max-width: 640px) {
+    .dream-unfold {
+        position: relative;
+        z-index: 1;
+
+        padding:
+            80px
+            24px
+            50px;
+
+        background-image:
+            url("../images/dream-unfold/pink-bkground.png");
+
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        overflow: hidden;
+    }
+    .dream-invitation.is-open {
+        height: 560px;
+    }
+    .dream-invitation.is-open .dream-storyboard {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        display: block;
+
+        width: min(82vw, 330px);
+        height: 430px;
+
+        padding: 0;
+
+        overflow: visible;
+
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
+    .dream-invitation.is-open
+    .dream-storyboard__panel {
+
+        position: absolute;
+
+        inset: 0;
+
+        display: none;
+
+        padding:
+            42px
+            34px
+            36px;
+
+        opacity: 1;
+
+        transform: none;
+
+        box-sizing: border-box;
+
+        width: 100%;
+        height: 100%;
+    }
+    .dream-invitation.is-open
+    .dream-storyboard__panel.is-mobile-active {
+
+        display: block;
+    }
+    .dream-invitation.is-open
+    .dream-storyboard__heading {
+
+        font-size: 1.7rem;
+        line-height: 1.15;
+    }
+    .dream-invitation.is-open
+    .dream-storyboard__copy {
+
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    .dream-invitation.is-open
+    .dream-storyboard__number {
+
+        top: 24px;
+        right: 26px;
+
+        font-size: 1.35rem;
+    }
+    .dream-storyboard__mobile-nav {
+        position: absolute;
+
+        z-index: 20;
+
+        top: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 38px;
+        height: 38px;
+
+        padding: 0;
+
+        color: #1f3a5f;
+        background: #fbfaf3;
+
+        border:
+            1px solid
+            rgba(31, 58, 95, 0.25);
+
+        border-radius: 50%;
+
+        font-size: 1.15rem;
+
+        cursor: pointer;
+
+        transform: translateY(-50%);
+
+        box-shadow:
+            0 4px 12px
+            rgba(31, 58, 95, 0.14);
+    }
+    .dream-storyboard__mobile-nav--prev {
+        left: -19px;
+    }
+    .dream-storyboard__mobile-nav--next {
+        right: -19px;
+    }
+    .dream-storyboard__mobile-nav:disabled {
+        opacity: 0.25;
+
+        cursor: default;
+    }
+
+}
