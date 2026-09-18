@@ -409,6 +409,121 @@
         13px
         32px;
 }
+/* ==================================================
+   DREAM NOTES CTA - FINAL OVERRIDES
+================================================== */
+.dream-notes__message .dream-notes__heading p {
+    margin: 0;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(
+        1.9rem,
+        2.35vw,
+        2.65rem
+    );
+
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.1;
+}
+.dream-notes__message .dream-notes__cta {
+    width: min(100%, 700px);
+
+    margin-top: 26px;
+}
+.dream-notes__message .dream-notes__divider {
+    width: min(100%, 520px);
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: rgba(31, 58, 95, 0.60);
+}
+.dream-notes__message .dream-notes__divider::before,
+.dream-notes__message .dream-notes__divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        rgba(31, 58, 95, 0.30);
+}
+.dream-notes__message .dream-notes__eyebrow {
+    margin: 15px 0 0;
+
+    color: #1f3a5f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.76rem;
+    font-style: normal;
+    font-weight: 700;
+
+    letter-spacing: 0.26em;
+    line-height: 1.3;
+
+    text-transform: uppercase;
+}
+.dream-notes__message .dream-notes__cta-line {
+    position: relative;
+
+    margin: 13px 0 0;
+
+    color: #df7fa5;
+
+    font-family:
+        "Allura",
+        "Brush Script MT",
+        cursive;
+
+    font-size: clamp(
+        2rem,
+        2.55vw,
+        2.65rem
+    );
+
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+.dream-notes__message .dream-notes__cta-line::after {
+    content: "";
+
+    display: block;
+
+    width: 44%;
+    height: 2px;
+
+    margin: 7px auto 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(223, 127, 165, 0.48);
+
+    transform: rotate(-1deg);
+}
+.dream-notes__message .dream-notes__button {
+    margin-top: 22px;
+
+    padding:
+        13px
+        32px;
+}
 
 /* ==================================================
    TABLET
@@ -577,144 +692,4 @@
         padding: 12px 22px;
     }
 
-}
-/* ==================================================
-   DREAM NOTES CTA - FINAL OVERRIDES
-================================================== */
-
-/* Keep the original heading exactly as the heading */
-.dream-notes__message .dream-notes__heading p {
-    margin: 0;
-
-    color: #1f3a5f;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: clamp(
-        1.9rem,
-        2.35vw,
-        2.65rem
-    );
-
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.1;
-}
-
-
-/* Give the CTA a little more breathing room */
-.dream-notes__message .dream-notes__cta {
-    width: min(100%, 700px);
-
-    margin-top: 26px;
-}
-
-
-/* Divider */
-.dream-notes__message .dream-notes__divider {
-    width: min(100%, 520px);
-
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    gap: 14px;
-
-    color: rgba(31, 58, 95, 0.60);
-}
-
-
-.dream-notes__message .dream-notes__divider::before,
-.dream-notes__message .dream-notes__divider::after {
-    content: "";
-
-    flex: 1;
-
-    height: 1px;
-
-    background:
-        rgba(31, 58, 95, 0.30);
-}
-
-
-/* Small uppercase eyebrow */
-.dream-notes__message .dream-notes__eyebrow {
-    margin: 15px 0 0;
-
-    color: #1f3a5f;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 0.76rem;
-    font-style: normal;
-    font-weight: 700;
-
-    letter-spacing: 0.26em;
-    line-height: 1.3;
-
-    text-transform: uppercase;
-}
-
-
-/* Pink handwritten line */
-.dream-notes__message .dream-notes__cta-line {
-    position: relative;
-
-    margin: 13px 0 0;
-
-    color: #df7fa5;
-
-    font-family:
-        "Allura",
-        "Brush Script MT",
-        cursive;
-
-    font-size: clamp(
-        2rem,
-        2.55vw,
-        2.65rem
-    );
-
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-}
-
-
-/* Hand-drawn pink underline */
-.dream-notes__message .dream-notes__cta-line::after {
-    content: "";
-
-    display: block;
-
-    width: 44%;
-    height: 2px;
-
-    margin: 7px auto 0;
-
-    border-radius: 50%;
-
-    background:
-        rgba(223, 127, 165, 0.48);
-
-    transform: rotate(-1deg);
-}
-
-
-/* Button spacing only.
-   The actual button design still comes from
-   .what-if-cta__button
-*/
-.dream-notes__message .dream-notes__button {
-    margin-top: 22px;
-
-    padding:
-        13px
-        32px;
 }
