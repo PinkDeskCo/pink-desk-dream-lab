@@ -252,7 +252,9 @@
 
     pointer-events: none;
 }
-
+.lab-projects__nav {
+    display: none;
+}
 /* ==========================================================
    STORY CONTENT
 ========================================================== */
@@ -966,13 +968,9 @@
 
     line-height: 1.5;
 }
-
-
 .dream-note-cta__copy p {
     margin: 0;
 }
-
-
 .dream-note-cta__copy p + p {
     margin-top: 14px;
 }
@@ -1025,8 +1023,6 @@
         transform 180ms ease,
         box-shadow 180ms ease;
 }
-
-
 .dream-note-cta__button:hover {
     transform:
         translateY(-2px);
@@ -1035,8 +1031,6 @@
         0 9px 17px
         rgba(31, 58, 95, 0.22);
 }
-
-
 .dream-note-cta__button-arrow {
     font-size: 1.45rem;
     line-height: 1;
@@ -1068,8 +1062,6 @@
     transform:
         rotate(-2deg);
 }
-
-
 .dream-note-cta__scribble span {
     display: inline-block;
 
@@ -1146,8 +1138,6 @@
 
     opacity: 0.75;
 }
-
-
 .dream-note-cta__coffee-ring::after {
     content: "";
 
@@ -1195,8 +1185,6 @@
 
     pointer-events: none;
 }
-
-
 .dream-note-cta__margin-note span {
     display: block;
 
@@ -1204,8 +1192,6 @@
 
     color: #e97fb2;
 }
-
-
 .dream-note-cta__margin-note--left {
     top: 19%;
     left: 1.3%;
@@ -1213,8 +1199,6 @@
     transform:
         rotate(-5deg);
 }
-
-
 .dream-note-cta__margin-note--right {
     right: 1.5%;
     bottom: 23%;
@@ -1224,8 +1208,9 @@
     transform:
         rotate(-5deg);
 }
-
-
+.lab-projects__swipe-cue {
+    display: none;
+}
 /* ==================================================
    RESPONSIVE
 ================================================== */
@@ -1247,8 +1232,39 @@
     }
 
 }
+@media (max-width: 1000px) and (min-width: 651px) {
 
+    .from-the-lab {
+        padding:
+            18px
+            10px
+            40px;
 
+        overflow-x: auto;
+    }
+
+    .from-the-lab__inner {
+        min-width: 980px;
+        width: 980px;
+    }
+
+    .from-the-lab__canvas {
+        min-height: 0;
+        height: 490px;
+    }
+
+}
+@media (max-width: 980px) {
+
+    .dream-note-cta__paper {
+        width: 92%;
+    }
+
+    .dream-note-cta__margin-note {
+        display: none;
+    }
+
+}
 @media (max-width: 700px) {
 
     .dream-note-cta {
@@ -1308,21 +1324,273 @@
     }
 
 }
+@media (max-width: 650px) {
+    .from-the-lab {
+        width: 100%;
 
-/* ==================================================
-   RESPONSIVE
-================================================== */
-@media (max-width: 980px) {
+        padding:
+            38px
+            20px
+            60px;
 
-    .dream-note-cta__paper {
-        width: 92%;
+        overflow: hidden;
     }
+    .from-the-lab__inner {
+        width: 100%;
+        min-width: 0;
 
-    .dream-note-cta__margin-note {
+        margin: 0 auto;
+    }
+    .from-the-lab__canvas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        aspect-ratio: auto;
+    }
+    .from-the-lab__header {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: 100%;
+
+        margin: 0 auto 20px;
+
+        text-align: center;
+    }
+    .from-the-lab__title {
+        font-size: 3.7rem;
+        line-height: 0.88;
+    }
+    .from-the-lab__tagline {
+        margin-top: 14px;
+
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+        line-height: 1.4;
+    }
+    .from-the-lab__header::after {
+        bottom: -12px;
+    }
+    .from-the-lab__magic {
         display: none;
     }
+    .from-the-lab__feature {
+        position: relative;
 
+        top: auto;
+        right: auto;
+        left: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: auto;
+
+        gap: 0;
+    }
+    .from-the-lab__character {
+        order: 1;
+
+        width: 100%;
+        height: auto;
+
+        margin: 10px auto 0;
+
+        align-items: center;
+        justify-content: center;
+    }
+    .from-the-lab__character img {
+        width: min(92%, 390px);
+        max-width: none;
+        max-height: none;
+
+        margin: 0 auto;
+
+        object-fit: contain;
+    }
+
+    /* -------------------------------
+       FEATURED PROJECT
+    ------------------------------- */
+    .lab-project__story {
+        order: 2;
+
+        width: 100%;
+        max-width: 390px;
+
+        margin: 8px auto 0;
+
+        padding:
+            42px
+            32px
+            38px;
+
+        transform: rotate(-0.5deg);
+    }
+    .lab-project__number {
+        margin-bottom: 12px;
+
+        font-size: 0.7rem;
+    }
+    .lab-project__title {
+        margin-bottom: 14px;
+
+        font-size: 2rem;
+        line-height: 1.05;
+    }
+    .lab-project__description {
+        margin-bottom: 16px;
+
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    .lab-project__notes-button {
+        width: min(280px, 88%);
+
+        margin:
+            18px
+            auto
+            8px;
+    }
+    .lab-project__scribble {
+        margin-top: 8px;
+
+        font-size: 1.7rem;
+        line-height: 1;
+    }
+    .lab-feature__board-wrap {
+        order: 3;
+
+        width: 100%;
+        height: auto;
+
+        margin: 40px auto 0;
+
+        overflow: hidden;
+    }
+    .lab-feature__board {
+        width: 100%;
+        max-width: 100%;
+        max-height: none;
+
+        object-fit: contain;
+    }
+    /* -------------------------------
+    MORE FROM THE LAB
+    -------------------------------- */
+
+    .lab-projects {
+        position: relative;
+
+        z-index: 20;
+
+        right: auto;
+        bottom: auto;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 18px;
+
+        width: 100%;
+
+        margin: 28px 0 0;
+        margin-top: 4px;
+        padding: 12px 0 28px;
+
+        overflow-x: auto;
+        overflow-y: visible;
+
+        scroll-snap-type: x mandatory;
+
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+    .lab-projects::-webkit-scrollbar {
+        display: none;
+    }
+    .lab-projects__card {
+        flex: 0 0 78%;
+
+        width: 78%;
+        max-width: 270px;
+
+        padding:
+            10px
+            10px
+            16px;
+
+        scroll-snap-align: center;
+    }
+    /* -------------------------------
+    MORE FROM THE LAB HEADING
+    -------------------------------- */
+    .from-the-lab__more-heading {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        width: 100%;
+
+        margin: 38px auto 4px;
+
+        text-align: center;
+    }
+    .from-the-lab__more-heading p {
+        margin: 0;
+
+        font-size: 2.2rem;
+        line-height: 1;
+
+        transform: rotate(-2deg);
+    }
+    .from-the-lab__more-heading span {
+        display: inline;
+
+        margin-left: 5px;
+    }
+    .from-the-lab__more-arrow {
+        display:none;
+    }
+    .lab-projects__nav:disabled {
+        opacity: 0.28;
+        cursor: default;
+    }
+    .lab-projects__swipe-cue {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        width: 100%;
+        margin: 8px 0 0;
+
+        color: rgba(31, 58, 95, 0.68);
+
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+    .lab-projects__swipe-cue span {
+        font-size: 1rem;
+        line-height: 1;
+    }
 }
+
 @media (max-width: 640px) {
 
     .dream-note-cta {
@@ -1360,54 +1628,6 @@
     .dream-note-cta__coffee-ring {
         right: -55px;
         bottom: -45px;
-    }
-
-}
-/* ==========================================================
-   TABLET
-========================================================== */
-@media (max-width: 1000px) {
-
-    .from-the-lab {
-        padding:
-            18px
-            10px
-            40px;
-
-        overflow-x: auto;
-    }
-
-    .from-the-lab__inner {
-        min-width: 980px;
-        width: 980px;
-    }
-
-    .from-the-lab__canvas {
-        min-height: 0;
-        height: 490px;
-    }
-
-}
-
-/* ==========================================================
-   MOBILE
-========================================================== */
-@media (max-width: 650px) {
-
-    .from-the-lab {
-        padding:
-            14px
-            8px
-            32px;
-    }
-
-    .from-the-lab__inner {
-        min-width: 920px;
-        width: 920px;
-    }
-
-    .from-the-lab__canvas {
-        height: 460px;
     }
 
 }
