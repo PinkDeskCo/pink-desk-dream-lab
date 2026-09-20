@@ -331,148 +331,6 @@ const labNext = document.querySelector(".from-the-lab__arrow--next");
 
 let activeLabIndex = 0;
 
-// function showLabProject(index) {
-//     const button = labProjectButtons[index];
-
-//     if (!button) {
-//         return;
-//     }
-
-//     const projectKey = button.dataset.project;
-//     const project = labProjects[projectKey];
-
-//     if (!project) {
-//         return;
-//     }
-
-//     activeLabIndex = index;
-
-//     labFeatureNumber.textContent =
-//         project.number;
-
-//     labFeatureTitle.innerHTML =
-//         project.title;
-
-//     labFeatureDescription.textContent =
-//         project.description;
-
-//     labFeatureScribble.innerHTML =
-//         project.scribble;
-
-//     labFeatureImage.src =
-//         project.image;
-
-//     labFeatureImage.alt =
-//         project.alt;
-
-//     labProjectButtons.forEach(
-//         (projectButton, buttonIndex) => {
-//             projectButton.classList.toggle(
-//                 "is-active",
-//                 buttonIndex === index
-//             );
-//         }
-//     );
-// }
-
-// labProjectButtons.forEach(
-//     (button, index) => {
-//         button.addEventListener(
-//             "click",
-//             () => {
-//                 showLabProject(index);
-//             }
-//         );
-//     }
-// );
-
-// labNext?.addEventListener(
-//     "click",
-//     () => {
-//         const nextIndex =
-//             (activeLabIndex + 1) %
-//             labProjectButtons.length;
-
-//         showLabProject(nextIndex);
-//     }
-// );
-
-// labPrev?.addEventListener(
-//     "click",
-//     () => {
-//         const previousIndex =
-//             (
-//                 activeLabIndex -
-//                 1 +
-//                 labProjectButtons.length
-//             ) %
-//             labProjectButtons.length;
-
-//         showLabProject(previousIndex);
-//     }
-// );
-
-// function showLabProject(index) {
-//     const button = labProjectButtons[index];
-
-//     if (!button) {
-//         return;
-//     }
-
-//     const projectKey = button.dataset.project;
-//     const project = labProjects[projectKey];
-
-//     if (!project) {
-//         return;
-//     }
-
-//     const labFeature =
-//         document.querySelector(".lab-feature");
-
-//     activeLabIndex = index;
-
-//     labFeature?.classList.add("is-changing");
-
-//     window.setTimeout(() => {
-//         labFeatureNumber.textContent =
-//             project.number;
-
-//         labFeatureTitle.innerHTML =
-//             project.title;
-
-//         labFeatureDescription.textContent =
-//             project.description;
-
-//         labFeatureScribble.innerHTML =
-//             project.scribble;
-
-//         labFeatureImage.src =
-//             project.image;
-
-//         labFeatureImage.alt =
-//             project.alt;
-
-//         labProjectButtons.forEach(
-//             (projectButton, buttonIndex) => {
-//                 projectButton.classList.toggle(
-//                     "is-active",
-//                     buttonIndex === index
-//                 );
-//             }
-//         );
-
-//         requestAnimationFrame(() => {
-//             labFeature?.classList.remove(
-//                 "is-changing"
-//             );
-//         });
-//     }, 300);
-// }
-
-/* ==================================================
-   FROM THE LAB
-================================================== */
-
 function initFromTheLab() {
 
     /* ==================================================
@@ -530,6 +388,27 @@ function initFromTheLab() {
             "#lab-notes-overlay-image"
         );
 
+    const labNotesPanel =
+    document.querySelector(
+        ".lab-notes-overlay__panel"
+    );
+
+    const labNotesPrev =
+        document.querySelector(
+            ".lab-notes-overlay__page-button--prev"
+        );
+
+    const labNotesNext =
+        document.querySelector(
+            ".lab-notes-overlay__page-button--next"
+        );
+
+    const labNotesPageCount =
+        document.querySelector(
+            ".lab-notes-overlay__page-count"
+        );
+
+    let labNotesPage = 1;
     const labNotesCloseButtons = [
         ...document.querySelectorAll(
             "[data-lab-notes-close]"
@@ -793,37 +672,101 @@ function initFromTheLab() {
        PROJECT POLAROID CLICKS
     ================================================== */
 
-    projectButtons.forEach(
-        (button) => {
+  projectButtons.forEach(
+    (button) => {
 
-            button.addEventListener(
-                "click",
-                () => {
+        button.addEventListener(
+            "click",
+            () => {
 
-                    const projectKey =
-                        button.dataset.projectTarget;
+                const projectKey =
+                    button.dataset.projectTarget;
 
+                if (!projectKey) {
+                    return;
+                }
 
-                    if (!projectKey) {
-                        return;
-                    }
+                showProject(
+                    projectKey
+                );
 
+                if (
+                    window.matchMedia(
+                        "(max-width: 650px)"
+                    ).matches
+                ) {
 
-                    showProject(
-                        projectKey
-                    );
+                    story.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
 
                 }
-            );
 
-        }
-    );
+            }
+        );
+
+    }
+);
 
 
     /* ==================================================
        OPEN LAB NOTES
     ================================================== */
+    function setLabNotesPage(page) {
 
+        labNotesPage =
+            Math.max(
+                1,
+                Math.min(2, page)
+            );
+
+        if (labNotesPanel) {
+            labNotesPanel.classList.toggle(
+                "is-page-2",
+                labNotesPage === 2
+            );
+        }
+
+        if (labNotesPrev) {
+            labNotesPrev.disabled =
+                labNotesPage === 1;
+        }
+
+        if (labNotesNext) {
+            labNotesNext.disabled =
+                labNotesPage === 2;
+        }
+
+        if (labNotesPageCount) {
+            labNotesPageCount.textContent =
+                `${labNotesPage} / 2`;
+        }
+    }
+
+    labNotesPrev?.addEventListener(
+        "click",
+        (event) => {
+
+            event.stopPropagation();
+
+            setLabNotesPage(
+                labNotesPage - 1
+            );
+        }
+    );
+
+    labNotesNext?.addEventListener(
+        "click",
+        (event) => {
+
+            event.stopPropagation();
+
+            setLabNotesPage(
+                labNotesPage + 1
+            );
+        }
+    );
     function openLabNotes() {
 
         if (
@@ -850,6 +793,8 @@ function initFromTheLab() {
 
         labNotesImage.alt =
             project.labNotesAlt;
+
+            setLabNotesPage(1);
 
 
         labNotesOverlay.classList.add(

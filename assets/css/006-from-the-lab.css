@@ -1211,6 +1211,9 @@
 .lab-projects__swipe-cue {
     display: none;
 }
+.lab-notes-overlay__mobile-nav {
+    display: none;
+}
 /* ==================================================
    RESPONSIVE
 ================================================== */
@@ -1589,8 +1592,118 @@
         font-size: 1rem;
         line-height: 1;
     }
-}
+    /* ==========================================================
+    MOBILE LAB NOTES VIEWER
+    ========================================================== */
+     .lab-notes-overlay {
+        padding:
+            10px
+            10px
+            68px;
+    }
+    .lab-notes-overlay__panel {
+        position: relative;
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: calc(100vw - 24px);
+        max-width: none;
+        height: 92vh;
+        max-height: none;
+
+        overflow: hidden;
+    }
+    .lab-notes-overlay__image {
+        display: block;
+
+        width: auto;
+        height: calc(92vh - 80px);
+
+        max-width: none;
+        max-height: none;
+
+        object-fit: none;
+
+        /* Enlarge the full spread */
+        transform: scale(2);
+        transform-origin: left center;
+
+        clip-path: inset(0 50% 0 0);
+    }
+    .lab-notes-overlay__panel.is-page-2
+    .lab-notes-overlay__image {
+        transform: scale(2);
+        transform-origin: right center;
+
+        clip-path: inset(0 0 0 50%);
+    }
+   .lab-notes-overlay__mobile-nav {
+        position: fixed;
+
+        z-index: 10001;
+
+        left: 50%;
+        bottom: 4px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 18px;
+
+        width: auto;
+        margin: 0;
+        padding: 6px 14px;
+
+        background: rgba(20, 28, 38, 0.55);
+        border-radius: 28px;
+
+        transform: translateX(-50%);
+    }
+    .lab-notes-overlay__page-button {
+        display: grid;
+        place-items: center;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+
+        color: #1f3a5f;
+        background: #fbfaf7;
+
+        border:
+            1px solid
+            rgba(31, 58, 95, 0.16);
+
+        border-radius: 50%;
+
+        box-shadow:
+            0 5px 14px
+            rgba(0, 0, 0, 0.16);
+
+        font-size: 1.2rem;
+
+        cursor: pointer;
+    }
+    .lab-notes-overlay__page-button:disabled {
+        opacity: 0.3;
+        cursor: default;
+    }
+    .lab-notes-overlay__page-count {
+        min-width: 44px;
+
+        color: #fbfaf7;
+
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+
+        text-align: center;
+    }
+}
 @media (max-width: 640px) {
 
     .dream-note-cta {
