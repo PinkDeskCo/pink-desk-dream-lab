@@ -1703,6 +1703,9 @@
 
         text-align: center;
     }
+    .what-if-cta__right-note {
+        display:none;
+    }
 }
 @media (max-width: 640px) {
 
