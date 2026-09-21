@@ -545,6 +545,112 @@
     }
 
 }
+
+/* ==================================================
+   TABLET . DREAM NOTES
+   641px–850px
+================================================== */
+
+@media (min-width: 641px) and (max-width: 1100px) {
+
+    .dream-notes {
+        width: 100%;
+
+        padding-top: 110px;
+        padding-right: 32px;
+        padding-bottom: 95px;
+        padding-left: 32px;
+
+        overflow: hidden;
+    }
+
+    /* Remove side notes at tablet width */
+
+    .dream-notes__testimonial,
+    .dream-notes__idea {
+        display: none;
+    }
+
+    /* Replace oversized desktop grid */
+
+    .dream-notes__inner {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .dream-notes__message {
+        width: 100%;
+        max-width: 620px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    /* Where the magic happens */
+
+    .dream-notes__heading {
+        width: 100%;
+
+        gap: 12px;
+    }
+
+    .dream-notes__message
+    .dream-notes__heading p {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .dream-notes__doodle--flower {
+        font-size: 1.7rem;
+    }
+
+    .dream-notes__doodle--heart {
+        font-size: 2rem;
+    }
+
+    /* CTA */
+
+    .dream-notes__message
+    .dream-notes__cta {
+        width: 100%;
+        max-width: 560px;
+
+        margin: 24px auto 0;
+    }
+
+    .dream-notes__message
+    .dream-notes__divider {
+        width: 100%;
+        max-width: 440px;
+
+        margin: 0 auto;
+    }
+
+    .dream-notes__message
+    .dream-notes__eyebrow {
+        margin-top: 15px;
+
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+    }
+
+    .dream-notes__message
+    .dream-notes__cta-line {
+        margin-top: 11px;
+
+        font-size: 2.2rem;
+    }
+
+    .dream-notes__message
+    .dream-notes__button {
+        margin-top: 20px;
+    }
+}
 /* ==================================================
    MOBILE . DREAM NOTES
 ================================================== */

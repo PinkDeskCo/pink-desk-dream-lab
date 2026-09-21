@@ -1698,7 +1698,7 @@
 /* ==================================================
    MOBILE . OPEN STORYBOARD
 ================================================== */
-@media (max-width: 640px) {
+@media (max-width: 1100px) {
     .dream-unfold {
         position: relative;
         z-index: 1;
@@ -1723,7 +1723,7 @@
     .dream-invitation.is-open .dream-storyboard {
         position: absolute;
 
-        top: 50%;
+        top: 55%;
         left: 50%;
 
         display: block;
@@ -1832,6 +1832,19 @@
         opacity: 0.25;
 
         cursor: default;
+    }
+
+}
+@media (min-width: 641px) and (max-width: 1100px) {
+
+    .dream-invitation.is-open {
+        height: 620px;
+    }
+
+    .dream-invitation.is-open .dream-storyboard {
+        width: min(72vw, 400px);
+        height: 500px;
+        margin-top: 35px;
     }
 
 }

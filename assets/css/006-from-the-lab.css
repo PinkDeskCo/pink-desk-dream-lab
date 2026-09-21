@@ -637,9 +637,6 @@
 
     color: #1f3a5f;
 }
-/* ==================================================
-   STAGE
-================================================== */
 .dream-note-cta__inner {
     position: relative;
 
@@ -652,10 +649,6 @@
     align-items: center;
     justify-content: center;
 }
-
-/* ==================================================
-   PAPER STACK
-================================================== */
 .dream-note-cta__paper {
     position: relative;
     z-index: 3;
@@ -722,8 +715,6 @@
         0.5% 14%
     );
 }
-/* torn aged layer behind the main paper */
-
 .dream-note-cta__paper::after {
     content: "";
 
@@ -782,8 +773,6 @@
 
     opacity: 0.95;
 }
-/* subtle paper speckling and staining */
-
 .dream-note-cta__paper::before {
     content: "";
 
@@ -823,10 +812,6 @@
 
     opacity: 0.75;
 }
-
-/* ==================================================
-   CONTENT
-================================================== */
 .dream-note-cta__content {
     position: relative;
     z-index: 2;
@@ -836,10 +821,6 @@
 
     text-align: center;
 }
-
-/* ==================================================
-   EYEBROW
-================================================== */
 .dream-note-cta__eyebrow {
     margin: 0;
 
@@ -852,10 +833,6 @@
 
     text-transform: uppercase;
 }
-
-/* ==================================================
-   DIVIDER
-================================================== */
 .dream-note-cta__divider {
     display: flex;
     align-items: center;
@@ -866,7 +843,6 @@
 
     color: #1f3a5f;
 }
-
 .dream-note-cta__divider::before,
 .dream-note-cta__divider::after {
     content: "";
@@ -882,10 +858,6 @@
     font-size: 1.35rem;
     line-height: 1;
 }
-
-/* ==================================================
-   TITLE
-================================================== */
 .dream-note-cta__title {
     margin: 0;
 
@@ -921,8 +893,6 @@
     font-weight: 400;
     line-height: 0.95;
 }
-/* little hand-drawn underline */
-
 .dream-note-cta__title span::after {
     content: "";
 
@@ -943,11 +913,6 @@
         rotate(-1deg)
         scaleX(0.92);
 }
-
-/* ==================================================
-   COPY
-================================================== */
-
 .dream-note-cta__copy {
     max-width: 690px;
     margin: 24px auto 0;
@@ -974,12 +939,6 @@
 .dream-note-cta__copy p + p {
     margin-top: 14px;
 }
-
-
-/* ==================================================
-   BUTTON
-================================================== */
-
 .dream-note-cta__button {
     display: inline-flex;
     align-items: center;
@@ -1035,12 +994,6 @@
     font-size: 1.45rem;
     line-height: 1;
 }
-
-
-/* ==================================================
-   SCRIBBLE
-================================================== */
-
 .dream-note-cta__scribble {
     margin: 18px 0 0;
 
@@ -1069,12 +1022,6 @@
 
     color: #1f3a5f;
 }
-
-
-/* ==================================================
-   HEART CLIP
-================================================== */
-
 .dream-note-cta__heart-clip {
     position: absolute;
     z-index: 6;
@@ -1105,12 +1052,6 @@
         3px 4px 6px
         rgba(66, 50, 34, 0.18);
 }
-
-
-/* ==================================================
-   COFFEE RING
-================================================== */
-
 .dream-note-cta__coffee-ring {
     position: absolute;
     z-index: 4;
@@ -1150,12 +1091,6 @@
 
     border-radius: 50%;
 }
-
-
-/* ==================================================
-   SIDE NOTES
-================================================== */
-
 .dream-note-cta__margin-note {
     position: absolute;
     z-index: 2;
@@ -1214,120 +1149,17 @@
 .lab-notes-overlay__mobile-nav {
     display: none;
 }
+
 /* ==================================================
-   RESPONSIVE
+   TABLET + MOBILE
+   850px AND BELOW
 ================================================== */
+@media (max-width: 1100px) {
 
-@media (max-width: 1050px) {
+    /* -----------------------------------------------
+       FROM THE LAB
+    ----------------------------------------------- */
 
-    .dream-note-cta__inner {
-        min-height: 610px;
-    }
-
-
-    .dream-note-cta__paper {
-        width: 88%;
-    }
-
-
-    .dream-note-cta__margin-note {
-        display: none;
-    }
-
-}
-@media (max-width: 1000px) and (min-width: 651px) {
-
-    .from-the-lab {
-        padding:
-            18px
-            10px
-            40px;
-
-        overflow-x: auto;
-    }
-
-    .from-the-lab__inner {
-        min-width: 980px;
-        width: 980px;
-    }
-
-    .from-the-lab__canvas {
-        min-height: 0;
-        height: 490px;
-    }
-
-}
-@media (max-width: 980px) {
-
-    .dream-note-cta__paper {
-        width: 92%;
-    }
-
-    .dream-note-cta__margin-note {
-        display: none;
-    }
-
-}
-@media (max-width: 700px) {
-
-    .dream-note-cta {
-        padding:
-            42px 16px
-            46px;
-    }
-
-
-    .dream-note-cta__inner {
-        min-height: 0;
-    }
-
-
-    .dream-note-cta__paper {
-        width: 100%;
-
-        padding:
-            48px 24px
-            42px;
-    }
-
-
-    .dream-note-cta__title {
-        font-size:
-            clamp(
-                2rem,
-                9vw,
-                2.8rem
-            );
-    }
-
-
-    .dream-note-cta__copy {
-        font-size: 1rem;
-    }
-
-
-    .dream-note-cta__button {
-        width: 100%;
-
-        gap: 14px;
-
-        font-size: 1.05rem;
-    }
-
-
-    .dream-note-cta__heart-clip {
-        top: 8px;
-        right: 3%;
-    }
-
-
-    .dream-note-cta__coffee-ring {
-        right: -62px;
-        bottom: -48px;
-    }
-
-}
-@media (max-width: 650px) {
     .from-the-lab {
         width: 100%;
 
@@ -1338,12 +1170,14 @@
 
         overflow: hidden;
     }
+
     .from-the-lab__inner {
         width: 100%;
         min-width: 0;
 
         margin: 0 auto;
     }
+
     .from-the-lab__canvas {
         display: flex;
         flex-direction: column;
@@ -1355,6 +1189,7 @@
 
         aspect-ratio: auto;
     }
+
     .from-the-lab__header {
         position: relative;
 
@@ -1367,10 +1202,12 @@
 
         text-align: center;
     }
+
     .from-the-lab__title {
         font-size: 3.7rem;
         line-height: 0.88;
     }
+
     .from-the-lab__tagline {
         margin-top: 14px;
 
@@ -1378,12 +1215,15 @@
         letter-spacing: 0.16em;
         line-height: 1.4;
     }
+
     .from-the-lab__header::after {
         bottom: -12px;
     }
+
     .from-the-lab__magic {
         display: none;
     }
+
     .from-the-lab__feature {
         position: relative;
 
@@ -1399,6 +1239,7 @@
 
         gap: 0;
     }
+
     .from-the-lab__character {
         order: 1;
 
@@ -1410,6 +1251,7 @@
         align-items: center;
         justify-content: center;
     }
+
     .from-the-lab__character img {
         width: min(92%, 390px);
         max-width: none;
@@ -1420,9 +1262,9 @@
         object-fit: contain;
     }
 
-    /* -------------------------------
-       FEATURED PROJECT
-    ------------------------------- */
+
+    /* FEATURED PROJECT */
+
     .lab-project__story {
         order: 2;
 
@@ -1438,23 +1280,27 @@
 
         transform: rotate(-0.5deg);
     }
+
     .lab-project__number {
         margin-bottom: 12px;
 
         font-size: 0.7rem;
     }
+
     .lab-project__title {
         margin-bottom: 14px;
 
         font-size: 2rem;
         line-height: 1.05;
     }
+
     .lab-project__description {
         margin-bottom: 16px;
 
         font-size: 0.95rem;
         line-height: 1.5;
     }
+
     .lab-project__notes-button {
         width: min(280px, 88%);
 
@@ -1463,12 +1309,14 @@
             auto
             8px;
     }
+
     .lab-project__scribble {
         margin-top: 8px;
 
         font-size: 1.7rem;
         line-height: 1;
     }
+
     .lab-feature__board-wrap {
         order: 3;
 
@@ -1479,6 +1327,7 @@
 
         overflow: hidden;
     }
+
     .lab-feature__board {
         width: 100%;
         max-width: 100%;
@@ -1486,58 +1335,10 @@
 
         object-fit: contain;
     }
-    /* -------------------------------
-    MORE FROM THE LAB
-    -------------------------------- */
 
-    .lab-projects {
-        position: relative;
 
-        z-index: 20;
+    /* MORE FROM THE LAB */
 
-        right: auto;
-        bottom: auto;
-
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-
-        gap: 18px;
-
-        width: 100%;
-
-        margin: 28px 0 0;
-        margin-top: 4px;
-        padding: 12px 0 28px;
-
-        overflow-x: auto;
-        overflow-y: visible;
-
-        scroll-snap-type: x mandatory;
-
-        -webkit-overflow-scrolling: touch;
-
-        scrollbar-width: none;
-    }
-    .lab-projects::-webkit-scrollbar {
-        display: none;
-    }
-    .lab-projects__card {
-        flex: 0 0 78%;
-
-        width: 78%;
-        max-width: 270px;
-
-        padding:
-            10px
-            10px
-            16px;
-
-        scroll-snap-align: center;
-    }
-    /* -------------------------------
-    MORE FROM THE LAB HEADING
-    -------------------------------- */
     .from-the-lab__more-heading {
         position: relative;
 
@@ -1552,6 +1353,7 @@
 
         text-align: center;
     }
+
     .from-the-lab__more-heading p {
         margin: 0;
 
@@ -1560,22 +1362,75 @@
 
         transform: rotate(-2deg);
     }
+
     .from-the-lab__more-heading span {
         display: inline;
 
         margin-left: 5px;
     }
+
     .from-the-lab__more-arrow {
-        display:none;
+        display: none;
     }
+
+
+    /* PROJECT POLAROIDS */
+
+    .lab-projects {
+        position: relative;
+        z-index: 20;
+
+        right: auto;
+        bottom: auto;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 18px;
+
+        width: 100%;
+
+        margin: 4px 0 0;
+        padding: 12px 0 28px;
+
+        overflow-x: auto;
+        overflow-y: visible;
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+
+    .lab-projects::-webkit-scrollbar {
+        display: none;
+    }
+
+    .lab-projects__card {
+        flex: 0 0 78%;
+
+        width: 78%;
+        max-width: 270px;
+
+        padding:
+            10px
+            10px
+            16px;
+
+        scroll-snap-align: center;
+    }
+
     .lab-projects__nav:disabled {
         opacity: 0.28;
         cursor: default;
     }
+
     .lab-projects__swipe-cue {
         display: flex;
         align-items: center;
         justify-content: center;
+
         gap: 8px;
 
         width: 100%;
@@ -1588,142 +1443,51 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
     }
+
     .lab-projects__swipe-cue span {
         font-size: 1rem;
         line-height: 1;
     }
-    /* ==========================================================
-    MOBILE LAB NOTES VIEWER
-    ========================================================== */
-     .lab-notes-overlay {
-        padding:
-            10px
-            10px
-            68px;
-    }
-    .lab-notes-overlay__panel {
-        position: relative;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
-        width: calc(100vw - 24px);
-        max-width: none;
-        height: 92vh;
-        max-height: none;
-
-        overflow: hidden;
-    }
-    .lab-notes-overlay__image {
-        display: block;
-
-        width: auto;
-        height: calc(92vh - 80px);
-
-        max-width: none;
-        max-height: none;
-
-        object-fit: none;
-
-        /* Enlarge the full spread */
-        transform: scale(2);
-        transform-origin: left center;
-
-        clip-path: inset(0 50% 0 0);
-    }
-    .lab-notes-overlay__panel.is-page-2
-    .lab-notes-overlay__image {
-        transform: scale(2);
-        transform-origin: right center;
-
-        clip-path: inset(0 0 0 50%);
-    }
-   .lab-notes-overlay__mobile-nav {
-        position: fixed;
-
-        z-index: 10001;
-
-        left: 50%;
-        bottom: 4px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        gap: 18px;
-
-        width: auto;
-        margin: 0;
-        padding: 6px 14px;
-
-        background: rgba(20, 28, 38, 0.55);
-        border-radius: 28px;
-
-        transform: translateX(-50%);
-    }
-    .lab-notes-overlay__page-button {
-        display: grid;
-        place-items: center;
-
-        width: 42px;
-        height: 42px;
-
-        padding: 0;
-
-        color: #1f3a5f;
-        background: #fbfaf7;
-
-        border:
-            1px solid
-            rgba(31, 58, 95, 0.16);
-
-        border-radius: 50%;
-
-        box-shadow:
-            0 5px 14px
-            rgba(0, 0, 0, 0.16);
-
-        font-size: 1.2rem;
-
-        cursor: pointer;
-    }
-    .lab-notes-overlay__page-button:disabled {
-        opacity: 0.3;
-        cursor: default;
-    }
-    .lab-notes-overlay__page-count {
-        min-width: 44px;
-
-        color: #fbfaf7;
-
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-
-        text-align: center;
-    }
-    .what-if-cta__right-note {
-        display:none;
-    }
+    /* -----------------------------------------------
+       FINAL DREAM SESSION CTA
+    ----------------------------------------------- */
 }
+/* ==================================================
+   PHONE
+   640px AND BELOW
+================================================== */
 @media (max-width: 640px) {
+
+    /* FINAL DREAM SESSION CTA */
 
     .dream-note-cta {
         padding:
-            55px 18px;
+            55px
+            18px;
     }
 
     .dream-note-cta__paper {
         width: 100%;
 
         padding:
-            55px 25px
+            55px
+            25px
             48px;
     }
 
     .dream-note-cta__eyebrow {
         letter-spacing: 0.2em;
+    }
+
+    .dream-note-cta__title {
+        font-size:
+            clamp(
+                2rem,
+                9vw,
+                2.8rem
+            );
     }
 
     .dream-note-cta__copy {
@@ -1735,9 +1499,12 @@
         width: 100%;
 
         gap: 14px;
+
+        font-size: 1.05rem;
     }
 
     .dream-note-cta__heart-clip {
+        top: 8px;
         right: 3%;
     }
 
@@ -1745,7 +1512,6 @@
         right: -55px;
         bottom: -45px;
     }
-
 }
 /* ==========================================================
    LAB NOTES OVERLAY
@@ -1822,4 +1588,141 @@
         rgba(31, 58, 95, 0.18);
     font-size: 2rem;
     cursor: pointer;
+}
+
+/* ==================================================
+   LAB NOTES PAGE CONTROLS
+================================================== */
+.lab-notes-overlay__mobile-nav {
+    display: none;
+}
+
+/* ==================================================
+   LAB NOTES - PHONE
+   ONE PAGE AT A TIME
+================================================== */
+@media (max-width: 640px) {
+
+    .lab-notes-overlay {
+        padding:
+            20px
+            14px;
+    }
+
+    .lab-notes-overlay__panel {
+        width: min(92vw, 430px);
+        max-height: 94vh;
+
+        display: block;
+
+        overflow: hidden;
+    }
+
+    /*
+       The original image contains both pages.
+       Make it twice the panel width so only
+       one half is visible at a time.
+    */
+
+    .lab-notes-overlay__image {
+        width: 200%;
+        max-width: none;
+        height: auto;
+        max-height: none;
+
+        transform: translateX(0);
+
+        transition:
+            transform
+            280ms ease;
+    }
+
+    /*
+       JS adds .is-page-2 to the panel.
+       Move the full spread left by one page.
+    */
+
+    .lab-notes-overlay__panel.is-page-2
+    .lab-notes-overlay__image {
+        transform: translateX(-50%);
+    }
+
+    .lab-notes-overlay__close {
+        top: 8px;
+        right: 8px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 1.7rem;
+    }
+
+    .lab-notes-overlay__mobile-nav  {
+        position: absolute;
+        z-index: 4;
+
+        left: 50%;
+        bottom: 12px;
+
+        transform: translateX(-50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 14px;
+
+        padding:
+            7px
+            10px;
+
+        background:
+            rgba(251, 250, 247, 0.94);
+
+        border-radius: 999px;
+
+        box-shadow:
+            0
+            5px
+            16px
+            rgba(31, 58, 95, 0.16);
+    }
+
+    .lab-notes-overlay__page-button {
+        display: grid;
+        place-items: center;
+
+        width: 38px;
+        height: 38px;
+
+        padding: 0;
+
+        color: #ffffff;
+        background: #1f3a5f;
+
+        border: 0;
+        border-radius: 50%;
+
+        font-size: 1.2rem;
+        line-height: 1;
+
+        cursor: pointer;
+    }
+
+    .lab-notes-overlay__page-button:disabled {
+        opacity: 0.32;
+        cursor: default;
+    }
+
+    .lab-notes-overlay__page-count {
+        min-width: 42px;
+
+        color: #1f3a5f;
+
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+
+        text-align: center;
+    }
 }

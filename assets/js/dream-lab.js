@@ -692,13 +692,13 @@ function initFromTheLab() {
 
                 if (
                     window.matchMedia(
-                        "(max-width: 650px)"
+                        "(max-width: 850px)"
                     ).matches
                 ) {
 
-                    story.scrollIntoView({
+                    notesButton?.scrollIntoView({
                         behavior: "smooth",
-                        block: "start"
+                        block: "center"
                     });
 
                 }
