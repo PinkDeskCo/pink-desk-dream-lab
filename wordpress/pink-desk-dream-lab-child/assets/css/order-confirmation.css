@@ -1068,6 +1068,168 @@ tfoot td {
     color: rgba(251, 250, 243, 0.55);
 }
 
+
+/* ==================================================
+   ORDER DETAILS - TABLET
+   601px - 1100px
+================================================== */
+@media (min-width: 601px) and (max-width: 1100px) {
+
+    .dream-order-details {
+        box-sizing: border-box !important;
+
+        width: calc(100% - 64px) !important;
+        max-width: 760px !important;
+
+        margin: 0 auto 70px !important;
+
+        padding:
+            90px
+            54px
+            60px !important;
+    }
+    .dream-order-details
+    .dream-order-layout.wp-block-columns,
+    .dream-order-details > .wp-block-columns {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 30px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .dream-order-details
+    .dream-order-layout
+    > .wp-block-column,
+    .dream-order-details
+    > .wp-block-columns
+    > .wp-block-column {
+        display: block !important;
+
+        flex: none !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .dream-order-details
+    > .wp-block-columns
+    > .wp-block-column:last-child::before {
+        display: none !important;
+    }
+    .dream-order-right {
+        border: 0 !important;
+    }
+    .dream-order-card-heading__title {
+        font-size: 2rem !important;
+    }
+    .dream-order-card-heading__meta {
+        font-size: 0.9rem !important;
+    }
+    .dream-order-info-panel {
+        width: 72% !important;
+        max-width: 600px !important;
+
+        margin:
+            28px
+            0
+            0
+            12% !important;
+
+        gap: 22px !important;
+    }
+    .dream-order-info {
+        min-height: 58px;
+
+        padding-left: 72px;
+    }
+    .dream-order-info::before {
+        width: 48px;
+        height: 48px;
+    }
+    .dream-order-info p:first-child {
+        font-size: 1.05rem !important;
+    }
+    .dream-order-info p:last-child {
+        font-size: 1rem !important;
+    }
+    .dream-order-thank-you {
+        font-size: 2.3rem !important;
+
+        margin:
+            24px
+            0
+            8px !important;
+    }
+    .dream-order-signature {
+        font-size: 1.8rem !important;
+    }
+    /* ==================================================
+    FOOTER - TABLET
+    ================================================== */
+
+    .dream-order-footer__inner {
+        width: calc(100% - 64px);
+        min-height: 320px;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+    .dream-order-footer__inner::before {
+        left: 32px;
+        right: auto;
+        top: 66%;
+
+         width: 220px;
+        height: 88px;
+
+        background-position: left center;
+        background-size: contain;
+
+        transform: translateY(-50%);
+    }
+    .dream-order-footer__links {
+        left: auto !important;
+        right: 32px !important;
+        top: 66% !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+
+        width: max-content !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 0 !important;
+
+        transform: translateY(-50%) !important;
+    }
+    .dream-order-footer__links
+    .wp-block-navigation-item {
+        display: inline-flex !important;
+        flex: 0 0 auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        white-space: nowrap !important;
+    }
+    .dream-order-footer__links a {
+        font-size: 0.9rem !important;
+    }
+    .dream-order-footer__message {
+        display: none !important;
+    }
+}
 /* ==================================================
    Mobile
 ================================================== */
@@ -1334,4 +1496,3 @@ tfoot td {
             display: none !important;
         }
     }
-
