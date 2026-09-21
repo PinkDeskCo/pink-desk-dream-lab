@@ -1372,6 +1372,9 @@
     text-decoration: none;
     text-transform: uppercase;
 }
+.dream-storyboard__mobile-nav {
+    display: none;
+}
 /* =========================================
    STORYBOARD ILLUSTRATIONS
 ========================================= */
